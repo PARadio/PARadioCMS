@@ -1,2 +1,13 @@
 <h1>Demo#hello</h1>
 <p>Hello!!!</p>
+<%# links the html way %>
+<a href="/demo/index">Index page 1</a><br />
+
+<%# links the ruby way %>
+<%= link_to('index page 2', {:action => 'index'})%><br />
+
+<p>
+  ID: <%= @id %><br />
+  PAGE: <%= @page%><br />
+  NEXT PAGE: <%= @page + 1%><br />
+</p>

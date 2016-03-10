@@ -4,10 +4,16 @@ class DemoController < ApplicationController
 
   def index
   #loads demo/index by default
+
+  #this is and example of an instance variable: it gets passed into the view
+  @array = [1,2,3,4,5]
+
   end
 
   def hello
-    # render lets you load a template specifically
+    @id = params['id'].to_i    #same as :id
+    @page = params[:page].to_i #same as 'page'
+    # render lets you load a template specifically. call it last
     render('hello')
     # this is shorthand for render(:template => 'demo/hello')
     # render assumes that the text is an existing template, and that it belongs within demo.
