@@ -11,6 +11,7 @@ class CreatePages < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+    # indexing helps find these faster. things we need to look up often go here
     add_index("pages", "subject_id")
     add_index("pages", "permalink")
   end
