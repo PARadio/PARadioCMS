@@ -13,30 +13,19 @@
 
 ActiveRecord::Schema.define(version: 20160311180236) do
 
-  create_table "admin_users", force: :cascade do |t|
-    t.string   "first_name",      limit: 25
-    t.string   "last_name",       limit: 50
-    t.string   "email",           limit: 100, default: "", null: false
-    t.string   "username",        limit: 25
-    t.string   "hashed_password", limit: 50
-    t.datetime "created_at",                               null: false
-    t.datetime "updated_at",                               null: false
-  end
-
-  add_index "admin_users", ["username"], name: "index_admin_users_on_username", using: :btree
-
   create_table "episodes", force: :cascade do |t|
     t.integer  "show_id",        limit: 4
     t.string   "name",           limit: 255
     t.text     "description",    limit: 65535
     t.text     "transcript",     limit: 65535
-    t.string   "media_file",     limit: 255
+    t.string   "media_id",       limit: 255
     t.integer  "stage",          limit: 4
     t.integer  "episode_number", limit: 4
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
   end
 
+  add_index "episodes", ["media_id"], name: "index_episodes_on_media_id", using: :btree
   add_index "episodes", ["name"], name: "index_episodes_on_name", using: :btree
   add_index "episodes", ["show_id"], name: "index_episodes_on_show_id", using: :btree
 
@@ -109,6 +98,16 @@ ActiveRecord::Schema.define(version: 20160311180236) do
     t.boolean  "visible",                default: false
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "first_name", limit: 25
+    t.string   "last_name",  limit: 50
+    t.string   "email",      limit: 255, default: "", null: false
+    t.string   "password",   limit: 50
+    t.integer  "user_level", limit: 4,   default: 0
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
 end
