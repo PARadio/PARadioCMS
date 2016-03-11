@@ -18,4 +18,5 @@ class CreateSections < ActiveRecord::Migration
 
   def down
     drop_table :sections
+  end
 end

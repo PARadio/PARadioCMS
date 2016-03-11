@@ -5,16 +5,18 @@ class CreatePages < ActiveRecord::Migration
       t.integer "subject_id"
 
       t.string "name"
-      t.int "permalink"
+      t.integer "permalink"
       t.integer "position"
       t.boolean "visible", :default=>false
 
       t.timestamps null: false
     end
+    # indexing helps find these faster. things we need to look up often go here
     add_index("pages", "subject_id")
     add_index("pages", "permalink")
   end
 
   def down
     drop_table :pages
+  end
 end
