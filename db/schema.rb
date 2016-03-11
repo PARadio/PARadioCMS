@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160310041750) do
+ActiveRecord::Schema.define(version: 20160311152555) do
 
   create_table "admin_users", force: :cascade do |t|
     t.string   "first_name",      limit: 25
@@ -24,5 +24,68 @@ ActiveRecord::Schema.define(version: 20160310041750) do
   end
 
   add_index "admin_users", ["username"], name: "index_admin_users_on_username", using: :btree
+
+  create_table "episodes", force: :cascade do |t|
+    t.integer  "show_id",        limit: 4
+    t.string   "name",           limit: 255
+    t.text     "description",    limit: 65535
+    t.text     "transcript",     limit: 65535
+    t.string   "media_file",     limit: 255
+    t.integer  "stage",          limit: 4
+    t.integer  "episode_number", limit: 4
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+  end
+
+  add_index "episodes", ["name"], name: "index_episodes_on_name", using: :btree
+  add_index "episodes", ["show_id"], name: "index_episodes_on_show_id", using: :btree
+
+  create_table "pages", force: :cascade do |t|
+    t.integer  "subject_id", limit: 4
+    t.string   "name",       limit: 255
+    t.integer  "permalink",  limit: 4
+    t.integer  "position",   limit: 4
+    t.boolean  "visible",                default: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+  end
+
+  add_index "pages", ["permalink"], name: "index_pages_on_permalink", using: :btree
+  add_index "pages", ["subject_id"], name: "index_pages_on_subject_id", using: :btree
+
+  create_table "sections", force: :cascade do |t|
+    t.integer  "page_id",      limit: 4
+    t.string   "name",         limit: 255
+    t.integer  "position",     limit: 4
+    t.boolean  "visible",                    default: false
+    t.string   "content_type", limit: 255
+    t.text     "content",      limit: 65535
+    t.datetime "created_at",                                 null: false
+    t.datetime "updated_at",                                 null: false
+  end
+
+  add_index "sections", ["page_id"], name: "index_sections_on_page_id", using: :btree
+
+  create_table "shows", force: :cascade do |t|
+    t.integer  "user_id",     limit: 4
+    t.string   "name",        limit: 255
+    t.text     "description", limit: 65535
+    t.integer  "stage",       limit: 4
+    t.integer  "image_id",    limit: 4
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  add_index "shows", ["image_id"], name: "index_shows_on_image_id", using: :btree
+  add_index "shows", ["name"], name: "index_shows_on_name", using: :btree
+  add_index "shows", ["user_id"], name: "index_shows_on_user_id", using: :btree
+
+  create_table "subjects", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.integer  "position",   limit: 4
+    t.boolean  "visible",                default: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+  end
 
 end

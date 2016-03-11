@@ -5,7 +5,7 @@ class CreatePages < ActiveRecord::Migration
       t.integer "subject_id"
 
       t.string "name"
-      t.int "permalink"
+      t.integer "permalink"
       t.integer "position"
       t.boolean "visible", :default=>false
 
@@ -16,5 +16,8 @@ class CreatePages < ActiveRecord::Migration
   end
 
   def down
+    remove_index("pages","permalink")
+    remove_index("pages","subject_id")
     drop_table :pages
+  end
 end

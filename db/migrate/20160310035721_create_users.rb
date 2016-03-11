@@ -7,7 +7,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string "last_name", :limit=>50
       t.string "email", :default => "", :null =>false
       t.string "password", :limit=>50
-    
+      t.integer "user_level", :default =>0 # 0-2 {0: creator, 1: editor, 2: admin}
+
       t.timestamps null: false
       # t .timestamps automatically adds:
       #   -- t.datetime "created_at"

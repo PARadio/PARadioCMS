@@ -17,4 +17,5 @@ class CreateSubjects < ActiveRecord::Migration
 
   def down
     drop_table :subjects
+  end
 end
