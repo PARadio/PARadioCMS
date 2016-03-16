@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
+
   #get 'demo/index'
 
   #root routing:
   root :to => "demo#index"
 
   # Default route: not considered best practice-- still useful to understand!
-  match ':controller(/:action(/:id))', :via => :get
+  match ':controller(/:action(/:id))', :via => [:get, :post]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

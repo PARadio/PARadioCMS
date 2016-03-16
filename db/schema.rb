@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160311180236) do
+ActiveRecord::Schema.define(version: 20160316002036) do
 
   create_table "episodes", force: :cascade do |t|
     t.integer  "show_id",        limit: 4
@@ -64,6 +64,23 @@ ActiveRecord::Schema.define(version: 20160311180236) do
 
   add_index "pages", ["permalink"], name: "index_pages_on_permalink", using: :btree
   add_index "pages", ["subject_id"], name: "index_pages_on_subject_id", using: :btree
+
+  create_table "pages_users", id: false, force: :cascade do |t|
+    t.integer "user_id", limit: 4
+    t.integer "page_id", limit: 4
+  end
+
+  add_index "pages_users", ["user_id", "page_id"], name: "index_pages_users_on_user_id_and_page_id", using: :btree
+
+  create_table "section_edits", force: :cascade do |t|
+    t.integer  "user_id",    limit: 4
+    t.integer  "section_id", limit: 4
+    t.string   "summary",    limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "section_edits", ["user_id", "section_id"], name: "index_section_edits_on_user_id_and_section_id", using: :btree
 
   create_table "sections", force: :cascade do |t|
     t.integer  "page_id",      limit: 4
