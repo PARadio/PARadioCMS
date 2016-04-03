@@ -127,4 +127,11 @@ ActiveRecord::Schema.define(version: 20160316002036) do
     t.datetime "updated_at",                          null: false
   end
 
+  create_table "mp3files", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.string   "attachment", limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
 end
