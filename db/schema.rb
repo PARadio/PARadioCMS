@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160316002036) do
+ActiveRecord::Schema.define(version: 20160403204736) do
 
   create_table "episodes", force: :cascade do |t|
     t.integer  "show_id",        limit: 4
@@ -51,6 +51,13 @@ ActiveRecord::Schema.define(version: 20160316002036) do
 
   add_index "media_files", ["ref_link"], name: "index_media_files_on_ref_link", using: :btree
   add_index "media_files", ["user_id"], name: "index_media_files_on_user_id", using: :btree
+
+  create_table "mp3files", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.string   "attachment", limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "pages", force: :cascade do |t|
     t.integer  "subject_id", limit: 4
@@ -125,13 +132,6 @@ ActiveRecord::Schema.define(version: 20160316002036) do
     t.integer  "user_level", limit: 4,   default: 0
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-  end
-
-  create_table "mp3files", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.string   "attachment", limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
   end
 
 end
