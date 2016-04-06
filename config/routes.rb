@@ -10,7 +10,6 @@ Rails.application.routes.draw do
 
   get 'pages/delete'
 
-
   # mp3 file uploading
   get 'mp3files/index'
 
@@ -19,7 +18,6 @@ Rails.application.routes.draw do
   get 'mp3files/create'
 
   get 'mp3files/destroy'
-
 
   get 'media_files/index'
 
@@ -33,7 +31,6 @@ Rails.application.routes.draw do
      resources :media_files, only: [:index, :new, :create, :destroy]
      root "media_files#index"
   end
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
