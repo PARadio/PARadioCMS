@@ -1,6 +1,6 @@
 class MediaFilesController < ApplicationController
   def index
-      @mediafile = MediaFile.all
+      @mediafiles = MediaFile.all
    end
 
    def new
@@ -15,7 +15,7 @@ class MediaFilesController < ApplicationController
         #  f.puts "/home/ubuntu/PARadioCMS/public#{@mediafile.attachment_url}"
         #end
 
-        redirect_to media_files_path, notice: "The media file #{@mediafile.name} has been uploaded."
+        redirect_to media_files_path, notice: "The media file #{@mediafile.title} has been uploaded."
       else
          render "new"
       end
@@ -34,11 +34,11 @@ class MediaFilesController < ApplicationController
       #  end
       #end
 
-      redirect_to media_files_path, notice:  "The media file #{@mediafile.name} has been deleted."
+      redirect_to media_files_path, notice:  "The media file #{@mediafile.title} has been deleted."
    end
 
    private
       def mediafiles_params
-      params.require(:mp3file).permit(:name, :attachment)
+      params.require(:media_file).permit(:title, :attachment)
    end
 end
