@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Mp3filesControllerTest < ActionController::TestCase
+class MediaFilesControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
     assert_response :success
