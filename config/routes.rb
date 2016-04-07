@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :subjects, :pages, :sections, :episodes, :mp3files, :media_files
 
+  get 'episodes/delete'
   # mp3 file uploading
 
   # The priority is based upon order of creation: first created -> highest priority.
