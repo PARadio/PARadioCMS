@@ -3,7 +3,7 @@
 <div class="subjects new">
   <h2>Delete Subject</h2>
 
-  <%= form_for(:subject, :url=>{:action=>'destroy', :id => @subject.id}) do |f| %>
+  <%= form_for(@subject) do |f| %>
     <p>Are you sure you want to delete this subject?
       It will be permanently removed.
     </p>

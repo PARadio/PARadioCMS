@@ -3,7 +3,7 @@
 <div class="subjects edit">
   <h2>Update Subject</h2>
 
-  <%= form_for(:subject, :url=>{:action=>'update', :id=> @subject.id}) do |f| %>
+  <%= form_for(@subject) do |f| %>
     <table summary="Subject form fields">
       <tr>
         <th>Name</th>

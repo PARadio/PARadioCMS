@@ -1,36 +1,8 @@
 Rails.application.routes.draw do
-
-  get 'pages/index'
-
-  get 'pages/show'
-
-  get 'pages/new'
-
-  get 'pages/edit'
-
-  get 'pages/delete'
+  resources :subjects, :pages, :sections, :episodes, :mp3files, :media_files
 
   # mp3 file uploading
-  get 'mp3files/index'
 
-  get 'mp3files/new'
-
-  get 'mp3files/create'
-
-  get 'mp3files/destroy'
-
-  get 'media_files/index'
-
-  get 'media_files/new'
-
-  get 'media_files/create'
-
-  get 'media_files/destroy'
-
-  PARadioCMS::Application.routes.draw do
-     resources :media_files, only: [:index, :new, :create, :destroy]
-     root "media_files#index"
-  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
