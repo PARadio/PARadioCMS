@@ -1,2 +1,21 @@
-<h1>MediaFiles#new</h1>
-<p>Find me in app/views/media_files/new.html.erb</p>
+<% if !@mediafile.errors.empty? %>
+   <div class = "alert alert-error">
+
+      <ul>
+         <% @mediafile.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+         <% end %>
+      </ul>
+
+   </div>
+<% end %>
+
+<div class = "well">
+   <%= form_for @mediafile, html: { multipart: true } do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+      <%= f.label :attachment %>
+      <%= f.file_field :attachment %>
+      <%= f.submit "Save", class: "btn btn-primary" %>
+   <% end %>
+</div>
