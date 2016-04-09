@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160409005751) do
+ActiveRecord::Schema.define(version: 20160409013424) do
 
   create_table "episodes", force: :cascade do |t|
     t.integer  "show_id",        limit: 4
@@ -119,7 +119,7 @@ ActiveRecord::Schema.define(version: 20160409005751) do
   add_index "shows", ["name"], name: "index_shows_on_name", using: :btree
   add_index "shows", ["user_id"], name: "index_shows_on_user_id", using: :btree
 
-  create_table "stream_items", force: :cascade do |t|
+  create_table "streamitems", force: :cascade do |t|
     t.string   "episode_id", limit: 255
     t.integer  "position",   limit: 4
     t.datetime "created_at",             null: false
