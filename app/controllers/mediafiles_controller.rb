@@ -1,21 +1,21 @@
-class MediaFilesController < ApplicationController
+class MediafilesController < ApplicationController
   def index
-      @mediafiles = MediaFile.all
+      @mediafiles = Mediafile.all
    end
 
    def new
-      @mediafile = MediaFile.new
+      @mediafile = Mediafile.new
    end
 
    def create
-      @mediafile = MediaFile.new(mediafiles_params)
+      @mediafile = Mediafile.new(mediafiles_params)
 
       if @mediafile.save
         #File.open(Rails.root.join('app', 'assets', 'playlist.txt'), 'a+') do |f|
         #  f.puts "/home/ubuntu/PARadioCMS/public#{@mediafile.attachment_url}"
         #end
 
-        redirect_to media_files_path, notice: "The media file #{@mediafile.title} has been uploaded."
+        redirect_to mediafiles_path, notice: "The media file #{@mediafile.title} has been uploaded."
       else
          render "new"
       end
@@ -23,7 +23,7 @@ class MediaFilesController < ApplicationController
    end
 
    def destroy
-      @mediafile = MediaFile.find(params[:id])
+      @mediafile = Mediafile.find(params[:id])
       @mediafile.destroy
 
       # rewrite playlist
@@ -34,11 +34,11 @@ class MediaFilesController < ApplicationController
       #  end
       #end
 
-      redirect_to media_files_path, notice:  "The media file #{@mediafile.title} has been deleted."
+      redirect_to mediafiles_path, notice:  "The media file #{@mediafile.title} has been deleted."
    end
 
    private
       def mediafiles_params
-      params.require(:media_file).permit(:title, :attachment)
+      params.require(:mediafile).permit(:title, :attachment)
    end
 end
