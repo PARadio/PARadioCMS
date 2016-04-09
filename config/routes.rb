@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :subjects, :pages, :sections, :episodes, :mediafiles
+  resources :subjects, :pages, :sections, :episodes, :mediafiles, :streamitems
 
   get 'episodes/delete'
   # mp3 file uploading

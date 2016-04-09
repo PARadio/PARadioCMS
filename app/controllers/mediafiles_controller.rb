@@ -19,7 +19,6 @@ class MediafilesController < ApplicationController
       else
          render "new"
       end
-
    end
 
    def destroy

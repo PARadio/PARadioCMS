@@ -1,0 +1,18 @@
+<% if !@streamitem.errors.empty? %>
+   <div class = "alert alert-error">
+
+      <ul>
+         <% @streamitem.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+         <% end %>
+      </ul>
+
+   </div>
+<% end %>
+
+<div class = "well">
+   <%= form_for @streamitem do |f| %>
+    <%= f.collection_select(:episode_id, Episode.all, :id, :name) %>
+    <%= f.submit "Add", class: "btn btn-primary" %>
+   <% end %>
+</div>

@@ -1,0 +1,34 @@
+<% if !flash[:notice].blank? %>
+   <div class = "alert alert-info">
+      <%= flash[:notice] %>
+   </div>
+<% end %>
+
+<br />
+
+<%= link_to "Add Episode", new_streamitem_path, class: "btn btn-primary" %>
+<br />
+<br />
+
+<table class = "table table-bordered table-striped">
+   <thead>
+      <tr>
+         <th>Name</th>
+         <th>Description</th>
+         <th> </th>
+      </tr>
+   </thead>
+
+   <tbody>
+      <% @episodes.each do |episode| %>
+
+         <tr>
+            <td><%= episode.name %></td>
+            <td><%= episode.description %></td>
+            <td><%= button_to "Remove",  Streamitem.find(episode.id), method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{episode.name}?" %></td>
+         </tr>
+
+      <% end %>
+   </tbody>
+
+</table>
