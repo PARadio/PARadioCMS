@@ -18,10 +18,10 @@ ActiveRecord::Schema.define(version: 20160411211104) do
     t.string   "name",        limit: 255
     t.text     "description", limit: 65535
     t.text     "transcript",  limit: 65535
-    t.integer  "stage",       limit: 4
+    t.integer  "stage",       limit: 4,     default: 1
     t.integer  "number",      limit: 4
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
   end
 
   add_index "episodes", ["name"], name: "index_episodes_on_name", using: :btree
