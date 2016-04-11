@@ -1,23 +1,25 @@
 <div class="episodes index">
   <h2>Episodes</h2>
-  <%=link_to("Add New Episode", new_episode_path())%>
+  <%=link_to("Add New Episode", new_episode_path())%><!--Button here instead-->
   <table class="listing table table-bordered table-striped" summary="Episode List">
     <tr class="header">
-      <th>Episode Name</th>
       <th>Episode Number</th>
+      <th>Episode Name</th>
       <th>Stage</th>
       <th>Media File</th>
       <th>Actions</th>
     </tr>
     <% @episodes.each do |episode| %>
     <tr>
+      <td><%= episode.number %></td>
       <td><%= episode.name %></td>
-      <td><%= episode.episode_number %></td>
-      <td><%= episode.stage %></td>
-      <td><%= episode.media_id%></td>
+      <td><%= episode.stage %></td><!--not necessary-->
+      <td><%= episode.mediafile.title%></td><!--not necessary-->
       <td class="actions">
-        <%= link_to("Show",{:action => 'show', :id => episode.id}, :class => 'action show') %>
+        <%= link_to("Show",{:action => 'show', :id => episode.id}, :class => 'action show') %> <!-- onclick this happens -->
+        <!-- invisible until edit button toggled -->
         <%= link_to("Edit",{:action => 'edit', :id => episode.id}, :class => 'action edit') %>
+        <!-- invisible until edit button toggled -->
         <%= link_to("Delete", episode_path(episode), method: :delete) %>
       </td>
     </tr>

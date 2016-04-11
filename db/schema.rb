@@ -11,21 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160409013424) do
+ActiveRecord::Schema.define(version: 20160411211104) do
 
   create_table "episodes", force: :cascade do |t|
-    t.integer  "show_id",        limit: 4
-    t.string   "name",           limit: 255
-    t.text     "description",    limit: 65535
-    t.text     "transcript",     limit: 65535
-    t.string   "media_id",       limit: 255
-    t.integer  "stage",          limit: 4
-    t.integer  "episode_number", limit: 4
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.integer  "show_id",     limit: 4
+    t.string   "name",        limit: 255
+    t.text     "description", limit: 65535
+    t.text     "transcript",  limit: 65535
+    t.integer  "stage",       limit: 4
+    t.integer  "number",      limit: 4
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
-  add_index "episodes", ["media_id"], name: "index_episodes_on_media_id", using: :btree
   add_index "episodes", ["name"], name: "index_episodes_on_name", using: :btree
   add_index "episodes", ["show_id"], name: "index_episodes_on_show_id", using: :btree
 
@@ -40,19 +38,6 @@ ActiveRecord::Schema.define(version: 20160409013424) do
   add_index "images", ["ref_link"], name: "index_images_on_ref_link", using: :btree
   add_index "images", ["user_id"], name: "index_images_on_user_id", using: :btree
 
-  create_table "media_files", force: :cascade do |t|
-    t.string   "title",      limit: 255
-    t.integer  "user_id",    limit: 4
-    t.string   "ref_link",   limit: 255
-    t.integer  "length",     limit: 4
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-    t.string   "attachment", limit: 255
-  end
-
-  add_index "media_files", ["ref_link"], name: "index_media_files_on_ref_link", using: :btree
-  add_index "media_files", ["user_id"], name: "index_media_files_on_user_id", using: :btree
-
   create_table "mediafiles", force: :cascade do |t|
     t.string   "title",      limit: 255
     t.integer  "user_id",    limit: 4
@@ -61,18 +46,20 @@ ActiveRecord::Schema.define(version: 20160409013424) do
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
     t.string   "attachment", limit: 255
+    t.integer  "episode_id", limit: 4
   end
 
+  add_index "mediafiles", ["episode_id"], name: "index_mediafiles_on_episode_id", using: :btree
   add_index "mediafiles", ["ref_link"], name: "index_mediafiles_on_ref_link", using: :btree
   add_index "mediafiles", ["user_id"], name: "index_mediafiles_on_user_id", using: :btree
 
   create_table "mp3files", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.string   "attachment", limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-    t.integer  "user_id",    limit: 4
-    t.integer  "duration",   limit: 4
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+    t.integer  "user_id",    limit: 4,   default: 0
+    t.integer  "duration",   limit: 4,   default: 0
   end
 
   create_table "pages", force: :cascade do |t|
@@ -131,13 +118,6 @@ ActiveRecord::Schema.define(version: 20160409013424) do
   add_index "shows", ["image_id"], name: "index_shows_on_image_id", using: :btree
   add_index "shows", ["name"], name: "index_shows_on_name", using: :btree
   add_index "shows", ["user_id"], name: "index_shows_on_user_id", using: :btree
-
-  create_table "stream_items", force: :cascade do |t|
-    t.string   "episode_id", limit: 255
-    t.integer  "position",   limit: 4
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
 
   create_table "streamitems", force: :cascade do |t|
     t.string   "episode_id", limit: 255

@@ -1,11 +1,9 @@
 class ModifyMp3filesDb < ActiveRecord::Migration
   def up
     change_table :mp3files do |t|
-      t.integer :user_id
-      t.integer :duration
+      t.integer :user_id, :default => 0
+      t.integer :duration, :default => 0 #in seconds
     end
-    Mp3files.update_all ["user_id = ?", 0]
-    Mp3files.update_all ["duration = ?", 0]
   end
 
   def down

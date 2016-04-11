@@ -1,4 +1,5 @@
 class EpisodesController < ApplicationController
+  layout 'main'
   def index
     @episodes = Episode.all
   end
@@ -9,36 +10,48 @@ class EpisodesController < ApplicationController
 
   def new
     @episode = Episode.new
+    @mediafile = Mediafile.new
   end
 
   def create
     @episode = Episode.new(episode_params)
+    @mediafile = @episode.build_mediafile(mediafiles_params)
     Episode.transaction do
       begin
+        @episode.mediafile.title=@episode.name.sub(" ", "_").downcase
         @episode.save
-        @mediafile.save
       rescue ActiveRecord::RecordInvalid
         render('new')
       end
     end
+    flash[:notice]= "Episode created successfully"
+    redirect_to(episode_path(@episode))
   end
 
   def edit
     @episode = Episode.find(params[:id])
+    @mediafile = @episode.mediafile
   end
 
   def update
     @episode = Episode.find(params[:id])
-    if @episode.update_attributes(episode_params)
-      flash[:notice]= "Episode updated successfully"
-      redirect_to(episode_path(@episode))
-    else
-      render('edit')
+    @mediafile = Mediafile.find(@episode.media_id)
+    Episode.transaction do
+      begin
+        @episode.update_attributes(episode_params)
+        @mediafile.title=@episode.name.sub(" ", "_").downcase
+        @mediafile.update_attributes(mediafiles_params)
+      rescue ActiveRecord::RecordInvalid
+         render('edit')
+      end
     end
+    flash[:notice]= "Episode updated successfully"
+    redirect_to(episode_path(@episode))
   end
 
   def delete
     @episode= Episode.find(params[:id])
+    @mediafile= @episode.mediafile
   end
 
   def destroy
@@ -50,9 +63,9 @@ class EpisodesController < ApplicationController
   private
     def episode_params
       params.require(:episode).permit([:name, :description, :transcript, :stage,
-        :episode_number])
+        :number])
     end
     def mediafiles_params
-      params.require(:mediafile).permit(:title, :attachment)
+      params.require(:mediafile).permit(:attachment)
     end
 end
