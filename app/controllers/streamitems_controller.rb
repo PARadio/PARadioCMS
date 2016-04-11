@@ -4,7 +4,7 @@ class StreamitemsController < ApplicationController
     @episodes = Array.new
     @streamitems.each do |streamitem|
       episode = Episode.find(streamitem.episode_id)
-      episodes.push episode
+      @episodes.push episode
     end
   end
 
