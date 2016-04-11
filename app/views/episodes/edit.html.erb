@@ -1,0 +1,33 @@
+<%= link_to("<< Back to List", {:action => 'index'}, :class=>"back-link") %>
+
+<div class="episodes update">
+  <h2>Update Episode</h2>
+
+  <%= form_for(@episode) do |f| %>
+    <table summary="Episode form fields">
+      <tr>
+        <th>Name</th>
+        <td><%= f.text_field(:name) %></td>
+      </tr>
+      <tr>
+        <th>Episode Number</th>
+        <td><%= f.text_field(:episode_number) %></td>
+      </tr>
+      <tr>
+        <th>Stage</th>
+        <td><%= f.text_field(:stage) %></td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td><%= f.text_field(:description) %></td>
+      </tr>
+      <tr>
+        <th>Transcript</th>
+        <td><%= f.text_field(:transcript) %></td>
+      </tr>
+    </table>
+    <div class="form-buttons">
+      <%= submit_tag("Update Episode")%>
+    </div>
+  <% end %>
+</div>
