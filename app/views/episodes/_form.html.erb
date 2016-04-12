@@ -1,0 +1,28 @@
+<table summary="Episode form fields">
+  <tr>
+    <th>Name</th>
+    <td><%= f.text_field(:name) %></td>
+  </tr>
+  <tr>
+    <th>Episode Number</th>
+    <td><%= f.text_field(:number) %></td>
+  </tr>
+  <tr>
+    <th>Stage</th>
+    <td><%= f.text_field(:stage) %></td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td><%= f.text_field(:description) %></td>
+  </tr>
+  <tr>
+    <th>Transcript</th>
+    <td><%= f.text_field(:transcript) %></td>
+  </tr>
+  <%= fields_for(@mediafile) do |m| %>
+    <tr>
+      <th>Media File</th>
+      <td><%= m.file_field :attachment %></td>
+    </tr>
+  <% end %>
+</table>
