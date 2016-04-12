@@ -1,4 +1,5 @@
 class StreamitemsController < ApplicationController
+  layout 'main'
   def index
     @streamitems = Streamitem.all
     @episodes = Array.new
