@@ -1,0 +1,11 @@
+<ul class="nav nav-stacked" role="navigation">
+  <li>
+    <a href="#">Home</a>
+  </li>
+  <li class= "<%= (@page_title=="Episodes")? "active" : ""%>">
+    <%= link_to("Episodes", episodes_path) %>
+  </li>
+  <li class="<%= (@page_title=="Livestream")? "active" : ""%>">
+    <%= link_to("Livestream", streamitems_path) %>
+  </li>
+</ul>

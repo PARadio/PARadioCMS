@@ -1,15 +1,8 @@
-<% if !flash[:notice].blank? %>
-   <div class = "alert alert-info">
-      <%= flash[:notice] %>
-   </div>
-<% end %>
-
-<br />
-
-<%= link_to "Add Episode", new_streamitem_path, class: "btn btn-primary" %>
-<br />
-<br />
-
+<% @page_title="Livestream" %>
+<h2>Livestream</h2>
+<%= link_to "Queue Episode", new_streamitem_path, class: "btn btn-primary" %>
+<br/>
+<br/>
 <table class = "table table-bordered table-striped">
    <thead>
       <tr>

@@ -2,7 +2,7 @@
 <div class="episodes index">
   <h2>Episodes</h2>
   <%=link_to("Add New Episode", new_episode_path())%><!--Button here instead-->
-  <div><%= pluralize(@episodes.size,'episodes')%> found</div>
+  <div><%= pluralize(@episodes.size,'episode')%> found</div>
   <table class="listing table table-bordered" summary="Episode List">
     <tr class="header">
       <th>Episode Number</th>
@@ -13,7 +13,7 @@
       <th>Actions</th>
     </tr>
     <% @episodes.each do |episode| %>
-    <tr class="<%=cycle('odd','even')%>">
+    <tr style="background-color:<%=cycle('white','grey')%>;">
       <td><%= episode.number %></td>
       <td><%= episode.name %></td>
       <td><%= episode.stage %></td><!--not necessary-->

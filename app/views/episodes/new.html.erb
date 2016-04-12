@@ -3,7 +3,7 @@
 <div class="episodes new">
   <h2>Create Episode</h2>
 
-  <%= form_for(@episode) do |f| %>
+  <%= form_for(@episode, html: { multipart: true }) do |f| %>
 
     <%= render(:partial => "form", :locals=>{:f=>f})%>
 
