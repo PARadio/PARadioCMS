@@ -1,6 +1,6 @@
 <% @page_title="Livestream" %>
 <h2>Livestream</h2>
-<%= link_to "Queue Episode", new_streamitem_path, class: "btn btn-primary" %>
+<%= link_to "Queue an episode", new_streamitem_path, class: "btn btn-primary" %>
 <br/>
 <br/>
 <table class = "table table-bordered table-striped">
@@ -14,7 +14,6 @@
 
    <tbody>
       <% @episodes.each do |episode| %>
-
          <tr>
             <td><%= episode.name %></td>
             <td><%= episode.description %></td>

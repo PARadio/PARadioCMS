@@ -15,8 +15,8 @@ class StreamitemsController < ApplicationController
 
   def create
     @streamitem = Streamitem.new(streamitems_params)
-    allStreamitems = Streamitem.find(:all, :order => "position")
-    if allStreamitems.empty
+    allStreamitems = Streamitem.sorted
+    if allStreamitems.empty?
       @streamitem.position = 1
     else
       @streamitem.position = allStreamitems.last.position + 1
