@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :subjects, :pages, :episodes, :sections, :mediafiles, :streamitems
 
+  root 'home#index'
   # mp3 file uploading
 
   # The priority is based upon order of creation: first created -> highest priority.
