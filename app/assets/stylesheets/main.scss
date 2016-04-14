@@ -30,6 +30,33 @@ html, body{
 }
 
 #sidenav{
+  box-shadow: 2px 0px 5px #888888;
   background-color: #F6F7EB;
   height:100%;
+  padding: 0;
+
+  li {
+    padding-left: 20px;
+    margin:0;
+    border-bottom: 1px solid grey;
+    a{
+      color:#000;
+    }
+  }
+  li.active{
+    a{
+      color:#FFF;
+    }
+    :hover{
+      background-color: #7C615D;
+    }
+    background-color: #7C615D;
+  }
+
+}
+
+#main-content{
+  .notice{
+    margin-top: 15px;
+  }
 }

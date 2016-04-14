@@ -1,3 +1,4 @@
 class Streamitem < ActiveRecord::Base
-    scope :sorted, lambda { order("streamitems.position ASC") }
+  belongs_to :episode #holds episode_id
+  scope :sorted, lambda { order("streamitems.position ASC") }
 end

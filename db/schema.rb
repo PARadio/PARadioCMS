@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160411211104) do
+ActiveRecord::Schema.define(version: 20160413220626) do
 
   create_table "episodes", force: :cascade do |t|
     t.integer  "show_id",     limit: 4
@@ -125,6 +125,8 @@ ActiveRecord::Schema.define(version: 20160411211104) do
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
+
+  add_index "streamitems", ["episode_id"], name: "index_streamitems_on_episode_id", using: :btree
 
   create_table "subjects", force: :cascade do |t|
     t.string   "name",       limit: 255

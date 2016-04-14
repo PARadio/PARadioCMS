@@ -1,23 +1,25 @@
 <% @page_title="Livestream" %>
 <h2>Livestream</h2>
-<%= link_to "Queue an episode", new_streamitem_path, class: "btn btn-primary" %>
-<br/>
-<br/>
+<%= link_to "Queue An Episode", new_streamitem_path %>
+<div><%= pluralize(@streamitems.size,'episode')%> queued</div>
 <table class = "table table-bordered table-striped">
    <thead>
       <tr>
-         <th>Name</th>
-         <th>Description</th>
-         <th> </th>
+        <th class="col-md-1">Position</th>
+        <th class="col-md-2">Name</th>
+        <th class="col-md-7">Description</th>
+        <th class="col-md-2">Actions</th>
+
       </tr>
    </thead>
 
    <tbody>
-      <% @episodes.each do |episode| %>
+      <% @streamitems.each do |streamitem| %>
          <tr>
-            <td><%= episode.name %></td>
-            <td><%= episode.description %></td>
-            <td><%= button_to "Remove",  Streamitem.find(episode.id), method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{episode.name}?" %></td>
+            <td><%= streamitem.position%></td>
+            <td><%= streamitem.episode.name %></td>
+            <td><%= streamitem.episode.description %></td>
+            <td><%= link_to "Remove", streamitem_path(streamitem), method: :delete %></td>
          </tr>
 
       <% end %>

@@ -1,12 +1,7 @@
 class StreamitemsController < ApplicationController
   layout 'main'
   def index
-    @streamitems = Streamitem.all
-    @episodes = Array.new
-    @streamitems.each do |streamitem|
-      episode = Episode.find(streamitem.episode_id)
-      @episodes.push episode
-    end
+    @streamitems = Streamitem.sorted
   end
 
   def new
@@ -14,14 +9,11 @@ class StreamitemsController < ApplicationController
   end
 
   def create
+    # create a new stream item and pass it an episode to add.
+    # dynamically assign position variable
+    # save streamitem
     @streamitem = Streamitem.new(streamitems_params)
-    allStreamitems = Streamitem.sorted
-    if allStreamitems.empty?
-      @streamitem.position = 1
-    else
-      @streamitem.position = allStreamitems.last.position + 1
-    end
-
+    @streamitem.position=get_next_position
     if @streamitem.save
       redirect_to streamitems_path, notice: "The stream item has been added."
     else
@@ -30,21 +22,25 @@ class StreamitemsController < ApplicationController
   end
 
   def destroy
-    @streamitem = Streamitem.find(params[:id])
-    @itemsToShift = Streamitem.where("position > :positionToDelete", {positionToDelete: @streamitem.position})
-    @streamitem.destroy
+    @streamitem = Streamitem.find(params[:id]).destroy
+    itemsToShift = Streamitem.where("position > :positionToDelete", {positionToDelete: @streamitem.position})
 
     # rewrite order
-    @itemsToShift.each do |item|
+    itemsToShift.each do |item|
       item.position = item.position - 1
       item.save
     end
 
-    redirect_to streamitems_path, notice:  "The episode has been removed."
+    redirect_to(streamitems_path, notice:  "The episode has been removed.")
   end
 
   private
-     def streamitems_params
-     params.require(:streamitem).permit(:episode_id)
-  end
+    def streamitems_params
+      params.require(:streamitem).permit(:episode_id)
+    end
+
+    def get_next_position
+      #returns next position for stream item.
+      return Streamitem.all.size + 1
+    end
 end
