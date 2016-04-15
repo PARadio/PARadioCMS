@@ -4,4 +4,9 @@ class Episode < ActiveRecord::Base
   #know it has one based off of db stuff.
   has_one :mediafile, dependent: :destroy, autosave: true
 
+  validates :name, :presence => true , :length =>{:maximum => 150}
+  validates_presence_of :description
+  validates_length_of :description, :maximum => 500
+  validates_presence_of :transcript
+  validates_length_of :transcript, :maximum => 1000
 end

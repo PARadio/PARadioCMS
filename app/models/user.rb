@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
-  # to configure with diff table name
-  # self.table_name = "different name"
-  has_many :section_edits #links to rich table
-  has_many :sections, :through=> :section_edits #links to rich table values
-  has_and_belongs_to_many :pages
+  # adds virtual attr (password) which is plain text.
+  # adds validations for that password
+  # auto encrypts that password
+  has_secure_password
+
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160413220626) do
+ActiveRecord::Schema.define(version: 20160414205208) do
 
   create_table "episodes", force: :cascade do |t|
     t.integer  "show_id",     limit: 4
@@ -137,13 +137,13 @@ ActiveRecord::Schema.define(version: 20160413220626) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "first_name", limit: 25
-    t.string   "last_name",  limit: 50
-    t.string   "email",      limit: 255, default: "", null: false
-    t.string   "password",   limit: 50
-    t.integer  "user_level", limit: 4,   default: 0
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.string   "first_name",      limit: 25
+    t.string   "last_name",       limit: 50
+    t.string   "email",           limit: 255, default: "", null: false
+    t.integer  "user_level",      limit: 4,   default: 0
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
+    t.string   "password_digest", limit: 255
   end
 
 end

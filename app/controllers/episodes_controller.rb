@@ -19,13 +19,16 @@ class EpisodesController < ApplicationController
     Episode.transaction do
       begin
         @episode.mediafile.title=@episode.name.sub(" ", "_").downcase
-        @episode.save
+        if @episode.save
+          flash[:notice]= "Episode created successfully"
+          redirect_to(episode_path(@episode))
+        else
+          render('new')
+        end
       rescue ActiveRecord::RecordInvalid
         render('new')
       end
     end
-    flash[:notice]= "Episode created successfully"
-    redirect_to(episode_path(@episode))
   end
 
   def edit

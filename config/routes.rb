@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
+  get 'access/index'
+  post 'access/login'
+
+  get 'admin', :to => "access#index"
+
   resources :subjects, :pages, :episodes, :sections, :mediafiles, :streamitems
   get '/home', to: 'home#index', as: 'home'
 
+  match ":controller(/:action(/:index))", :via => [:get,:post]
   root 'home#index'
   # mp3 file uploading
 
