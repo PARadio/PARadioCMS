@@ -1,6 +1,6 @@
 <ul class="nav nav-stacked" role="navigation">
   <li class= "<%= (@page_title=="Home")? "active" : ""%>">
-    <a href="home#index">Home</a>
+    <%= link_to("Home", home_path)%>
   </li>
   <li class= "<%= (@page_title=="Episodes")? "active" : ""%>">
     <%= link_to("Episodes", episodes_path) %>
