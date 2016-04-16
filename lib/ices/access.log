@@ -1,0 +1,77 @@
+[2016-04-15  19:45:10] INFO ices-core/main IceS 2.0.2 started...
+[2016-04-15  19:45:10] WARN ices-core/main pidfile "/var/log/ices/ices.pid" cannot be written to
+[2016-04-15  19:45:10] INFO signals/signal_usr1_handler Metadata update requested
+[2016-04-15  19:45:10] INFO playlist-basic/playlist_basic_get_next_filename Loading playlist from file "/home/sean/ThinkTank/paradio/PARadioCMS/lib/ices/playlist.txt"
+[2016-04-15  19:45:22] INFO ices-core/main IceS 2.0.2 started...
+[2016-04-15  19:45:22] WARN ices-core/main pidfile "/var/log/ices/ices.pid" cannot be written to
+[2016-04-15  19:45:22] INFO signals/signal_usr1_handler Metadata update requested
+[2016-04-15  19:45:22] INFO playlist-basic/playlist_basic_get_next_filename Loading playlist from file "/home/sean/ThinkTank/paradio/PARadioCMS/lib/ices/playlist.txt"
+[2016-04-15  19:46:45] INFO ices-core/main IceS 2.0.2 started...
+[2016-04-15  19:46:45] INFO signals/signal_usr1_handler Metadata update requested
+[2016-04-15  19:46:45] INFO playlist-basic/playlist_basic_get_next_filename Loading playlist from file "/home/sean/ThinkTank/paradio/PARadioCMS/lib/ices/playlist.txt"
+[2016-04-15  19:47:09] INFO ices-core/main IceS 2.0.2 started...
+[2016-04-15  19:47:09] INFO signals/signal_usr1_handler Metadata update requested
+[2016-04-15  19:47:09] INFO playlist-basic/playlist_basic_get_next_filename Loading playlist from file "/home/sean/ThinkTank/paradio/PARadioCMS/lib/ices/playlist.txt"
+[2016-04-15  19:48:09] INFO ices-core/main IceS 2.0.2 started...
+[2016-04-15  19:48:09] INFO signals/signal_usr1_handler Metadata update requested
+[2016-04-15  19:48:09] INFO playlist-basic/playlist_basic_get_next_filename Loading playlist from file "/home/sean/ThinkTank/paradio/PARadioCMS/lib/ices/playlist.txt"
+[2016-04-15  19:53:29] INFO ices-core/main IceS 2.0.2 started...
+[2016-04-15  19:53:29] INFO signals/signal_usr1_handler Metadata update requested
+[2016-04-15  19:53:29] INFO playlist-basic/playlist_basic_get_next_filename Loading playlist from file "/home/sean/ThinkTank/paradio/PARadioCMS/lib/ices/playlist.txt"
+[2016-04-15  19:53:29] INFO playlist-builtin/playlist_read Currently playing "/home/sean/Downloads/DestinysChild-Bootylicious.ogg"
+[2016-04-15  19:53:29] INFO stream/ices_instance_stream Connected to server: localhost:8000/ices
+[2016-04-15  19:56:56] EROR playlist-builtin/playlist_read Cannot play same file twice in a row, skipping
+[2016-04-15  19:56:56] EROR playlist-builtin/playlist_read Cannot play same file twice in a row, skipping
+[2016-04-15  19:56:56] EROR playlist-builtin/playlist_read Cannot play same file twice in a row, skipping
+[2016-04-15  19:56:56] EROR playlist-builtin/playlist_read Cannot play same file twice in a row, skipping
+[2016-04-15  19:56:56] EROR playlist-builtin/playlist_read Cannot play same file twice in a row, skipping
+[2016-04-15  19:56:56] EROR playlist-builtin/playlist_read Cannot play same file twice in a row, skipping
+[2016-04-15  19:56:56] WARN playlist-builtin/playlist_read Too many consecutive errors - exiting
+[2016-04-15  19:56:56] DBUG stream-shared/stream_wait_for_data Shutdown signalled: thread shutting down
+[2016-04-15  19:56:56] DBUG input/input_loop An instance died, removing it
+[2016-04-15  19:56:56] DBUG input/input_flush_queue Input queue flush requested
+[2016-04-15  19:56:56] INFO input/input_loop All instances removed, shutting down...
+[2016-04-15  19:56:56] INFO ices-core/main Shutdown complete
+[2016-04-15  20:09:23] INFO ices-core/main IceS 2.0.2 started...
+[2016-04-15  20:09:23] INFO signals/signal_usr1_handler Metadata update requested
+[2016-04-15  20:09:23] INFO playlist-basic/playlist_basic_get_next_filename Loading playlist from file "/home/sean/ThinkTank/paradio/PARadioCMS/lib/ices/playlist.txt"
+[2016-04-15  20:09:23] INFO playlist-builtin/playlist_read Currently playing "/home/sean/Downloads/DestinysChild-Bootylicious.ogg"
+[2016-04-15  20:09:23] INFO stream/ices_instance_stream Connected to server: localhost:8000/ices
+[2016-04-15  20:12:50] EROR playlist-builtin/playlist_read Cannot play same file twice in a row, skipping
+[2016-04-15  20:12:50] EROR playlist-builtin/playlist_read Cannot play same file twice in a row, skipping
+[2016-04-15  20:12:50] EROR playlist-builtin/playlist_read Cannot play same file twice in a row, skipping
+[2016-04-15  20:12:50] EROR playlist-builtin/playlist_read Cannot play same file twice in a row, skipping
+[2016-04-15  20:12:50] EROR playlist-builtin/playlist_read Cannot play same file twice in a row, skipping
+[2016-04-15  20:12:50] EROR playlist-builtin/playlist_read Cannot play same file twice in a row, skipping
+[2016-04-15  20:12:50] WARN playlist-builtin/playlist_read Too many consecutive errors - exiting
+[2016-04-15  20:12:50] DBUG stream-shared/stream_wait_for_data Shutdown signalled: thread shutting down
+[2016-04-15  20:12:51] DBUG input/input_loop An instance died, removing it
+[2016-04-15  20:12:51] DBUG input/input_flush_queue Input queue flush requested
+[2016-04-15  20:12:51] INFO input/input_loop All instances removed, shutting down...
+[2016-04-15  20:12:51] INFO ices-core/main Shutdown complete
+[2016-04-15  20:16:41] INFO ices-core/main IceS 2.0.2 started...
+[2016-04-15  20:16:41] INFO signals/signal_usr1_handler Metadata update requested
+[2016-04-15  20:16:41] INFO playlist-basic/playlist_basic_get_next_filename Loading playlist from file "/home/sean/ThinkTank/paradio/PARadioCMS/lib/ices/playlist.txt"
+[2016-04-15  20:16:41] INFO playlist-builtin/playlist_read Currently playing "/home/sean/Downloads/DestinysChild-Bootylicious.ogg"
+[2016-04-15  20:16:41] INFO stream/ices_instance_stream Connected to server: localhost:8000/ices
+[2016-04-15  20:20:09] EROR playlist-builtin/playlist_read Cannot play same file twice in a row, skipping
+[2016-04-15  20:20:09] EROR playlist-builtin/playlist_read Cannot play same file twice in a row, skipping
+[2016-04-15  20:20:09] EROR playlist-builtin/playlist_read Cannot play same file twice in a row, skipping
+[2016-04-15  20:20:09] EROR playlist-builtin/playlist_read Cannot play same file twice in a row, skipping
+[2016-04-15  20:20:09] EROR playlist-builtin/playlist_read Cannot play same file twice in a row, skipping
+[2016-04-15  20:20:09] EROR playlist-builtin/playlist_read Cannot play same file twice in a row, skipping
+[2016-04-15  20:20:09] WARN playlist-builtin/playlist_read Too many consecutive errors - exiting
+[2016-04-15  20:20:09] DBUG stream-shared/stream_wait_for_data Shutdown signalled: thread shutting down
+[2016-04-15  20:20:09] DBUG input/input_loop An instance died, removing it
+[2016-04-15  20:20:09] DBUG input/input_flush_queue Input queue flush requested
+[2016-04-15  20:20:09] INFO input/input_loop All instances removed, shutting down...
+[2016-04-15  20:20:09] INFO ices-core/main Shutdown complete
+127.0.0.1 - - [15/Apr/2016:21:01:27 -0400] "SOURCE /ices HTTP/1.0" 200 19 "-" "IceS 2.0.2" 24
+127.0.0.1 - - [15/Apr/2016:21:09:37 -0400] "GET /ices HTTP/1.1" 404 106 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36" 0
+127.0.0.1 - - [15/Apr/2016:21:09:40 -0400] "GET / HTTP/1.1" 200 1141 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36" 3
+127.0.0.1 - - [15/Apr/2016:21:09:40 -0400] "GET /style.css HTTP/1.1" 200 5059 "http://localhost:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36" 3
+127.0.0.1 - - [15/Apr/2016:21:09:40 -0400] "GET /corner_topleft.jpg HTTP/1.1" 200 8238 "http://localhost:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36" 0
+127.0.0.1 - - [15/Apr/2016:21:09:40 -0400] "GET /corner_bottomleft.jpg HTTP/1.1" 200 8253 "http://localhost:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36" 0
+127.0.0.1 - - [15/Apr/2016:21:09:40 -0400] "GET /corner_bottomright.jpg HTTP/1.1" 200 8244 "http://localhost:8000/style.css" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36" 0
+127.0.0.1 - - [15/Apr/2016:21:09:40 -0400] "GET /icecast.png HTTP/1.1" 200 4070 "http://localhost:8000/style.css" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36" 0
+127.0.0.1 - - [15/Apr/2016:21:09:40 -0400] "GET /corner_topright.jpg HTTP/1.1" 200 8240 "http://localhost:8000/style.css" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36" 0
