@@ -1,4 +1,6 @@
-class MediafilesController < ApplicationController
+class  Admin::MediafilesController < ApplicationController
+  before_action :require_login
+  layout 'main'
   def index
       @mediafiles = Mediafile.all
    end

@@ -1,4 +1,5 @@
-class StreamitemsController < ApplicationController
+class  Admin::StreamitemsController < ApplicationController
+  before_action :require_login
   layout 'main'
   def index
     @streamitems = Streamitem.sorted
@@ -21,7 +22,7 @@ class StreamitemsController < ApplicationController
         f.puts Rails.root.join('public', episode.mediafile.attachment_url)
       end
 
-      redirect_to streamitems_path, notice: "The stream item has been added."
+      redirect_to(streamitems_path, notice: "The stream item has been added.")
     else
        render "new"
     end
