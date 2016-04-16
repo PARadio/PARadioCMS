@@ -1,0 +1,167 @@
+[2016-04-15  21:00:57] INFO main/main Icecast 2.3.3 server started
+[2016-04-15  21:00:57] DBUG yp/yp_recheck_config Updating YP configuration
+[2016-04-15  21:00:57] INFO connection/get_ssl_certificate No SSL capability
+[2016-04-15  21:00:57] INFO yp/yp_update_thread YP update thread started
+[2016-04-15  21:00:58] DBUG slave/_slave_thread checking master stream list
+[2016-04-15  21:01:03] INFO connection/_handle_source_request Source logging in at mountpoint "/ices"
+[2016-04-15  21:01:03] DBUG connection/connection_complete_source sources count is 0
+[2016-04-15  21:01:03] DBUG source/source_apply_mount Applying mount information for "/ices"
+[2016-04-15  21:01:03] DBUG source/source_update_settings public set to 0
+[2016-04-15  21:01:03] DBUG source/source_update_settings max listeners to -1
+[2016-04-15  21:01:03] DBUG source/source_update_settings queue size to 524288
+[2016-04-15  21:01:03] DBUG source/source_update_settings burst size to 65535
+[2016-04-15  21:01:03] DBUG source/source_update_settings source timeout to 10
+[2016-04-15  21:01:03] DBUG source/source_update_settings fallback_when_full to 0
+[2016-04-15  21:01:03] DBUG connection/connection_complete_source source is ready to start
+[2016-04-15  21:01:03] DBUG fserve/fserve_add_client_callback Adding client to file serving engine
+[2016-04-15  21:01:03] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-04-15  21:01:03] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-04-15  21:01:03] DBUG source/source_init Source creation complete
+[2016-04-15  21:01:03] DBUG format-vorbis/initial_vorbis_page checking for vorbis codec
+[2016-04-15  21:01:03] INFO format-vorbis/initial_vorbis_page seen initial vorbis header
+[2016-04-15  21:01:03] DBUG stats/modify_node_event update global clients (1)
+[2016-04-15  21:01:03] DBUG stats/modify_node_event update global connections (1)
+[2016-04-15  21:01:03] DBUG stats/modify_node_event update global sources (1)
+[2016-04-15  21:01:03] DBUG stats/process_source_event new source stat /ices
+[2016-04-15  21:01:03] DBUG stats/process_source_event new node listenurl (http://localhost:8000/ices)
+[2016-04-15  21:01:03] DBUG stats/process_source_event new node listener_peak (0)
+[2016-04-15  21:01:03] DBUG stats/process_source_event new node public (0)
+[2016-04-15  21:01:03] DBUG stats/process_source_event new node server_name (Awesome Stream)
+[2016-04-15  21:01:03] DBUG stats/process_source_event new node server_description (A really cool stream)
+[2016-04-15  21:01:03] DBUG stats/process_source_event new node genre (Custom)
+[2016-04-15  21:01:03] DBUG stats/process_source_event new node server_type (application/ogg)
+[2016-04-15  21:01:03] DBUG stats/process_source_event new node max_listeners (unlimited)
+[2016-04-15  21:01:03] DBUG stats/process_source_event new node source_ip (127.0.0.1)
+[2016-04-15  21:01:03] DBUG stats/process_source_event new node user_agent (IceS 2.0.2)
+[2016-04-15  21:01:03] DBUG stats/modify_node_event update global source_client_connections (1)
+[2016-04-15  21:01:03] DBUG stats/process_source_event new node listeners (0)
+[2016-04-15  21:01:03] DBUG stats/process_source_event new node samplerate (0)
+[2016-04-15  21:01:03] DBUG stats/process_source_event new node channels (0)
+[2016-04-15  21:01:03] DBUG stats/process_source_event new node quality (3.00)
+[2016-04-15  21:01:03] DBUG stats/process_source_event new node audio_info (samplerate=0;channels=0;quality=3%2e00)
+[2016-04-15  21:01:03] DBUG stats/modify_node_event update "/ices" listenurl (http://localhost:8000/ices)
+[2016-04-15  21:01:03] DBUG stats/modify_node_event update global source_total_connections (1)
+[2016-04-15  21:01:03] DBUG stats/process_source_event new node slow_listeners (0)
+[2016-04-15  21:01:03] DBUG stats/modify_node_event update "/ices" listeners (0)
+[2016-04-15  21:01:03] DBUG stats/modify_node_event update "/ices" listener_peak (0)
+[2016-04-15  21:01:03] DBUG stats/process_source_event new node stream_start (Fri, 15 Apr 2016 21:01:03 -0400)
+[2016-04-15  21:01:03] DBUG stats/process_source_event new node total_bytes_read (0)
+[2016-04-15  21:01:03] DBUG stats/process_source_event new node total_bytes_sent (0)
+[2016-04-15  21:01:03] DBUG format-vorbis/process_vorbis_page processing incoming header packet (1)
+[2016-04-15  21:01:03] DBUG format-vorbis/process_vorbis_page processing incoming header packet (2)
+[2016-04-15  21:01:03] DBUG format-vorbis/process_vorbis_page we have the header packets now
+[2016-04-15  21:01:03] DBUG format-vorbis/process_vorbis_headers Adding the 3 header packets
+[2016-04-15  21:01:03] DBUG format-ogg/format_ogg_attach_header attaching BOS page
+[2016-04-15  21:01:03] DBUG format-ogg/format_ogg_attach_header attaching header page
+[2016-04-15  21:01:03] INFO source/source_main listener count on /ices now 0
+[2016-04-15  21:01:04] DBUG stats/process_source_event new node audio_samplerate (44100)
+[2016-04-15  21:01:04] DBUG stats/process_source_event new node audio_channels (2)
+[2016-04-15  21:01:04] DBUG stats/process_source_event new node audio_bitrate (192000)
+[2016-04-15  21:01:04] DBUG stats/process_source_event new node ice-bitrate (192)
+[2016-04-15  21:01:04] DBUG stats/process_source_event new node subtype (Vorbis)
+[2016-04-15  21:01:04] DBUG stats/modify_node_event update "/ices" listeners (0)
+[2016-04-15  21:01:08] DBUG stats/modify_node_event update "/ices" total_bytes_read (77774)
+[2016-04-15  21:01:08] DBUG stats/modify_node_event update "/ices" total_bytes_sent (0)
+[2016-04-15  21:01:13] DBUG stats/modify_node_event update "/ices" total_bytes_read (163738)
+[2016-04-15  21:01:13] DBUG stats/modify_node_event update "/ices" total_bytes_sent (0)
+[2016-04-15  21:01:18] DBUG stats/modify_node_event update "/ices" total_bytes_read (245616)
+[2016-04-15  21:01:18] DBUG stats/modify_node_event update "/ices" total_bytes_sent (0)
+[2016-04-15  21:01:23] DBUG stats/modify_node_event update "/ices" total_bytes_read (331925)
+[2016-04-15  21:01:23] DBUG stats/modify_node_event update "/ices" total_bytes_sent (0)
+[2016-04-15  21:01:27] DBUG format-vorbis/initiate_flush adding EOS packet
+[2016-04-15  21:01:27] DBUG format-vorbis/get_buffer_finished flushing page
+[2016-04-15  21:01:27] DBUG format-ogg/format_ogg_free_headers releasing header pages
+[2016-04-15  21:01:27] INFO source/get_next_buffer End of Stream /ices
+[2016-04-15  21:01:27] INFO source/source_shutdown Source "/ices" exiting
+[2016-04-15  21:01:27] DBUG source/source_clear_source clearing source "/ices"
+[2016-04-15  21:01:27] DBUG format-ogg/format_ogg_free_headers releasing header pages
+[2016-04-15  21:01:27] DBUG format-ogg/free_ogg_codecs freeing codecs
+[2016-04-15  21:01:27] DBUG format-vorbis/vorbis_codec_free freeing vorbis codec
+[2016-04-15  21:01:27] DBUG source/source_free_source freeing source "/ices"
+[2016-04-15  21:01:27] DBUG stats/process_source_event delete source node /ices
+[2016-04-15  21:01:27] DBUG stats/modify_node_event update global clients (0)
+[2016-04-15  21:01:27] DBUG stats/modify_node_event update global sources (0)
+[2016-04-15  21:01:28] DBUG slave/_slave_thread checking master stream list
+[2016-04-15  21:03:28] DBUG slave/_slave_thread checking master stream list
+[2016-04-15  21:05:28] DBUG slave/_slave_thread checking master stream list
+[2016-04-15  21:07:28] DBUG slave/_slave_thread checking master stream list
+[2016-04-15  21:09:28] DBUG slave/_slave_thread checking master stream list
+[2016-04-15  21:09:37] INFO fserve/fserve_client_create checking for file /ices (/usr/share/icecast2/web/ices)
+[2016-04-15  21:09:37] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/ices" No such file or directory
+[2016-04-15  21:09:37] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-04-15  21:09:37] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-04-15  21:09:37] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-04-15  21:09:37] DBUG stats/modify_node_event update global clients (1)
+[2016-04-15  21:09:37] DBUG stats/modify_node_event update global connections (2)
+[2016-04-15  21:09:37] DBUG stats/modify_node_event update global clients (2)
+[2016-04-15  21:09:37] DBUG stats/modify_node_event update global connections (3)
+[2016-04-15  21:09:37] DBUG stats/modify_node_event update global clients (3)
+[2016-04-15  21:09:37] DBUG stats/modify_node_event update global connections (4)
+[2016-04-15  21:09:37] DBUG stats/modify_node_event update global client_connections (1)
+[2016-04-15  21:09:37] DBUG stats/modify_node_event update global clients (2)
+[2016-04-15  21:09:40] DBUG connection/_handle_get_request alias has made / into /status.xsl
+[2016-04-15  21:09:40] DBUG auth/add_authenticated_listener Stats request, sending XSL transformed stats
+[2016-04-15  21:09:40] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-04-15  21:09:40] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-04-15  21:09:40] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-04-15  21:09:40] INFO fserve/fserve_client_create checking for file /style.css (/usr/share/icecast2/web/style.css)
+[2016-04-15  21:09:40] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-04-15  21:09:40] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-04-15  21:09:40] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-04-15  21:09:40] INFO fserve/fserve_client_create checking for file /corner_topleft.jpg (/usr/share/icecast2/web/corner_topleft.jpg)
+[2016-04-15  21:09:40] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-04-15  21:09:40] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-04-15  21:09:40] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-04-15  21:09:40] INFO fserve/fserve_client_create checking for file /corner_bottomleft.jpg (/usr/share/icecast2/web/corner_bottomleft.jpg)
+[2016-04-15  21:09:40] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-04-15  21:09:40] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-04-15  21:09:40] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-04-15  21:09:40] DBUG stats/modify_node_event update global client_connections (2)
+[2016-04-15  21:09:40] DBUG stats/modify_node_event update global clients (1)
+[2016-04-15  21:09:40] DBUG stats/modify_node_event update global client_connections (3)
+[2016-04-15  21:09:40] DBUG stats/modify_node_event update global file_connections (1)
+[2016-04-15  21:09:40] DBUG stats/modify_node_event update global clients (0)
+[2016-04-15  21:09:40] DBUG stats/modify_node_event update global clients (1)
+[2016-04-15  21:09:40] DBUG stats/modify_node_event update global connections (5)
+[2016-04-15  21:09:40] DBUG stats/modify_node_event update global clients (2)
+[2016-04-15  21:09:40] DBUG stats/modify_node_event update global connections (6)
+[2016-04-15  21:09:40] DBUG stats/modify_node_event update global client_connections (4)
+[2016-04-15  21:09:40] DBUG stats/modify_node_event update global file_connections (2)
+[2016-04-15  21:09:40] DBUG stats/modify_node_event update global clients (1)
+[2016-04-15  21:09:40] DBUG stats/modify_node_event update global client_connections (5)
+[2016-04-15  21:09:40] DBUG stats/modify_node_event update global file_connections (3)
+[2016-04-15  21:09:40] DBUG stats/modify_node_event update global clients (0)
+[2016-04-15  21:09:40] INFO fserve/fserve_client_create checking for file /corner_bottomright.jpg (/usr/share/icecast2/web/corner_bottomright.jpg)
+[2016-04-15  21:09:40] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-04-15  21:09:40] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-04-15  21:09:40] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-04-15  21:09:40] INFO fserve/fserve_client_create checking for file /corner_topright.jpg (/usr/share/icecast2/web/corner_topright.jpg)
+[2016-04-15  21:09:40] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-04-15  21:09:40] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-04-15  21:09:40] INFO fserve/fserve_client_create checking for file /icecast.png (/usr/share/icecast2/web/icecast.png)
+[2016-04-15  21:09:40] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-04-15  21:09:40] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-04-15  21:09:41] DBUG stats/modify_node_event update global clients (1)
+[2016-04-15  21:09:41] DBUG stats/modify_node_event update global connections (7)
+[2016-04-15  21:09:41] DBUG stats/modify_node_event update global clients (2)
+[2016-04-15  21:09:41] DBUG stats/modify_node_event update global connections (8)
+[2016-04-15  21:09:41] DBUG stats/modify_node_event update global client_connections (6)
+[2016-04-15  21:09:41] DBUG stats/modify_node_event update global file_connections (4)
+[2016-04-15  21:09:41] DBUG stats/modify_node_event update global clients (3)
+[2016-04-15  21:09:41] DBUG stats/modify_node_event update global connections (9)
+[2016-04-15  21:09:41] DBUG stats/modify_node_event update global clients (2)
+[2016-04-15  21:09:41] DBUG stats/modify_node_event update global client_connections (7)
+[2016-04-15  21:09:41] DBUG stats/modify_node_event update global file_connections (5)
+[2016-04-15  21:09:41] DBUG stats/modify_node_event update global client_connections (8)
+[2016-04-15  21:09:41] DBUG stats/modify_node_event update global file_connections (6)
+[2016-04-15  21:09:41] DBUG stats/modify_node_event update global clients (1)
+[2016-04-15  21:09:41] DBUG stats/modify_node_event update global clients (0)
+[2016-04-15  21:09:49] INFO sighandler/_sig_die Caught signal 15, shutting down...
+[2016-04-15  21:09:49] INFO main/main Shutting down
+[2016-04-15  21:09:49] INFO fserve/fserve_shutdown file serving stopped
+[2016-04-15  21:09:49] DBUG slave/slave_shutdown waiting for slave thread
+[2016-04-15  21:09:50] INFO slave/_slave_thread shutting down current relays
+[2016-04-15  21:09:50] INFO slave/_slave_thread Slave thread shutdown complete
+[2016-04-15  21:09:50] INFO auth/auth_shutdown Auth shutdown
+[2016-04-15  21:09:50] INFO yp/yp_shutdown YP thread down
+[2016-04-15  21:09:50] INFO stats/stats_shutdown stats thread finished
