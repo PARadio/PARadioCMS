@@ -1,4 +1,4 @@
-class Episode < ActiveRecord::Base
+class Admin::Episode < ActiveRecord::Base
   has_one :streamitem, dependent: :destroy
   #has one means Episode is linked to from :streamitem. Episode doesn't even
   #know it has one based off of db stuff.

@@ -1,4 +1,4 @@
-class EpisodesController < ApplicationController
+class  Admin::EpisodesController < ApplicationController
   before_action :require_login
   layout 'main'
   def index

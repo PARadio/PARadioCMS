@@ -4,10 +4,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   private
-  def require_login
-    unless session[:user_id]
-      flash[:error] = "You must be logged in to access this section"
-      redirect_to('/access#login') # halts request cycle
+    def require_login
+      unless session[:user_id]
+        flash[:notice]= "you must be logged in to access this"
+        redirect_to(login_path)
+      end
     end
-  end
 end

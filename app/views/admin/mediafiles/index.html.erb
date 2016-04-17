@@ -18,7 +18,8 @@
          <tr>
             <td><%= mediafile.title %></td>
             <td><%= link_to "Download mp3file", mediafile.attachment_url %></td>
-            <td><%= button_to "Delete",  mediafile, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{mediafile.title}?" %></td>
+            <td><%= button_to "Delete", mediafile_path(mediafile), method: :delete, class: "btn btn-danger",
+             confirm: "Are you sure that you wish to delete #{mediafile.title}?" %></td>
          </tr>
 
       <% end %>

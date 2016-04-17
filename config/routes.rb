@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
   get 'access/index'
-  post 'access/login'
+  get 'access/login', as: :login
+  get 'access/logout', as: :logout
+  post 'access/attempt_login', as: :attempt_login
 
-  scope '/admin' do
-      resources :subjects, :pages, :episodes, :sections, :mediafiles, :streamitems
+  scope module: 'admin' do
+      resources :episodes, :mediafiles, :streamitems
   end
 
   get '/home', to: 'home#index', as: 'home'
 
-  match ":controller(/:action(/:index))", :via => [:get,:post]
+  #match ":controller(/:action(/:index))", :via => [:get,:post]
   root 'home#index'
   # mp3 file uploading
 

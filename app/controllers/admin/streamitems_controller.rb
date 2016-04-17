@@ -1,4 +1,5 @@
-class StreamitemsController < ApplicationController
+class  Admin::StreamitemsController < ApplicationController
+  before_action :require_login
   layout 'main'
   def index
     @streamitems = Streamitem.sorted
@@ -15,7 +16,13 @@ class StreamitemsController < ApplicationController
     @streamitem = Streamitem.new(streamitems_params)
     @streamitem.position=get_next_position
     if @streamitem.save
-      redirect_to streamitems_path, notice: "The stream item has been added."
+      # update playlist
+      episode = Episode.find(@streamitem.episode_id)
+      File.open(Rails.root.join('lib', 'ices', 'playlist.txt'), 'a+') do |f|
+        f.puts Rails.root.join('public', episode.mediafile.attachment_url)
+      end
+
+      redirect_to(streamitems_path, notice: "The stream item has been added.")
     else
        render "new"
     end
@@ -29,6 +36,15 @@ class StreamitemsController < ApplicationController
     itemsToShift.each do |item|
       item.position = item.position - 1
       item.save
+    end
+
+    # rewrite playlist
+    @streamitemsUpdated = Streamitem.sorted
+    File.open(Rails.root.join('lib', 'ices', 'playlist.txt'), 'w') do |f|
+      @streamitemsUpdated.each do |streamitemUpdated|
+        episode = Episode.find(streamitemUpdated.episode_id)
+        f.puts Rails.root.join('public', episode.mediafile.attachment_url)
+      end
     end
 
     redirect_to(streamitems_path, notice:  "The episode has been removed.")
