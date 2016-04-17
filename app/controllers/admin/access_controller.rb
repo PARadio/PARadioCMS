@@ -1,4 +1,4 @@
-class AccessController < ApplicationController
+class Admin::AccessController < ApplicationController
   layout 'main'
   def index
     #displays text and links
@@ -20,6 +20,7 @@ class AccessController < ApplicationController
       session[:user_id] = authorized_user.id
       session[:user_first_name] = authorized_user.first_name
       session[:user_last_name] = authorized_user.last_name
+      session[:user_email] = authorized_user.email
       flash[:notice] = "You are now logged in."
       redirect_to(:action => 'index')
     else

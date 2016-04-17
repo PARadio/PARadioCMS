@@ -1,0 +1,6 @@
+<% if !flash[:notice].blank? %>
+   <div class = "notice alert alert-info dismissable">
+      <%= flash[:notice] %>
+      <button class="dismiss btn btn-info" onclick="dismissNotification()">Dismiss</button>
+   </div>
+<% end %>

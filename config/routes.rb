@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  get 'access/index'
-  get 'access/login', as: :login
-  get 'access/logout', as: :logout
-  post 'access/attempt_login', as: :attempt_login
+  get 'admin/access/index', as: :admin_index
+  get 'admin/access/login', as: :login
+  get 'admin/access/logout', as: :logout
+  post 'admin/access/attempt_login', as: :attempt_login
 
   scope module: 'admin' do
-      resources :episodes, :mediafiles, :streamitems
+      resources :episodes, :mediafiles, :streamitems, :access
   end
 
   get '/home', to: 'home#index', as: 'home'
