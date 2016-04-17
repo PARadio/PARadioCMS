@@ -1,6 +1,10 @@
 <% if !flash[:notice].blank? %>
-   <div class = "notice alert alert-info dismissable">
+  <div class = "notice row alert alert-info dismissable">
+    <div class="pull-left col-lg-11">
       <%= flash[:notice] %>
+    </div>
+    <div class="pull-right col-lg-1">
       <button class="dismiss btn btn-info" onclick="dismissNotification()">Dismiss</button>
-   </div>
+    </div>
+  </div>
 <% end %>
