@@ -1,28 +1,28 @@
-class  Admin::EpisodesController < ApplicationController
+class Admin::EpisodesController < ApplicationController
   before_action :require_login
   layout 'main'
   def index
-    @episodes = Episode.all
+    @episodes = Admin::Episode.all
   end
 
   def show
-    @episode = Episode.find(params[:id])
+    @episode = Admin::Episode.find(params[:id])
   end
 
   def new
-    @episode = Episode.new
-    @mediafile = Mediafile.new
+    @episode = Admin::Episode.new
+    @mediafile = Admin::Mediafile.new
   end
 
   def create
-    @episode = Episode.new(episode_params)
+    @episode = Admin::Episode.new(episode_params)
     @mediafile = @episode.build_mediafile(mediafiles_params)
-    Episode.transaction do
+    Admin::Episode.transaction do
       begin
         @episode.mediafile.title=@episode.name.sub(" ", "_").downcase
         if @episode.save
           flash[:notice]= "Episode created successfully"
-          redirect_to(episode_path(@episode))
+          redirect_to(admin_episode_path(@episode))
         else
           render('new')
         end
@@ -33,14 +33,14 @@ class  Admin::EpisodesController < ApplicationController
   end
 
   def edit
-    @episode = Episode.find(params[:id])
+    @episode = Admin::Episode.find(params[:id])
     @mediafile = @episode.mediafile
   end
 
   def update
-    @episode = Episode.find(params[:id])
-    @mediafile = Mediafile.find(@episode.media_id)
-    Episode.transaction do
+    @episode = Admin::Episode.find(params[:id])
+    @mediafile = Admin::Mediafile.find(@episode.media_id)
+    Admin::Episode.transaction do
       begin
         @episode.update_attributes(episode_params)
         @mediafile.title=@episode.name.sub(" ", "_").downcase
@@ -50,26 +50,26 @@ class  Admin::EpisodesController < ApplicationController
       end
     end
     flash[:notice]= "Episode updated successfully"
-    redirect_to(episode_path(@episode))
+    redirect_to(admin_episode_path(@episode))
   end
 
   def delete
-    @episode= Episode.find(params[:id])
+    @episode= Admin::Episode.find(params[:id])
     @mediafile= @episode.mediafile
   end
 
   def destroy
-    @episode= Episode.find(params[:id]).destroy
+    @episode= Admin::Episode.find(params[:id]).destroy
     flash[:notice]= "Episode deleted successfully"
     redirect_to({:action=>'index'})
   end
 
   private
     def episode_params
-      params.require(:episode).permit([:name, :description, :transcript, :stage,
+      params.require(:admin_episode).permit([:name, :description, :transcript, :stage,
         :number])
     end
     def mediafiles_params
-      params.require(:mediafile).permit(:attachment)
+      params.require(:admin_mediafile).permit(:attachment)
     end
 end

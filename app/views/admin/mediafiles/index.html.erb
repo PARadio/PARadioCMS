@@ -1,5 +1,5 @@
 
-<%= link_to "New mp3file", new_mediafile_path, class: "btn btn-primary" %>
+<%= link_to "New mp3file", new_admin_mediafile_path, class: "btn btn-primary" %>
 <br />
 <br />
 
@@ -18,7 +18,7 @@
          <tr>
             <td><%= mediafile.title %></td>
             <td><%= link_to "Download mp3file", mediafile.attachment_url %></td>
-            <td><%= button_to "Delete", mediafile_path(mediafile), method: :delete, class: "btn btn-danger",
+            <td><%= button_to "Delete", admin_mediafile_path(mediafile), method: :delete, class: "btn btn-danger",
              confirm: "Are you sure that you wish to delete #{mediafile.title}?" %></td>
          </tr>
 

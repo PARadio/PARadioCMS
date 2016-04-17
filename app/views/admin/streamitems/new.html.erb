@@ -10,7 +10,7 @@
 
 <div class = "well">
    <%= form_for @streamitem do |f| %>
-    <%= f.collection_select(:episode_id, Episode.all, :id, :name) %>
+    <%= f.collection_select(:episode_id, Admin::Episode.all, :id, :name) %>
     <%= f.submit "Add", class: "btn btn-primary" %>
    <% end %>
 </div>

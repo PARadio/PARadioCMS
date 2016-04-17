@@ -1,7 +1,8 @@
 <% @page_title="Episodes" %>
 <div class="episodes index">
+  <%= link_to("<- Back to Admin Panel", admin_index_path)%>
   <h2>Episodes</h2>
-  <%=link_to("Add New Episode", new_episode_path())%><!--Button here instead-->
+  <%=link_to("Add New Episode", new_admin_episode_path())%><!--Button here instead-->
   <div><%= pluralize(@episodes.size,'episode')%> found</div>
   <table class="listing table table-bordered table-striped" summary="Episode List">
     <thead>
@@ -27,7 +28,7 @@
           <!-- invisible until edit button toggled -->
           <%= link_to("Edit",{:action => 'edit', :id => episode.id}, :class => 'action edit') %>
           <!-- invisible until edit button toggled -->
-          <%= link_to("Delete", episode_path(episode), method: :delete) %>
+          <%= link_to("Delete", admin_episode_path(episode), method: :delete) %>
         </td>
       </tr>
       <% end %>

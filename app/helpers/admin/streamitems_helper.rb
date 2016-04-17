@@ -1,2 +1,2 @@
-module  Admin::StreamitemsHelper
+module Admin::StreamitemsHelper
 end

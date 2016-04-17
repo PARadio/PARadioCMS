@@ -1,9 +1,32 @@
-<% @page_title="Admin Menu"%>
+<% @page_title="Admin Panel"%>
 
 <div class="menu">
-  <h2>Admin Menu</h2>
-  <div class="identity">Logged in as: <%= session[:user_email] %></div>
-  <ul>
-    <li><%= link_to("Logout", logout_path) %></li>
-  </ul>
+  <h2>Admin Panel</h2>
+  <div class="row">
+    <div class="col-lg-3">
+      <div id="shows-panel" class="panel panel-default">
+        <div class="panel-heading">Manage Shows</div>
+        <div class="panel-body"><%=link_to("Shows","#")%></div>
+      </div>
+    </div>
+    <div class="col-lg-3">
+
+      <div id="episodes-panel" class="panel panel-default">
+      <div class="panel-heading">Manage Episodes</div>
+        <div class="panel-body"><%=link_to("Episodes", admin_episodes_path)%></div>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div id="stream-panel" class="panel panel-default">
+        <div class="panel-heading">Manage Livestream</div>
+        <div class="panel-body"><%=link_to("Livestream", admin_streamitems_path)%></div>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div id="users-panel" class="panel panel-default">
+        <div class="panel-heading">Manage Users</div>
+        <div class="panel-body"><%=link_to("Users","#")%></div>
+      </div>
+    </div>
+  </div>
 </div>

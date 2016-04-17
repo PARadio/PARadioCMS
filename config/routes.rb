@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'admin/access/logout', as: :logout
   post 'admin/access/attempt_login', as: :attempt_login
 
-  scope module: 'admin' do
+  namespace :admin do
       resources :episodes, :mediafiles, :streamitems, :access
   end
 

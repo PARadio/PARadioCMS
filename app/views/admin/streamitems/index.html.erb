@@ -1,6 +1,8 @@
 <% @page_title="Livestream" %>
+<div class="livestream index">
+<%= link_to("<- Back to Admin Panel", admin_index_path)%>
 <h2>Livestream</h2>
-<%= link_to "Queue An Episode", new_streamitem_path %>
+<%= link_to "Queue An Episode", new_admin_streamitem_path %>
 <div><%= pluralize(@streamitems.size,'episode')%> queued</div>
 <table class = "table table-bordered table-striped">
    <thead>
@@ -19,7 +21,7 @@
             <td><%= streamitem.position%></td>
             <td><%= streamitem.episode.name %></td>
             <td><%= streamitem.episode.description %></td>
-            <td><%= link_to "Remove", streamitem_path(streamitem), method: :delete %></td>
+            <td><%= link_to "Remove", admin_streamitem_path(streamitem), method: :delete %></td>
          </tr>
 
       <% end %>

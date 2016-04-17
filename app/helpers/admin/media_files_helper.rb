@@ -1,2 +1,2 @@
-module  Admin::MediaFilesHelper
+module Admin::MediaFilesHelper
 end
