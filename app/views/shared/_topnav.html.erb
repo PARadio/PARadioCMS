@@ -5,5 +5,15 @@
         PA Radio CMS
       </a>
     </div>
+    <ul id="topnav-links" class"nav navbar-nav">
+      <li id="home" class="nav-item"><%= link_to("Home", home_path) %></li>
+      <li id="listen" class="nav-item"><%= link_to("Listen", "#") %></li>
+      <% if !session[:user_id] %>
+        <li id="login" class="nav-item"><%=link_to("Log in", login_path)%></li>
+      <% else %>
+        <li id="admin-panel" class"nav-item">
+          <%= link_to("Admin Panel", "#") %>
+        </li>
+      <% end %>
   </div>
 </nav>
