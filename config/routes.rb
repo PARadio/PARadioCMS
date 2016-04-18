@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/listen', to: 'listen#index', as: 'listen'
+
   get 'admin/access/index', as: :admin_index
   get 'admin/access/login', as: :login
   get 'admin/access/logout', as: :logout
