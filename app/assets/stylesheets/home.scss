@@ -2,7 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .carousel-inner{
+  max-height:500px;
   .item{
+    background-color:black;
     img{
       width:100%;
       margin:auto;
