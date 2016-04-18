@@ -1,30 +1,32 @@
 <% @page_title="Livestream" %>
 <div class="livestream index">
-<%= link_to("<- Back to Admin Panel", admin_index_path)%>
-<h2>Livestream</h2>
-<%= link_to "Queue An Episode", new_admin_streamitem_path %>
-<div><%= pluralize(@streamitems.size,'episode')%> queued</div>
-<table class = "table table-bordered table-striped">
-   <thead>
-      <tr>
-        <th class="col-md-1">Position</th>
-        <th class="col-md-2">Name</th>
-        <th class="col-md-7">Description</th>
-        <th class="col-md-2">Actions</th>
+  <div class="container">
+    <%= link_to(echoGlyphicon("menu-left") + " Return to Admin Panel", admin_index_path, class: "btn btn-primary")%>
+    <h2 id="livestreamHeader" >Livestream</h2>
+    <%= link_to echoGlyphicon("plus") + " Queue An Episode", new_admin_streamitem_path, class: "btn btn-success" %>
+    <div><%= pluralize(@streamitems.size,'episode')%> queued</div>
+    <table class = "table table-bordered table-striped">
+       <thead>
+          <tr>
+            <th class="col-md-1">Position</th>
+            <th class="col-md-2">Name</th>
+            <th class="col-md-7">Description</th>
+            <th class="col-md-2">Actions</th>
 
-      </tr>
-   </thead>
+          </tr>
+       </thead>
 
-   <tbody>
-      <% @streamitems.each do |streamitem| %>
-         <tr>
-            <td><%= streamitem.position%></td>
-            <td><%= streamitem.episode.name %></td>
-            <td><%= streamitem.episode.description %></td>
-            <td><%= link_to "Remove", admin_streamitem_path(streamitem), method: :delete %></td>
-         </tr>
+       <tbody>
+          <% @streamitems.each do |streamitem| %>
+             <tr>
+                <td><%= streamitem.position%></td>
+                <td><%= streamitem.episode.name %></td>
+                <td><%= streamitem.episode.description %></td>
+                <td><%= link_to "Remove", admin_streamitem_path(streamitem), method: :delete %></td>
+             </tr>
 
-      <% end %>
-   </tbody>
-
-</table>
+          <% end %>
+       </tbody>
+    </table>
+  </div>
+</div>
