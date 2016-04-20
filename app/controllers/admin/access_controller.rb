@@ -1,4 +1,5 @@
 class Admin::AccessController < ApplicationController
+  before_action :require_login, only: [:index]
   layout 'main'
   def index
     #displays text and links
