@@ -3,7 +3,7 @@
   <div class="container">
     <%= link_to(echoGlyphicon("menu-left") + " Return to Admin Panel", admin_index_path, class: "btn btn-primary")%>
     <h2 id="livestreamHeader" >Livestream</h2>
-    <%= link_to echoGlyphicon("plus") + " Queue An Episode", new_admin_streamitem_path, class: "btn btn-success" %>
+    <%= link_to(echoGlyphicon("plus") + " Queue An Episode", new_admin_streamitem_path, class: "btn btn-success") %>
     <div><%= pluralize(@streamitems.size,'episode')%> queued</div>
     <table class = "table table-bordered table-striped">
        <thead>

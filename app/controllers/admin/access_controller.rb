@@ -36,6 +36,6 @@ class Admin::AccessController < ApplicationController
     session[:user_last_name] = nil
 
     flash[:notice] = "Logged out"
-    redirect_to(:action => 'login')
+    redirect_to(home_path)
   end
 end

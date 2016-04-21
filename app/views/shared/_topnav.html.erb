@@ -23,12 +23,13 @@
           </div>
         </div>
       <% else %>
-        <div class="fill"></div>
+        <div class="fill"><%= link_to("Log in", login_path, :class=>"navbar-link") %></div>
       <% end %>
       <div class="row">
-        <div class="navbar-item col-lg-4"><%= link_to("Home", home_path, :class=>"navbar-link") %></div>
-        <div class="navbar-item col-lg-4"><%= link_to("Listen", listen_path, :class=>"navbar-link") %></div>
-        <% if session[:user_id] %>
+        <div class="setCols(4)">
+        <div class="navbar-item <%= setCols(4) %>"><%= link_to("Home", home_path, :class=>"navbar-link") %></div>
+        <div class="navbar-item <%= setCols(4) %>"><%= link_to("Listen", listen_path, :class=>"navbar-link") %></div>
+        <% if false %>
           <div class="navbar-item col-lg-4">
             <%= link_to("Admin", admin_index_path, :class=>"navbar-link") %>
           </div>
