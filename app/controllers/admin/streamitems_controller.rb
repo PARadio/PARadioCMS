@@ -30,11 +30,11 @@ class Admin::StreamitemsController < ApplicationController
 
   def destroy
     @streamitem = Admin::Streamitem.find(params[:id]).destroy
-    itemsToShift = Admin::Streamitem.where("position > :positionToDelete", {positionToDelete: @streamitem.position})
+    itemsToShift = Admin::Streamitem.where("start_time > :positionToDelete", {positionToDelete: @streamitem.start_time})
 
     # rewrite order
     itemsToShift.each do |item|
-      item.position = item.position - 1
+      item.start_time = item.start_time - @streamitem.episode.mediafile.duration
       item.save
     end
 
