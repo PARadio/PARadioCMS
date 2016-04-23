@@ -18,10 +18,10 @@ ActiveRecord::Schema.define(version: 20160423222439) do
     t.string   "name",        limit: 255
     t.text     "description", limit: 65535
     t.text     "transcript",  limit: 65535
-    t.integer  "stage",       limit: 4,     default: 1
+    t.integer  "stage",       limit: 4
     t.integer  "number",      limit: 4
-    t.datetime "created_at",                            null: false
-    t.datetime "updated_at",                            null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.integer  "user_id",     limit: 4
   end
 

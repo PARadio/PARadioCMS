@@ -1,6 +1,6 @@
 <%@page_title="Listen"%>
 <div class="container">
-  <h2>MKAO 24/7</h2>
+  <h2>Now Playing: <%= @currentItem.episode.name %></h2>
   <audio controls>
     <source src="http://54.191.224.62:8000/ices" type="audio/mpeg">
   Your browser does not support the audio element.
