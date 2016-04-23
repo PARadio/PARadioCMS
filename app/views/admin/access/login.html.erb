@@ -1,19 +1,28 @@
 <% @page_title = "Login" %>
-<div class="login">
-  <%=form_tag(:action=>'attempt_login') do %>
-    <table>
-      <tr>
-        <td><%= label_tag(:email) %></td>
-        <td><%= text_field_tag(:email) %></td>
-      </tr>
-      <tr>
-        <td><%= label_tag(:password) %></td>
-        <td><%= password_field_tag(:password) %></td>
-      </tr>
-      <tr>
-        <td> &nbsp; </td>
-        <td><%= submit_tag("Log In") %></td>
-      </tr>
-    </table>
-  <% end %>
+<div class="container">
+  <div class="login">
+    <div class="row form-horizontal">
+      <h2> Log In </h2>
+      <%=form_tag(:action=>'attempt_login') do %>
+        <div class="form-group">
+          <%= label_tag(:email, nil, :class=>"control-label #{setCols(2)}") %>
+          <div class="<%=setCols(6)%>">
+            <%= text_field_tag(:email,"", :class=>"form-control") %>
+          </div>
+            <div class="<%=setCols(4)%>"></div>
+        </div>
+        <div class="form-group">
+          <%= label_tag(:password, nil, :class=>"control-label #{setCols(2)}") %>
+          <div class="<%=setCols(6)%>">
+            <%= password_field_tag(:password,"", :class=>"form-control") %>
+          </div>
+            <div class="<%=setCols(4)%>"></div>
+        </div>
+        <div class="form-group">
+          <div class="<%= setColOffset(2)%> <%=setCols(10)%>">
+            <%= submit_tag("Log In",:class=>"btn btn-success") %>
+          </div>
+        </div>
+      <% end %>
+  </div>
 </div>

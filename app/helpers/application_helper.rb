@@ -15,4 +15,13 @@ module ApplicationHelper
     end
     return colString
   end
+
+  def setColOffset(size)
+    columns=["xs","sm","md","lg"]
+    colString=""
+    columns.each do |col|
+      colString+="col-#{col}-offset-#{size} "
+    end
+    return colString
+  end
 end
