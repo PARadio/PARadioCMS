@@ -1,43 +1,39 @@
 <nav id="topnav" class="navbar navbar-default">
   <div class="row">
     <div class="navbar-header col-lg-3">
-      <a class="navbar-brand" href="home#index">
+      <a class="navbar-brand" href="<%=home_path%>">
         Pinkerton Radio
       </a>
     </div>
     <div class="col-lg-6"></div>
     <div id="topnav-links" class="nav navbar-nav navbar-right col-lg-3">
       <% if session[:user_id] %>
+        <!-- User-specific links -->
         <div class="row user-access">
           <div class="dropdown nav pull-right">
             <a class="dropdown-toggle" data-toggle="dropdown"
             href="#" role="button" aria-haspopup="true" aria-expanded="false">
-               <%= session[:user_email]%><span class="caret"></span>
+               <%= session[:user_email] %><span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
               <li class="dropdown-item"><%= link_to("Preferences", "#")%></li>
               <li class="dropdown-item"><%=link_to("Logout", logout_path)%></li>
             </ul>
           </div>
-          <div class="dropdown nav pull-right">
-          </div>
         </div>
       <% else %>
-        <div class="fill"><%= link_to("Log in", login_path, :class=>"navbar-link") %></div>
+        <!-- Login link -->
+        <div class="row user-access">
+          <div class="<%= setCols(8) %>"></div>
+          <div class="<%= setCols(4) %>">
+            <%= link_to("Log in", login_path, :id=>"login-link") %>
+          </div>
+        </div>
       <% end %>
       <div class="row">
-        <div class="setCols(4)">
+        <div class="<%= setCols(4) %>"></div>
         <div class="navbar-item <%= setCols(4) %>"><%= link_to("Home", home_path, :class=>"navbar-link") %></div>
         <div class="navbar-item <%= setCols(4) %>"><%= link_to("Listen", listen_path, :class=>"navbar-link") %></div>
-        <% if false %>
-          <div class="navbar-item col-lg-4">
-            <%= link_to("Admin", admin_index_path, :class=>"navbar-link") %>
-          </div>
-        <% else %>
-          <div class="navbar-item col-lg-4">
-            <%= link_to("Log in", login_path, :class=>"navbar-link") %>
-          </div>
-        <% end %>
       </div>
   </div>
 </nav>
