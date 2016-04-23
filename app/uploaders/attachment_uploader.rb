@@ -17,7 +17,7 @@ class AttachmentUploader < CarrierWave::Uploader::Base
   end
 
   def extension_white_list
-     %w(mp3 ogg)
+     %w(ogg)
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
