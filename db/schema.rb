@@ -11,17 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160414205208) do
+ActiveRecord::Schema.define(version: 20160423192356) do
 
   create_table "episodes", force: :cascade do |t|
     t.integer  "show_id",     limit: 4
     t.string   "name",        limit: 255
     t.text     "description", limit: 65535
     t.text     "transcript",  limit: 65535
-    t.integer  "stage",       limit: 4,     default: 1
+    t.integer  "stage",       limit: 4
     t.integer  "number",      limit: 4
-    t.datetime "created_at",                            null: false
-    t.datetime "updated_at",                            null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   add_index "episodes", ["name"], name: "index_episodes_on_name", using: :btree
@@ -121,9 +121,9 @@ ActiveRecord::Schema.define(version: 20160414205208) do
 
   create_table "streamitems", force: :cascade do |t|
     t.string   "episode_id", limit: 255
-    t.integer  "position",   limit: 4
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.datetime "start_time"
   end
 
   add_index "streamitems", ["episode_id"], name: "index_streamitems_on_episode_id", using: :btree

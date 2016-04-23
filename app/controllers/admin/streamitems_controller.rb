@@ -17,9 +17,8 @@ class Admin::StreamitemsController < ApplicationController
     @streamitem.position=get_next_position
     if @streamitem.save
       # update playlist
-      episode = Admin::Episode.find(@streamitem.episode_id)
       File.open(Rails.root.join('lib', 'ices', 'playlist.txt'), 'a+') do |f|
-        f.puts Rails.root.join('public', episode.mediafile.attachment_url)
+        f.puts Rails.root.join('public', @streamitem.episode.mediafile.attachment_url)
       end
 
       redirect_to(admin_streamitems_path, notice: "The stream item has been added.")
@@ -42,8 +41,7 @@ class Admin::StreamitemsController < ApplicationController
     @streamitemsUpdated = Admin::Streamitem.sorted
     File.open(Rails.root.join('lib', 'ices', 'playlist.txt'), 'w') do |f|
       @streamitemsUpdated.each do |streamitemUpdated|
-        episode = Admin::Episode.find(streamitemUpdated.episode_id)
-        f.puts Rails.root.join('public', episode.mediafile.attachment_url)
+        f.puts Rails.root.join('public', @streamitemsUpdated.episode.mediafile.attachment_url)
       end
     end
 
