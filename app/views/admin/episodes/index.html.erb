@@ -10,7 +10,7 @@
         <th>Episode Number</th>
         <th>Episode Name</th>
         <th>Stage</th>
-        <th>Media File</th>
+        <th>Main Author</th>
         <th>Last Updated</th>
         <th>Actions</th>
       </tr>
@@ -21,7 +21,7 @@
         <td><%= episode.number %></td>
         <td><%= episode.name %></td>
         <td><%= episode.stage %></td><!--not necessary-->
-        <td><%= episode.mediafile.title%></td><!--not necessary-->
+        <td><%= "#{episode.user.first_name} #{episode.user.last_name}"%></td><!--not necessary-->
         <td><%= episode.updated_at.strftime("%a  %B %d, %Y at %I:%M %p")%></td>
         <td class="actions">
           <%= link_to("Show",{:action => 'show', :id => episode.id}, :class => 'action show') %> <!-- onclick this happens -->

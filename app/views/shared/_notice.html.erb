@@ -1,7 +1,7 @@
 <% if !flash[:notice].blank? %>
-  <div class = "row notice-wrapper">
+  <div class = "row notice-wrapper dismissable">
     <div class="<%=setCols(4)%>"></div>
-    <div class = "notice alert alert-info dismissable <%=setCols(4)%>">
+    <div class = "notice alert alert-info <%=setCols(4)%>">
       <%= flash[:notice] %>
       <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
     </div>
