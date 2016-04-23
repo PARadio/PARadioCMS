@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160423194954) do
+ActiveRecord::Schema.define(version: 20160423222439) do
 
   create_table "episodes", force: :cascade do |t|
     t.integer  "show_id",     limit: 4
@@ -22,10 +22,12 @@ ActiveRecord::Schema.define(version: 20160423194954) do
     t.integer  "number",      limit: 4
     t.datetime "created_at",                            null: false
     t.datetime "updated_at",                            null: false
+    t.integer  "user_id",     limit: 4
   end
 
   add_index "episodes", ["name"], name: "index_episodes_on_name", using: :btree
   add_index "episodes", ["show_id"], name: "index_episodes_on_show_id", using: :btree
+  add_index "episodes", ["user_id"], name: "index_episodes_on_user_id", using: :btree
 
   create_table "images", force: :cascade do |t|
     t.string   "title",      limit: 255

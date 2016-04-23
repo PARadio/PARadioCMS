@@ -20,6 +20,7 @@ class Admin::EpisodesController < ApplicationController
     Admin::Episode.transaction do
       begin
         @episode.mediafile.title=@episode.name.sub(" ", "_").downcase
+        @episode.user_id= session[:user_id]
         if @episode.save
           # set duration attribute
           fullpath = Rails.root.join('public', @episode.mediafile.attachment_url.to_s[1..-1])
