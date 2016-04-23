@@ -13,12 +13,13 @@ class Admin::StreamitemsController < ApplicationController
     # create a new stream item and pass it an episode to add.
     # dynamically assign position variable
     # save streamitem
-    @streamitem = Admin::Streamitem.new(streamitems_params)
-    @streamitem.position=get_next_position
-    if @streamitem.save
+    @newStreamitem = Admin::Streamitem.new(streamitems_params)
+    @newStreamitem.start_time = get_next_start_time
+
+    if @newStreamitem.save
       # update playlist
       File.open(Rails.root.join('lib', 'ices', 'playlist.txt'), 'a+') do |f|
-        f.puts Rails.root.join('public', @streamitem.episode.mediafile.attachment_url)
+        f.puts Rails.root.join('public', @newStreamitem.episode.mediafile.attachment_url)
       end
 
       redirect_to(admin_streamitems_path, notice: "The stream item has been added.")
@@ -53,8 +54,14 @@ class Admin::StreamitemsController < ApplicationController
       params.require(:admin_streamitem).permit(:episode_id)
     end
 
-    def get_next_position
-      #returns next position for stream item.
-      return Admin::Streamitem.all.size + 1
+    def get_next_start_time
+      #returns next start time for stream item.
+      streamitems = Admin::Streamitem.sorted
+      if Admin::Streamitem.count == 0
+        newStart = Time.now;
+      else
+        newStart = streamitems.last.start_time + streamitems.last.episode.mediafile.duration.seconds;
+      end
+      return newStart
     end
 end
