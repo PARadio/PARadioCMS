@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160423192356) do
+ActiveRecord::Schema.define(version: 20160423194954) do
 
   create_table "episodes", force: :cascade do |t|
     t.integer  "show_id",     limit: 4
@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 20160423192356) do
     t.string   "title",      limit: 255
     t.integer  "user_id",    limit: 4
     t.string   "ref_link",   limit: 255
-    t.integer  "length",     limit: 4
+    t.integer  "duration",   limit: 4
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
     t.string   "attachment", limit: 255

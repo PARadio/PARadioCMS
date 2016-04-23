@@ -21,6 +21,12 @@ class Admin::EpisodesController < ApplicationController
       begin
         @episode.mediafile.title=@episode.name.sub(" ", "_").downcase
         if @episode.save
+          # set duration attribute
+          fullpath = Rails.root.join('public', @episode.mediafile.attachment_url.to_s[1..-1])
+          info = Mediainfo.new(fullpath)
+          @episode.mediafile.duration = info.audio.duration/1000
+          @episode.save
+
           flash[:notice]= "Episode created successfully"
           redirect_to(admin_episode_path(@episode))
         else
