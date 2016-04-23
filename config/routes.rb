@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'users/create'
+
+  get 'users/index'
+
   get '/listen', to: 'listen#index', as: 'listen'
 
   get 'admin/access/index', as: :admin_index
