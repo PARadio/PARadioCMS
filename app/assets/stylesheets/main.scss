@@ -104,3 +104,15 @@ html, body{
     margin-top: 15px;
   }
 }
+.notice-wrapper{
+  position:absolute;
+  top: 5px;
+  left:0px;
+  z-index: 1000;
+  height: auto;
+  max-height: 200px;
+  width:100%;
+  .notice{
+    background-color: rgba(#d9edf7, .9) !important;
+  }
+}
