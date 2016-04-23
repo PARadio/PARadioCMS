@@ -1,6 +1,6 @@
 <%@page_title="Home"%>
 <div class="home index">
-  <div class="row">
+  <div id="carousel" class="row">
     <div id="homeCarousel" class="carousel slide" interval=5000 data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -25,12 +25,12 @@
       </a>
     </div>
   </div>
-  <div id="about" class="row">
-    <div class="container">
+  <div class="fluid-container">
+    <div id="about" class="row main-section">
       <div class="row">
         <h3 class="section-heading">About Us<h3>
       </div>
-      <div class="row">
+      <div class="row section-body">
         <div id="mission" class="panel <%= setCols(4)%>">
           <div class="panel-heading"> Mission </div>
           <div class="panel-body">Image of some inspiring stuff</div>
@@ -43,6 +43,14 @@
           <div class="panel-heading">Vision</div>
           <div class="panel-body"> Image of an eye or something majestic </div>
         </div>
+      </div>
+    </div>
+    <div id="join" class="row main-section">
+      <div class="row">
+        <h3 class="section-heading">Contact Us<h3>
+      </div>
+      <div class="row section-body">
+        This is a form to contact us with.
       </div>
     </div>
   </div>
