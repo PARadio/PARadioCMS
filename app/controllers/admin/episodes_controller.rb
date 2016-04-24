@@ -25,7 +25,7 @@ class Admin::EpisodesController < ApplicationController
           # set duration attribute
           fullpath = Rails.root.join('public', @episode.mediafile.attachment_url.to_s[1..-1])
           info = Mediainfo.new(fullpath)
-          @episode.mediafile.duration = info.audio.duration/1000
+          @episode.duration = info.audio.duration/1000
           @episode.save
 
           flash[:notice]= "Episode created successfully"

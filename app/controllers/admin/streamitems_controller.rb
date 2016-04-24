@@ -34,7 +34,7 @@ class Admin::StreamitemsController < ApplicationController
 
     # rewrite order
     itemsToShift.each do |item|
-      item.start_time = item.start_time - @streamitem.episode.mediafile.duration
+      item.start_time = item.start_time - @streamitem.episode.duration
       item.save
     end
 
@@ -60,7 +60,7 @@ class Admin::StreamitemsController < ApplicationController
       if Admin::Streamitem.count == 0
         newStart = Time.now;
       else
-        newStart = streamitems.last.start_time + streamitems.last.episode.mediafile.duration.seconds;
+        newStart = streamitems.last.start_time + streamitems.last.episode.duration.seconds;
       end
       return newStart
     end

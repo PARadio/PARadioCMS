@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160424003338) do
+ActiveRecord::Schema.define(version: 20160424141043) do
 
   create_table "episodes", force: :cascade do |t|
     t.integer  "show_id",     limit: 4
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20160424003338) do
     t.datetime "created_at",                            null: false
     t.datetime "updated_at",                            null: false
     t.integer  "user_id",     limit: 4
+    t.integer  "duration",    limit: 4
   end
 
   add_index "episodes", ["name"], name: "index_episodes_on_name", using: :btree
@@ -44,7 +45,6 @@ ActiveRecord::Schema.define(version: 20160424003338) do
     t.string   "title",      limit: 255
     t.integer  "user_id",    limit: 4
     t.string   "ref_link",   limit: 255
-    t.integer  "duration",   limit: 4
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
     t.string   "attachment", limit: 255
