@@ -9,6 +9,9 @@ Rails.application.routes.draw do
 
   resources :users
 
+  get '/admin/streamitems/:year/:month/:day', to: 'admin/streamitems#showStream', as: 'streamitems_show'
+  get '/admin/streamitems/:year/:month/:day/new', to: 'admin/streamitems#new', as: 'streamitems_new'
+
   namespace :admin do
       resources :episodes, :mediafiles, :streamitems, :access
   end

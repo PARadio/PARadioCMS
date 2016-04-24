@@ -2,31 +2,102 @@
 <div class="livestream index">
   <div class="container">
     <%= link_to(echoGlyphicon("menu-left") + " Return to Admin Panel", admin_index_path, class: "btn btn-primary")%>
-    <h2 id="livestreamHeader" >Livestream</h2>
-    <%= link_to(echoGlyphicon("plus") + " Queue An Episode", new_admin_streamitem_path, class: "btn btn-success") %>
-    <div><%= pluralize(@streamitems.size,'episode')%> queued</div>
-    <table class = "table table-bordered table-striped">
-       <thead>
-          <tr>
-            <th class="col-md-1">Start Time</th>
-            <th class="col-md-2">Name</th>
-            <th class="col-md-7">Description</th>
-            <th class="col-md-2">Actions</th>
+    <h2 id="livestreamHeader" >Livestream<% if defined? @selected_date %><%= ": " + @selected_date.strftime('%d %B, %Y') %><% end %></h2>
+    <div id="dateChooser" class="row">
+      <script>
+        function daysInMonth(month, year) {
+            return new Date(year, month, 0).getDate();
+        }
+        function updateDaySelect(){
+          var days = daysInMonth($("#month").val(), $("#year").val());
+          var str = "";
+          for(var i = 1; i <= days; i++){
+            str += "<option value='" + i + "'>" + i + "</option>";
+          }
+          $("#day").html(str);
+        }
+        function updateSelects(){
+          var urlArray = window.location.href.split("/");
+          if(!(typeof urlArray[7] === 'undefined')) {
+            $("#year option[value='"+ urlArray[5] +"']").prop('selected', true);
+            $("#month option[value='"+ urlArray[6] +"']").prop('selected', true);
+            updateDaySelect();
+            $("#day option[value='"+ urlArray[7] +"']").prop('selected', true);
+          }
+        }
+        $(document).ready(function (){
+          updateSelects();
+          $("#month").change(function() {
+            if($("#day").val() != -1){
+              window.location.replace("/admin/streamitems/" + $("#year").val() + "/" + $("#month").val() + "/" + $("#day").val());
+            }
+            updateDaySelect();
+          });
+          $("#year").change(function() {
+            if($("#day").val() != -1){
+              window.location.replace("/admin/streamitems/" + $("#year").val() + "/" + $("#month").val() + "/" + $("#day").val());
+            }
+            //updateDaySelect();
+          });
+          $("#day").change(function() {
+            window.location.replace("/admin/streamitems/" + $("#year").val() + "/" + $("#month").val() + "/" + $("#day").val());
+          });
+        });
+      </script>
+      <div class="<%= setCols(4) %>">
+        <select id="year" class="form-control">
+          <option value='2016'>2016</option>
+          <option value='2017'>2017</option>
+          <option value='2018'>2018</option>
+        </select>
+      </div>
+      <div class="<%= setCols(4) %>">
+        <select id="month" class="form-control">
+          <option value='1'>January</option>
+          <option value='2'>February</option>
+          <option value='3'>March</option>
+          <option value='4'>April</option>
+          <option value='5'>May</option>
+          <option value='6'>June</option>
+          <option value='7'>July</option>
+          <option value='8'>August</option>
+          <option value='9'>September</option>
+          <option value='10'>October</option>
+          <option value='11'>November</option>
+          <option value='12'>December</option>
+        </select>
+      </div>
+      <div class="<%= setCols(4) %>">
+        <select id="day" class="form-control">
+          <option value='-1'></option>
+        </select>
+      </div>
+    </div>
+    <% if defined? @streamitems %>
+      <%= link_to(echoGlyphicon("plus") + " Queue An Episode", streamitems_new_path, class: "btn btn-success") %>
+      <!--<div><%= pluralize(@streamitems.size,'episode')%> queued</div>-->
+      <table class="table table-bordered table-striped">
+         <thead>
+            <tr>
+              <th class="col-md-2">Position</th>
+              <th class="col-md-2">Name</th>
+              <th class="col-md-6">Description</th>
+              <th class="col-md-2">Actions</th>
 
-          </tr>
-       </thead>
+            </tr>
+         </thead>
 
-       <tbody>
-          <% @streamitems.each do |streamitem| %>
-             <tr>
-                <td><%= streamitem.start_time%></td>
-                <td><%= streamitem.episode.name %></td>
-                <td><%= streamitem.episode.description %></td>
-                <td><%= link_to "Remove", admin_streamitem_path(streamitem), method: :delete %></td>
-             </tr>
-
-          <% end %>
-       </tbody>
-    </table>
+         <tbody>
+            <% @streamitems.each do |streamitem| %>
+               <tr>
+                  <td><%= streamitem.start_time.strftime("%I:%M:%S %p") %></td>
+                  <td><%= streamitem.episode.name %></td>
+                  <td><%= streamitem.episode.description %></td>
+                  <td><%= link_to "Remove", admin_streamitem_path(streamitem), method: :delete %></td>
+               </tr>
+            <% end %>
+         </tbody>
+      </table>
+    <% end %>
   </div>
 </div>

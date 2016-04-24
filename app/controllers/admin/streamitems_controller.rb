@@ -2,10 +2,20 @@ class Admin::StreamitemsController < ApplicationController
   before_action :require_login
   layout 'main'
   def index
-    @streamitems = Admin::Streamitem.sorted
+
+  end
+
+  def showStream
+    datestr = params[:year].to_s + "-" + params[:month].to_s + "-" + params[:day].to_s
+    @selected_date = Date.strptime(datestr, '%Y-%m-%d')
+    @streamitems = Admin::Streamitem.where(date: @selected_date.strftime('%Y-%m-%d')).sorted
+
+    render 'index'
   end
 
   def new
+    datestr = params[:year].to_s + "-" + params[:month].to_s + "-" + params[:day].to_s
+    @selected_date = Date.strptime(datestr, '%Y-%m-%d')
     @streamitem = Admin::Streamitem.new
   end
 
@@ -14,15 +24,16 @@ class Admin::StreamitemsController < ApplicationController
     # dynamically assign position variable
     # save streamitem
     @newStreamitem = Admin::Streamitem.new(streamitems_params)
-    @newStreamitem.start_time = get_next_start_time
+    @newStreamitem.date = Date.strptime(params[:admin_streamitem][:date], '%Y-%m-%d')
+    @newStreamitem.position = get_next_position(@newStreamitem.date)
 
     if @newStreamitem.save
       # update playlist
-      File.open(Rails.root.join('lib', 'ices', 'playlist.txt'), 'a+') do |f|
-        f.puts Rails.root.join('public', @newStreamitem.episode.mediafile.attachment_url)
-      end
+      #File.open(Rails.root.join('lib', 'ices', 'playlist.txt'), 'a+') do |f|
+      #  f.puts Rails.root.join('public', @newStreamitem.episode.mediafile.attachment_url)
+      #end
 
-      redirect_to(admin_streamitems_path, notice: "The stream item has been added.")
+      redirect_to(streamitems_show_path(:year => @newStreamitem.date.strftime('%Y'), :month => @newStreamitem.date.strftime('%m'), :day => @newStreamitem.date.strftime('%d')), notice: "The stream item has been added.")
     else
        render "new"
     end
@@ -30,21 +41,21 @@ class Admin::StreamitemsController < ApplicationController
 
   def destroy
     @streamitem = Admin::Streamitem.find(params[:id]).destroy
-    itemsToShift = Admin::Streamitem.where("start_time > :positionToDelete", {positionToDelete: @streamitem.start_time})
+    itemsToShift = Admin::Streamitem.where(date: @selected_date.strftime('%Y-%m-%d')).where("position > :positionToDelete", {positionToDelete: @streamitem.position}).sorted
 
     # rewrite order
     itemsToShift.each do |item|
-      item.start_time = item.start_time - @streamitem.episode.duration
+      item.position = item.position - 1
       item.save
     end
 
     # rewrite playlist
-    @streamitemsUpdated = Admin::Streamitem.sorted
-    File.open(Rails.root.join('lib', 'ices', 'playlist.txt'), 'w') do |f|
-      @streamitemsUpdated.each do |streamitemUpdated|
-        f.puts Rails.root.join('public', @streamitemsUpdated.episode.mediafile.attachment_url)
-      end
-    end
+    #@streamitemsUpdated = Admin::Streamitem.sorted
+    #File.open(Rails.root.join('lib', 'ices', 'playlist.txt'), 'w') do |f|
+    #  @streamitemsUpdated.each do |streamitemUpdated|
+    #    f.puts Rails.root.join('public', @streamitemsUpdated.episode.mediafile.attachment_url)
+    #  end
+    #end
 
     redirect_to(admin_streamitems_path, notice:  "The episode has been removed.")
   end
@@ -54,14 +65,14 @@ class Admin::StreamitemsController < ApplicationController
       params.require(:admin_streamitem).permit(:episode_id)
     end
 
-    def get_next_start_time
+    def get_next_position(selected_date)
       #returns next start time for stream item.
-      streamitems = Admin::Streamitem.sorted
-      if Admin::Streamitem.count == 0
-        newStart = Time.now;
+      streamitems = Admin::Streamitem.where(date: selected_date.strftime('%Y-%m-%d')).sorted
+      if streamitems.empty?
+        newPosition = 1
       else
-        newStart = streamitems.last.start_time + streamitems.last.episode.duration.seconds;
+        newPosition = streamitems.last.position + 1
       end
-      return newStart
+      return newPosition
     end
 end
