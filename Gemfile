@@ -51,3 +51,5 @@ gem 'carrierwave', '~> 0.9'
 gem 'bootstrap-sass', :git => 'https://github.com/twbs/bootstrap-sass.git', :branch => 'next'
 
 gem 'mediainfo'
+
+gem 'time_difference'
