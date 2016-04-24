@@ -1,13 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Arvo);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
 html, body{
   height: 100%;
   min-height: 100%;
+  position: relative;
   margin: 0;
   padding: 0;
 }
 
 #main-container{
+  font-family: 'Arvo', serif;
   padding: 0px 0px 0px 0px;
-  //height:100%;
+  position:relative;
+  min-height:100%;
+  h1,h2,h3{
+    font-family: 'Oswald', serif;
+  }
   .row{
     margin-left: 0;
     margin-right: 0;
@@ -19,6 +28,7 @@ html, body{
   .navbar-header{
     padding-top:20px;
     .navbar-brand{
+      font-family: 'Oswald', serif;
       font-size: 2em;
       color:#fff;
     }
@@ -100,20 +110,31 @@ html, body{
 }
 
 #main-content{
-  padding:0px;
-  .notice{
-    margin-top: 15px;
+  min-height:100%;
+  padding:0;
+  .notice-wrapper{
+    position:absolute;
+    top: 5px;
+    left:0px;
+    z-index: 1000;
+    height: auto;
+    max-height: 200px;
+    width:100%;
+    .notice{
+      background-color: rgba(#d9edf7, .9) !important;
+      margin-top: 15px;
+    }
   }
 }
-.notice-wrapper{
-  position:absolute;
-  top: 5px;
-  left:0px;
-  z-index: 1000;
-  height: auto;
-  max-height: 200px;
-  width:100%;
-  .notice{
-    background-color: rgba(#d9edf7, .9) !important;
-  }
+
+.push{
+  height:90px;
+}
+.footer{
+    /* Set the fixed height of the footer here */
+  height:80px;
+  background-color: #6B6B6B;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
