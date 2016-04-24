@@ -74,8 +74,21 @@
       </div>
     </div>
     <% if defined? @streamitems %>
-      <%= link_to(echoGlyphicon("plus") + " Queue An Episode", streamitems_new_path, class: "btn btn-success") %>
-      <!--<div><%= pluralize(@streamitems.size,'episode')%> queued</div>-->
+      <div class="row">
+        <div class="<%= setCols(2) %>">
+          <%= link_to(echoGlyphicon("plus") + " Queue An Episode", streamitems_new_path, class: "btn btn-success") %>
+        </div>
+        <div class="<%= setCols(2) %>">
+          <div class="progressText"><%= @time_available_str %> left</div>
+        </div>
+        <div class="<%= setCols(8) %>">
+          <div class="progress">
+            <div class="progress-bar progress-bar-<%= @progress_class %>" role="progressbar" aria-valuenow="<%= @percent_left %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= @percent_left %>%">
+              <div class="progressText"><%= @percent_left %>% Full.</div>
+            </div>
+          </div>
+        </div>
+      </div>
       <table class="table table-bordered table-striped">
          <thead>
             <tr>
