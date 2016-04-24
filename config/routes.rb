@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'users/create'
-
-  get 'users/index'
 
   get '/listen', to: 'listen#index', as: 'listen'
 
@@ -9,6 +6,8 @@ Rails.application.routes.draw do
   get 'admin/access/login', as: :login
   get 'admin/access/logout', as: :logout
   post 'admin/access/attempt_login', as: :attempt_login
+
+  resources :users
 
   namespace :admin do
       resources :episodes, :mediafiles, :streamitems, :access

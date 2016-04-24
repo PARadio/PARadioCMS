@@ -1,2 +1,37 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<% @page_title="Users" %>
+<div class="users index container">
+  <%= link_to("<- Back to Admin Panel", admin_index_path)%>
+  <h2>Users</h2>
+  <%=link_to("Add New User", new_user_path())%><!--Button here instead-->
+  <div><%= pluralize(@users.size,'user')%> found</div>
+  <table class="listing table table-bordered table-striped" summary="User List">
+    <thead>
+      <tr class="header">
+        <th>Email</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Access Level</th>
+        <th>Joined</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+      <tr>
+        <td><%= user.email %></td>
+        <td><%= user.first_name %></td>
+        <td><%= user.last_name %></td>
+        <td><%= user.access_level %></td>
+        <td><%= user.created_at.strftime("%a  %B %d, %Y at %I:%M %p") %></td>
+        <td class="actions">
+          <%= link_to("Show",{:action => 'show', :id => user.id}, :class => 'action show') %> <!-- onclick this happens -->
+          <!-- invisible until edit button toggled -->
+          <%= link_to("Edit",{:action => 'edit', :id => user.id}, :class => 'action edit') %>
+          <!-- invisible until edit button toggled -->
+          <%= link_to("Delete", user_path(user), method: :delete) %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
