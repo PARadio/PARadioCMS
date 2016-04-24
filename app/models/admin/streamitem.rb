@@ -23,6 +23,7 @@ class Admin::Streamitem < ActiveRecord::Base
       elsif i+1 >= streamitems.length
         #
         # VERY NOT GOOD FIX THIS
+        # FIND WHAT WOULD BE PLAYING IF PLAYLIST LOOPED
         #
         return Admin::Streamitem.first
       elsif Time.now > streamitem.start_time && Time.now < streamitems[i+1].start_time

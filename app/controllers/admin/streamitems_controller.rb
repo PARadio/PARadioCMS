@@ -27,7 +27,10 @@ class Admin::StreamitemsController < ApplicationController
     @newStreamitem.date = Date.strptime(params[:admin_streamitem][:date], '%Y-%m-%d')
     @newStreamitem.position = get_next_position(@newStreamitem.date)
 
-    if @newStreamitem.save
+    if @newStreamitem.start_time + @newStreamitem.episode.duration.seconds > Admin::Streamitem.stream_end
+      time_available = TimeDifference.between(@newStreamitem.start_time, Admin::Streamitem.stream_end).in_minutes.to_i.to_s + " minutes " + TimeDifference.between(@newStreamitem.start_time, Admin::Streamitem.stream_end).in_seconds.to_i.to_s + " seconds"
+      redirect_to(streamitems_show_path(:year => @newStreamitem.date.strftime('%Y'), :month => @newStreamitem.date.strftime('%m'), :day => @newStreamitem.date.strftime('%d')), notice: "Not enough room in schedule for episode. Time Available: " + time_available)
+    elsif @newStreamitem.save
       # update playlist
       #File.open(Rails.root.join('lib', 'ices', 'playlist.txt'), 'a+') do |f|
       #  f.puts Rails.root.join('public', @newStreamitem.episode.mediafile.attachment_url)
@@ -41,7 +44,7 @@ class Admin::StreamitemsController < ApplicationController
 
   def destroy
     @streamitem = Admin::Streamitem.find(params[:id]).destroy
-    itemsToShift = Admin::Streamitem.where(date: @selected_date.strftime('%Y-%m-%d')).where("position > :positionToDelete", {positionToDelete: @streamitem.position}).sorted
+    itemsToShift = Admin::Streamitem.where(date: @streamitem.strftime('%Y-%m-%d')).where("position > :positionToDelete", {positionToDelete: @streamitem.position}).sorted
 
     # rewrite order
     itemsToShift.each do |item|
