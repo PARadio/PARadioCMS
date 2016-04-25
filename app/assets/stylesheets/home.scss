@@ -20,40 +20,47 @@
       }
     }
   }
-  .about-item{
-    .img-circular{
-      margin-left: auto;
-      margin-right: auto;
-      width:250px;
-      height:250px;
-      background-image: url(image_path("mic-logo-with-bg.png"));
-      background-position: center;
-      background-size:100% 100%;
-      background-repeat: no-repeat;
-      background-position: center;
-      border-radius: 50%;
-    }
-    .banner{
-      .banner-text{
-        color: #F6F7EA;
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
+  #about{
+    .about-item{
+      .img-circular{
+        margin-left: auto;
+        margin-right: auto;
+        width:250px;
+        height:250px;
+        background-image: url(image_path("mic-logo-with-bg.png"));
+        background-position: center;
+        background-size:100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
       }
-      margin-left:auto;
-      margin-right:auto;
-      position: relative;
-      top:-20px;
-      width:50%;
-      min-width:300px;
-      height:100px;
-      background-image: url(image_path('red-banner.png'));
-      background-size:300px 75px;
-      background-repeat: no-repeat;
-      background-position: center;
+      .banner{
+        .banner-text{
+          color: #F6F7EA;
+          position: absolute;
+          top: 30%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+        }
+        margin-left:auto;
+        margin-right:auto;
+        position: relative;
+        top:-20px;
+        width:50%;
+        min-width:300px;
+        height:100px;
+        background-image: url(image_path('red-banner.png'));
+        background-size:300px 75px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
     }
+    background-image: url(image_path('stripe-bg.png'));
+  }
+
+  #join{
+    background-color:#C9FFCD;
   }
 
   .main-section{
