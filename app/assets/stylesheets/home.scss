@@ -4,19 +4,30 @@
 .home{
   #carousel{
     .carousel-inner{
-      max-height:500px;
+      height:500px;
       .item{
-        background-color:black;
+        width:100%;
+        height:100%;
+        margin:auto;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        .carousel-caption{
+          top: 50%;
+          width:50%;
+          max-width: 700px;
+          border-radius: 5px;
+          background-color: rgba(#515051, .5);
+          margin-left: auto;
+          margin-right: auto;
+          bottom: initial;
+          transform: translateY(-50%);
+        }
         img{
           width:100%;
-          margin:auto;
+          min-height:500px;
         }
-        a{
-          img{
-            width:70%;
-            margin:auto;
-          }
-        }
+
       }
     }
   }
@@ -31,7 +42,6 @@
         background-position: center;
         background-size:100% 100%;
         background-repeat: no-repeat;
-        background-position: center;
         border-radius: 50%;
       }
       .banner{
@@ -50,17 +60,18 @@
         width:50%;
         min-width:300px;
         height:100px;
-        background-image: url(image_path('red-banner.png'));
+        background-image: url(image_path('banners/red-banner.png'));
         background-size:300px 75px;
         background-repeat: no-repeat;
         background-position: center;
       }
     }
-    background-image: url(image_path('stripe-bg.png'));
+    background-image: url(image_path('backgrounds/stripe-bg-with-blue.png'));
   }
 
   #join{
-    background-color:#C9FFCD;
+    background-image: url(image_path('backgrounds/dot-bg.png'));
+    background-size: 200px 200px;
   }
 
   .main-section{

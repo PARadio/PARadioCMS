@@ -1,7 +1,7 @@
 <%@page_title="Home"%>
 <div class="home index">
   <div id="carousel" class="row">
-    <div id="homeCarousel" class="carousel slide" interval=5000 data-ride="carousel">
+    <div id="homeCarousel" class="carousel slide" data-interval="false" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
@@ -11,13 +11,28 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <%=image_tag('/images/dwight.jpg')%>
+          <div id="about-slide" class="carousel-caption">
+            <h2>Welcome to Pinkerton Radio!</h2>
+            <p>An internet radio station brought to you by high school students</p>
+            <a href="#about"><button class="btn btn-info"> More about us </button></a>
+          </div>
+          <%=image_tag("carousel/dwight.jpg")%>
         </div>
         <div class="item">
-          <%=image_tag('dwight2.jpg')%>
+          <div id="listen-slide" class="carousel-caption">
+            <h2>Listen up!</h2>
+            <p>Click below to listen to our radio</p>
+            <a href="<%= listen_path %>"><button class="btn btn-info"> Listen now </button></a>
+          </div>
+          <%=image_tag("carousel/dwight2.jpg")%>
         </div>
         <div class="item">
-          <%=image_tag('dwight3.jpg')%>
+          <div id="join-slide" class="carousel-caption">
+            <h2>Get in touch</h2>
+            <p>We are always looking for feedback and new members. Click below to contact us!</p>
+            <a href="#join"><button class="btn btn-info"> Contact us </button></a>
+          </div>
+          <%=image_tag("carousel/dwight3.jpg")%>
         </div>
       </div>
 
@@ -61,7 +76,6 @@
         <h2 class="section-heading">Contact Us<h2>
       </div>
       <div class="row section-body">
-        This is a form to contact us with.
       </div>
     </div>
   </div>

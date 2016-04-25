@@ -9,8 +9,4 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
-Rails.application.config.assets.precompile += %w( dwight.jpg )
-Rails.application.config.assets.precompile += %w( dwight2.jpg )
-Rails.application.config.assets.precompile += %w( dwight3.jpg )
-Rails.application.config.assets.precompile += %w( mic-logo-with-bg.png )
-Rails.application.config.assets.precompile += %w( mic-logo.png )
+Rails.application.config.assets.precompile += %W(carousel/)
