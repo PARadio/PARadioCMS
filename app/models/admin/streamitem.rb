@@ -56,4 +56,13 @@ class Admin::Streamitem < ActiveRecord::Base
       return time_counter
     end
   end
+
+  def self.updatePlaylistFile
+    streamitems = Admin::Streamitem.sorted
+    File.open(Rails.root.join('lib', 'ices', 'playlist.txt'), 'w') do |f|
+      streamitems.each do |streamitem|
+       f.puts Rails.root.join('public', streamitem.episode.mediafile.attachment_url)
+      end
+    end
+  end
 end

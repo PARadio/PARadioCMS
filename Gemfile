@@ -53,3 +53,5 @@ gem 'bootstrap-sass', :git => 'https://github.com/twbs/bootstrap-sass.git', :bra
 gem 'mediainfo'
 
 gem 'time_difference'
+
+gem 'whenever', require: false
