@@ -72,7 +72,7 @@ class Admin::StreamitemsController < ApplicationController
 
   def destroy
     @streamitem = Admin::Streamitem.find(params[:id]).destroy
-    itemsToShift = Admin::Streamitem.where(date: @streamitem.strftime('%Y-%m-%d')).where("position > :positionToDelete", {positionToDelete: @streamitem.position}).sorted
+    itemsToShift = Admin::Streamitem.where(date: @streamitem.date.strftime('%Y-%m-%d')).where("position > :positionToDelete", {positionToDelete: @streamitem.position}).sorted
 
     # rewrite order
     itemsToShift.each do |item|
@@ -88,7 +88,7 @@ class Admin::StreamitemsController < ApplicationController
     #  end
     #end
 
-    redirect_to(admin_streamitems_path, notice:  "The episode has been removed.")
+    redirect_to(streamitems_show_path(:year => @streamitem.date.strftime('%Y'), :month => @streamitem.date.strftime('%m'), :day => @streamitem.date.strftime('%d')), notice:  "The episode has been removed.")
   end
 
   private

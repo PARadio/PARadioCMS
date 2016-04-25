@@ -1,41 +1,14 @@
 class Admin::Streamitem < ActiveRecord::Base
   belongs_to :episode #holds episode_id
 
-  @@stream_start = Time.parse("08:00 PM")
-  @@stream_end = Time.parse("11:00 PM")
+  @@stream_start = Time.parse("10:27 PM")
+  @@stream_end = Time.parse("10:29:00 PM")
   cattr_reader :stream_start
   cattr_reader :stream_end
 
   scope :sorted, lambda { order("position ASC") }
 
-  scope :getCurrent, lambda {
-    streamitems = Admin::Streamitem.where(date: Date.today.strftime('%Y-%m-%d')).sorted
-    if streamitems.empty? || streamitems.nil?
-      return nil
-    end
 
-    time_offset = 0;
-    currentItem = nil;
-    3.times do |i|
-      j = 0
-      total_seconds = 0;
-      streamitems.each do |streamitem|
-        total_seconds = total_seconds + streamitem.episode.duration
-        if Time.now == (streamitem.start_time + time_offset.seconds)
-          currentItem =  streamitem
-          break
-        elsif Time.now > (streamitem.start_time + time_offset.seconds) && Time.now < ((streamitems[i].start_time + streamitems[i].episode.duration.seconds) + time_offset.seconds)
-          currentItem = streamitem
-          break
-        elsif streamitems[j+1].nil?
-          time_offset = time_offset + total_seconds
-        end
-        j = j + 1
-      end
-    end
-
-    return currentItem
-  }
 
   scope :dank, lambda {
     puts 'dank'
@@ -56,4 +29,44 @@ class Admin::Streamitem < ActiveRecord::Base
       return time_counter
     end
   end
+
+  def self.getCurrent
+    # get all of todays queued episodes
+    streamitems = Admin::Streamitem.where(date: Date.today.strftime('%Y-%m-%d')).sorted
+
+    # if no streams, then nothing playing
+    if streamitems.empty? || streamitems.nil?
+      return nil
+    end
+
+    # if only one stream, then only one option
+    if streamitems.count == 1
+      return streamitems.first
+    end
+
+    # we know the episodes may have looped. lets find out how many times
+        # get the time diff and divide by loop time to get number of loops already done
+    loop_time=0
+    streamitems.each do |item|
+      loop_time+=item.episode.duration
+    end
+    num_loops = (TimeDifference.between(Admin::Streamitem.stream_start, Time.now).in_seconds)/loop_time
+    loop_frac = ('0.'+num_loops.to_s.split('.').last).to_f
+    current_time_in_loop = loop_time*loop_frac
+    puts current_time_in_loop
+    puts streamitems.count
+    time_into_loop=0
+    streamitems.count.times do |i|
+      puts streamitems[i].position
+      time_into_loop+=streamitems[i+1].episode.duration
+      next_time_into_loop=streamitems[i].episode.duration+time_into_loop
+      if(time_into_loop <= current_time_in_loop && next_time_into_loop> current_time_in_loop)
+        puts("found it")
+        return streamitems[i+1]
+      end
+    end
+    puts "reached end"
+    return nil
+  end
+
 end
