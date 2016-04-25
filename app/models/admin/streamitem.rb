@@ -65,13 +65,15 @@ class Admin::Streamitem < ActiveRecord::Base
     puts streamitems.count
     time_into_loop=0
     streamitems.count.times do |i|
-      puts streamitems[i].position
-      time_into_loop+=streamitems[i+1].episode.duration
-      next_time_into_loop=streamitems[i].episode.duration+time_into_loop
-      if(time_into_loop <= current_time_in_loop && next_time_into_loop> current_time_in_loop)
+      puts i
+      puts "time into loop #{time_into_loop.to_s}"
+      next_time=streamitems[i].episode.duration+time_into_loop
+      puts "next time into loop #{next_time.to_s}"
+      if( current_time_in_loop >= time_into_loop && current_time_in_loop < next_time)
         puts("found it")
-        return streamitems[i+1]
+        return streamitems[i]
       end
+      time_into_loop+=streamitems[i].episode.duration
     end
     puts "reached end"
     return nil
