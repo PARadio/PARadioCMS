@@ -59,7 +59,7 @@
                  <hostname>localhost</hostname>
                  <port>8000</port>
                  <password>hackme</password>
-                 <mount>/ices</mount>
+                 <mount>/livestream</mount>
 
                  <!-- Reconnect parameters:
                      When something goes wrong (e.g. the server crashes, or the

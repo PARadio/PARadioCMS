@@ -44,6 +44,14 @@ class Admin::Streamitem < ActiveRecord::Base
       return streamitems.first
     end
 
+    # if the current time is in between streams, return nil
+    if Time.now < Admin::Streamitem.stream_start
+      return nil
+    elsif Time.now > Admin::Streamitem.stream_end
+      return nil
+    end
+
+
     # we know the episodes may have looped. lets find out how many times
         # get the time diff and divide by loop time to get number of loops already done
     loop_time=0

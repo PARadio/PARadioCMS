@@ -1,8 +1,8 @@
 <%@page_title="Listen"%>
 <div class="container">
-  <h2>Now Playing: <% if @currentItem %><%= @currentItem.episode.name %><% end %></h2>
+  <h2>Now Playing: <% if @currentItem %><%= @currentItem.episode.name %><% else %>Nothing<% end %></h2>
   <audio controls>
-    <source src="http://54.191.224.62:8000/ices" type="audio/mpeg">
+    <source src="http://localhost:8000/livestream" type="audio/mpeg">
   Your browser does not support the audio element.
   </audio>
 </div>
