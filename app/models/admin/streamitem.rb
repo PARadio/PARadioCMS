@@ -1,7 +1,7 @@
 class Admin::Streamitem < ActiveRecord::Base
   belongs_to :episode #holds episode_id
 
-  @@stream_start = Time.parse("05:00 AM")
+  @@stream_start = Time.parse("08:00 PM")
   @@stream_end = Time.parse("11:00 PM")
   cattr_reader :stream_start
   cattr_reader :stream_end
@@ -11,26 +11,30 @@ class Admin::Streamitem < ActiveRecord::Base
   scope :getCurrent, lambda {
     streamitems = Admin::Streamitem.where(date: Date.today.strftime('%Y-%m-%d')).sorted
     if streamitems.empty? || streamitems.nil?
-      #
-      # VERY NOT GOOD FIX THIS
-      #
-      return Admin::Streamitem.first
+      return nil
     end
-    i = 0
-    streamitems.each do |streamitem|
-      if Time.now == streamitem.start_time
-        return streamitem
-      elsif i+1 >= streamitems.length
-        #
-        # VERY NOT GOOD FIX THIS
-        # FIND WHAT WOULD BE PLAYING IF PLAYLIST LOOPED
-        #
-        return Admin::Streamitem.first
-      elsif Time.now > streamitem.start_time && Time.now < streamitems[i+1].start_time
-        return streamitem
+
+    time_offset = 0;
+    currentItem = nil;
+    3.times do |i|
+      j = 0
+      total_seconds = 0;
+      streamitems.each do |streamitem|
+        total_seconds = total_seconds + streamitem.episode.duration
+        if Time.now == (streamitem.start_time + time_offset.seconds)
+          currentItem =  streamitem
+          break
+        elsif Time.now > (streamitem.start_time + time_offset.seconds) && Time.now < ((streamitems[i].start_time + streamitems[i].episode.duration.seconds) + time_offset.seconds)
+          currentItem = streamitem
+          break
+        elsif streamitems[j+1].nil?
+          time_offset = time_offset + total_seconds
+        end
+        j = j + 1
       end
-      i = i + 1
     end
+
+    return currentItem
   }
 
   scope :dank, lambda {
