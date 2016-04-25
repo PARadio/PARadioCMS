@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   get '/admin/streamitems/:year/:month/:day', to: 'admin/streamitems#showStream', as: 'streamitems_show'
   get '/admin/streamitems/:year/:month/:day/new', to: 'admin/streamitems#new', as: 'streamitems_new'
+  post '/admin/streamitems/:year/:month/:day/move', to: 'admin/streamitems#move', as: 'streamitems_move'
 
   namespace :admin do
       resources :episodes, :mediafiles, :streamitems, :access

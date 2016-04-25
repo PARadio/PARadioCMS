@@ -19,11 +19,11 @@ class Admin::StreamitemsController < ApplicationController
     @percent_left = ((time_taken / total_time) * 100).round(2)
 
     if @percent_left >= 90
-      @progess_class = 'danger'
+      @progress_class = 'danger'
     elsif @percent_left >= 75
-      @progess_class = 'warning'
+      @progress_class = 'warning'
     else
-      @progess_class = 'success'
+      @progress_class = 'success'
     end
 
     if @streamitems.empty?
@@ -67,6 +67,19 @@ class Admin::StreamitemsController < ApplicationController
       redirect_to(streamitems_show_path(:year => @newStreamitem.date.strftime('%Y'), :month => @newStreamitem.date.strftime('%m'), :day => @newStreamitem.date.strftime('%d')), notice: "The stream item has been added.")
     else
        render "new"
+    end
+  end
+
+  def move
+    datestr = params[:year].to_s + "-" + params[:month].to_s + "-" + params[:day].to_s
+    i = 1
+    params[:old_positions].each do |old_position|
+      if i != old_position
+        itemToShift = Admin::Streamitem.where(date: datestr).where(position: old_position).first
+        itemToShift.position = i
+        itemToShift.save
+      end
+      i = i + 1
     end
   end
 
