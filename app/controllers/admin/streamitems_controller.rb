@@ -73,13 +73,15 @@ class Admin::StreamitemsController < ApplicationController
   def move
     datestr = params[:year].to_s + "-" + params[:month].to_s + "-" + params[:day].to_s
     i = 1
+    itemsArray = [];
     params[:old_positions].each do |old_position|
-      if i != old_position
-        itemToShift = Admin::Streamitem.where(date: datestr).where(position: old_position).first
-        itemToShift.position = i
-        itemToShift.save
-      end
+      itemToShift = Admin::Streamitem.where(date: datestr).where(position: old_position).first
+      itemToShift.position = i
+      itemsArray.push(itemToShift)
       i = i + 1
+    end
+    itemsArray.each do |item|
+      item.save
     end
   end
 
