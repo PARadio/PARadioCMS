@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :users
 
   get '/admin/streamitems/:year/:month/:day', to: 'admin/streamitems#showStream', as: 'streamitems_show'
+  get '/admin/streamitems/:year/:month/:day/ajax', to: 'admin/streamitems#getItemsAjax', as: 'streamitems_ajax'
   get '/admin/streamitems/:year/:month/:day/new', to: 'admin/streamitems#new', as: 'streamitems_new'
   post '/admin/streamitems/:year/:month/:day/move', to: 'admin/streamitems#move', as: 'streamitems_move'
 

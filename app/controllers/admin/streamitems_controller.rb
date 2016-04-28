@@ -85,6 +85,12 @@ class Admin::StreamitemsController < ApplicationController
     end
   end
 
+  def getItemsAjax
+    datestr = params[:year].to_s + "-" + params[:month].to_s + "-" + params[:day].to_s
+    @streamitems = Admin::Streamitem.where(date: datestr).sorted
+    render layout: false
+  end
+
   def destroy
     @streamitem = Admin::Streamitem.find(params[:id]).destroy
     itemsToShift = Admin::Streamitem.where(date: @streamitem.date.strftime('%Y-%m-%d')).where("position > :positionToDelete", {positionToDelete: @streamitem.position}).sorted

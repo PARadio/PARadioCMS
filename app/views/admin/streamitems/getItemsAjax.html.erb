@@ -1,0 +1,8 @@
+<% @streamitems.each do |streamitem| %>
+  <tr position="<%= streamitem.position %>">
+     <td class="col-md-2"><%= streamitem.start_time.strftime("%I:%M:%S %p") %></td>
+     <td class="col-md-2"><%= streamitem.episode.name %></td>
+     <td class="col-md-6"><%= streamitem.episode.description %></td>
+     <td class="col-md-2"><%= link_to "Remove", admin_streamitem_path(streamitem), method: :delete %></td>
+  </tr>
+<% end %>
