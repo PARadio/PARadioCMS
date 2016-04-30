@@ -76,7 +76,7 @@ class Admin::Streamitem < ActiveRecord::Base
     streamitems = Admin::Streamitem.where(date: Date.today.strftime('%Y-%m-%d')).sorted
     File.open(Rails.root.join('lib', 'ices', 'playlist.txt'), 'w') do |f|
       streamitems.each do |streamitem|
-       f.puts Rails.root.join('public', streamitem.episode.mediafile.attachment_url)
+       f.puts "/var/www/html/PARadioCMS/public" + streamitem.episode.mediafile.attachment_url
       end
     end
   end
