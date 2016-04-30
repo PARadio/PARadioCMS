@@ -95,3 +95,87 @@
 [2016-04-23  14:15:51] INFO ices-core/main IceS 2.0.1 started...
 [2016-04-23  14:15:51] INFO signals/signal_usr1_handler Metadata update requested
 [2016-04-23  14:15:51] INFO playlist-basic/playlist_basic_get_next_filename Loading playlist from file "./PARadioCMS/lib/ices/playlist.txt"
+[2016-04-30  03:31:04] INFO ices-core/main IceS 2.0.1 started...
+[2016-04-30  03:31:04] INFO signals/signal_usr1_handler Metadata update requested
+[2016-04-30  03:31:04] INFO playlist-basic/playlist_basic_get_next_filename Loading playlist from file "/var/www/html/PARadioCMS/lib/ices/playlist.txt"
+[2016-04-30  03:33:04] INFO ices-core/main IceS 2.0.1 started...
+[2016-04-30  03:33:04] INFO signals/signal_usr1_handler Metadata update requested
+[2016-04-30  03:33:04] INFO playlist-basic/playlist_basic_get_next_filename Loading playlist from file "/var/www/html/PARadioCMS/lib/ices/playlist.txt"
+[2016-04-30  03:42:05] INFO ices-core/main IceS 2.0.1 started...
+[2016-04-30  03:42:05] INFO signals/signal_usr1_handler Metadata update requested
+[2016-04-30  03:42:05] INFO playlist-basic/playlist_basic_get_next_filename Loading playlist from file "/var/www/html/PARadioCMS/lib/ices/playlist.txt"
+[2016-04-30  03:47:04] INFO ices-core/main IceS 2.0.1 started...
+[2016-04-30  03:47:04] INFO signals/signal_usr1_handler Metadata update requested
+[2016-04-30  03:47:04] INFO playlist-basic/playlist_basic_get_next_filename Loading playlist from file "/var/www/html/PARadioCMS/lib/ices/playlist.txt"
+[2016-04-30  03:54:05] INFO ices-core/main IceS 2.0.1 started...
+[2016-04-30  03:54:05] INFO signals/signal_usr1_handler Metadata update requested
+[2016-04-30  03:54:05] INFO playlist-basic/playlist_basic_get_next_filename Loading playlist from file "/var/www/html/PARadioCMS/lib/ices/playlist.txt"
+[2016-04-30  03:55:06] INFO ices-core/main IceS 2.0.1 started...
+[2016-04-30  03:55:06] INFO signals/signal_usr1_handler Metadata update requested
+[2016-04-30  03:55:06] INFO playlist-basic/playlist_basic_get_next_filename Loading playlist from file "/var/www/html/PARadioCMS/lib/ices/playlist.txt"
+[2016-04-30  03:55:06] WARN playlist-builtin/playlist_read Error opening file "/uploads/mediafiles/DestinysChild-Bootylicious.ogg": No such file or directory
+[2016-04-30  03:55:06] WARN playlist-builtin/playlist_read Error opening file "/uploads/mediafiles/dumbintro.ogg": No such file or directory
+[2016-04-30  03:55:06] WARN playlist-builtin/playlist_read Error opening file "/uploads/mediafiles/DestinysChild-Bootylicious.ogg": No such file or directory
+[2016-04-30  03:55:06] EROR playlist-builtin/playlist_read Cannot play same file twice in a row, skipping
+[2016-04-30  03:55:06] WARN playlist-builtin/playlist_read Error opening file "/uploads/mediafiles/dumbintro.ogg": No such file or directory
+[2016-04-30  03:55:06] WARN playlist-builtin/playlist_read Error opening file "/uploads/mediafiles/DestinysChild-Bootylicious.ogg": No such file or directory
+[2016-04-30  03:55:06] WARN playlist-builtin/playlist_read Too many consecutive errors - exiting
+[2016-04-30  03:55:06] EROR stream/ices_instance_stream Failed initial connect to localhost:8000 (Couldn't connect: Connection refused)
+[2016-04-30  03:55:07] DBUG input/input_loop An instance died, removing it
+[2016-04-30  03:55:07] DBUG input/input_flush_queue Input queue flush requested
+[2016-04-30  03:55:07] INFO input/input_loop All instances removed, shutting down...
+[2016-04-30  03:55:07] INFO ices-core/main Shutdown complete
+[2016-04-30  03:56:10] INFO ices-core/main IceS 2.0.1 started...
+[2016-04-30  03:56:10] INFO signals/signal_usr1_handler Metadata update requested
+[2016-04-30  03:56:10] INFO playlist-basic/playlist_basic_get_next_filename Loading playlist from file "/var/www/html/PARadioCMS/lib/ices/playlist.txt"
+[2016-04-30  03:56:10] WARN playlist-builtin/playlist_read Error opening file "/uploads/mediafiles/DestinysChild-Bootylicious.ogg": No such file or directory
+[2016-04-30  03:56:10] WARN playlist-builtin/playlist_read Error opening file "/uploads/mediafiles/dumbintro.ogg": No such file or directory
+[2016-04-30  03:56:10] WARN playlist-builtin/playlist_read Error opening file "/uploads/mediafiles/DestinysChild-Bootylicious.ogg": No such file or directory
+[2016-04-30  03:56:10] EROR playlist-builtin/playlist_read Cannot play same file twice in a row, skipping
+[2016-04-30  03:56:10] WARN playlist-builtin/playlist_read Error opening file "/uploads/mediafiles/dumbintro.ogg": No such file or directory
+[2016-04-30  03:56:10] WARN playlist-builtin/playlist_read Error opening file "/uploads/mediafiles/DestinysChild-Bootylicious.ogg": No such file or directory
+[2016-04-30  03:56:10] WARN playlist-builtin/playlist_read Too many consecutive errors - exiting
+[2016-04-30  03:56:10] EROR stream/ices_instance_stream Failed initial connect to localhost:8000 (Couldn't connect: Connection refused)
+[2016-04-30  03:56:10] DBUG input/input_loop An instance died, removing it
+[2016-04-30  03:56:10] DBUG input/input_flush_queue Input queue flush requested
+[2016-04-30  03:56:10] INFO input/input_loop All instances removed, shutting down...
+[2016-04-30  03:56:10] INFO ices-core/main Shutdown complete
+[2016-04-30  03:56:16] INFO ices-core/main IceS 2.0.2 started...
+[2016-04-30  03:56:16] INFO signals/signal_usr1_handler Metadata update requested
+[2016-04-30  03:56:16] INFO playlist-basic/playlist_basic_get_next_filename Loading playlist from file "/var/www/html/PARadioCMS/lib/ices/playlist.txt"
+[2016-04-30  03:56:16] WARN playlist-builtin/playlist_read Error opening file "/uploads/mediafiles/DestinysChild-Bootylicious.ogg": No such file or directory
+[2016-04-30  03:56:16] WARN playlist-builtin/playlist_read Error opening file "/uploads/mediafiles/dumbintro.ogg": No such file or directory
+[2016-04-30  03:56:16] WARN playlist-builtin/playlist_read Error opening file "/uploads/mediafiles/DestinysChild-Bootylicious.ogg": No such file or directory
+[2016-04-30  03:56:16] EROR playlist-builtin/playlist_read Cannot play same file twice in a row, skipping
+[2016-04-30  03:56:16] WARN playlist-builtin/playlist_read Error opening file "/uploads/mediafiles/dumbintro.ogg": No such file or directory
+[2016-04-30  03:56:16] WARN playlist-builtin/playlist_read Error opening file "/uploads/mediafiles/DestinysChild-Bootylicious.ogg": No such file or directory
+[2016-04-30  03:56:16] WARN playlist-builtin/playlist_read Too many consecutive errors - exiting
+[2016-04-30  03:56:16] EROR stream/ices_instance_stream Failed initial connect to localhost:8000 (Couldn't connect: Connection refused)
+[2016-04-30  03:56:16] DBUG input/input_loop An instance died, removing it
+[2016-04-30  03:56:16] DBUG input/input_flush_queue Input queue flush requested
+[2016-04-30  03:56:16] INFO input/input_loop All instances removed, shutting down...
+[2016-04-30  03:56:17] INFO ices-core/main Shutdown complete
+[2016-04-30  03:57:13] INFO ices-core/main IceS 2.0.1 started...
+[2016-04-30  03:57:13] INFO signals/signal_usr1_handler Metadata update requested
+[2016-04-30  03:57:13] INFO playlist-basic/playlist_basic_get_next_filename Loading playlist from file "/var/www/html/PARadioCMS/lib/ices/playlist.txt"
+[2016-04-30  03:57:13] WARN playlist-builtin/playlist_read Error opening file "/uploads/mediafiles/DestinysChild-Bootylicious.ogg": No such file or directory
+[2016-04-30  03:57:13] WARN playlist-builtin/playlist_read Error opening file "/uploads/mediafiles/dumbintro.ogg": No such file or directory
+[2016-04-30  03:57:13] WARN playlist-builtin/playlist_read Error opening file "/uploads/mediafiles/DestinysChild-Bootylicious.ogg": No such file or directory
+[2016-04-30  03:57:13] EROR playlist-builtin/playlist_read Cannot play same file twice in a row, skipping
+[2016-04-30  03:57:13] WARN playlist-builtin/playlist_read Error opening file "/uploads/mediafiles/dumbintro.ogg": No such file or directory
+[2016-04-30  03:57:13] WARN playlist-builtin/playlist_read Error opening file "/uploads/mediafiles/DestinysChild-Bootylicious.ogg": No such file or directory
+[2016-04-30  03:57:13] WARN playlist-builtin/playlist_read Too many consecutive errors - exiting
+[2016-04-30  03:57:13] EROR stream/ices_instance_stream Failed initial connect to localhost:8000 (Couldn't connect: Connection refused)
+[2016-04-30  03:57:14] DBUG input/input_loop An instance died, removing it
+[2016-04-30  03:57:14] DBUG input/input_flush_queue Input queue flush requested
+[2016-04-30  03:57:14] INFO input/input_loop All instances removed, shutting down...
+[2016-04-30  03:57:14] INFO ices-core/main Shutdown complete
+[2016-04-30  03:59:54] INFO ices-core/main IceS 2.0.1 started...
+[2016-04-30  03:59:54] INFO signals/signal_usr1_handler Metadata update requested
+[2016-04-30  03:59:54] INFO playlist-basic/playlist_basic_get_next_filename Loading playlist from file "/var/www/html/PARadioCMS/lib/ices/playlist.txt"
+[2016-04-30  03:59:54] INFO playlist-builtin/playlist_read Currently playing "/var/www/html/PARadioCMS/public/uploads/mediafiles/DestinysChild-Bootylicious.ogg"
+[2016-04-30  03:59:54] EROR stream/ices_instance_stream Failed initial connect to localhost:8000 (Couldn't connect: Connection refused)
+[2016-04-30  03:59:54] DBUG input/input_loop An instance died, removing it
+[2016-04-30  03:59:54] DBUG input/input_flush_queue Input queue flush requested
+[2016-04-30  03:59:54] INFO input/input_loop All instances removed, shutting down...
+[2016-04-30  03:59:55] INFO ices-core/main Shutdown complete
