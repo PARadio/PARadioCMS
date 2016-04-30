@@ -8,13 +8,6 @@ class Admin::Streamitem < ActiveRecord::Base
 
   scope :sorted, lambda { order("position ASC") }
 
-
-
-  scope :dank, lambda {
-    puts 'dank'
-    return 'dank'
-  }
-
   def start_time
     position = read_attribute(:position)
     if position == 1
