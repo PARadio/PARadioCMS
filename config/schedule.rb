@@ -24,11 +24,11 @@ set :environment, 'development'
 
 every 1.day, :at => '5:00 am' do
   runner "Admin::Streamitem.updatePlaylistFile"
+  command "icecast2 -c /var/www/html/PARadioCMS/lib/ices/icecast.xml"
   command "ices2 /var/www/html/PARadioCMS/lib/ices/ices.xml"
-  #command "/etc/init.d/icecast2 start -c /var/www/html/PARadioCMS/lib/ices/icecast.xml"
 end
 
 every 1.day, :at => '11:00 pm' do
   command "killall ices2"
-  #command "/etc/init.d/icecast2 stop"
+  command "killall icecast2"
 end

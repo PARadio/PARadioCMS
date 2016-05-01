@@ -165,3 +165,1276 @@
 [2016-04-15  21:09:50] INFO auth/auth_shutdown Auth shutdown
 [2016-04-15  21:09:50] INFO yp/yp_shutdown YP thread down
 [2016-04-15  21:09:50] INFO stats/stats_shutdown stats thread finished
+[2016-04-30  23:59:18] INFO main/main Icecast 2.4.3 server started
+[2016-04-30  23:59:18] DBUG yp/yp_recheck_config Updating YP configuration
+[2016-04-30  23:59:18] INFO yp/yp_update_thread YP update thread started
+[2016-04-30  23:59:18] INFO connection/get_ssl_certificate No SSL capability on any configured ports
+[2016-04-30  23:59:19] DBUG slave/_slave_thread checking master stream list
+[2016-05-01  00:00:52] DBUG connection/_handle_get_request alias has made / into /status.xsl
+[2016-05-01  00:00:52] DBUG auth/add_authenticated_listener Stats request, sending XSL transformed stats
+[2016-05-01  00:00:52] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:00:52] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:00:52] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:00:52] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:00:52] DBUG stats/modify_node_event update global connections (1)
+[2016-05-01  00:00:52] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:00:52] DBUG stats/modify_node_event update global connections (2)
+[2016-05-01  00:00:52] DBUG stats/modify_node_event update global client_connections (1)
+[2016-05-01  00:00:52] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:00:52] INFO fserve/fserve_client_create checking for file /style.css (/usr/share/icecast2/web/style.css)
+[2016-05-01  00:00:52] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:00:52] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:00:52] INFO fserve/fserve_client_create checking for file /corner_topleft.jpg (/usr/share/icecast2/web/corner_topleft.jpg)
+[2016-05-01  00:00:52] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:00:52] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:00:52] INFO fserve/fserve_client_create checking for file /corner_bottomleft.jpg (/usr/share/icecast2/web/corner_bottomleft.jpg)
+[2016-05-01  00:00:52] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:00:52] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:00:52] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:00:53] INFO fserve/fserve_client_create checking for file /corner_bottomright.jpg (/usr/share/icecast2/web/corner_bottomright.jpg)
+[2016-05-01  00:00:53] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:00:53] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:00:53] INFO fserve/fserve_client_create checking for file /corner_topright.jpg (/usr/share/icecast2/web/corner_topright.jpg)
+[2016-05-01  00:00:53] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:00:53] INFO fserve/fserve_client_create checking for file /icecast.png (/usr/share/icecast2/web/icecast.png)
+[2016-05-01  00:00:53] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:00:53] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global connections (3)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global client_connections (2)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global file_connections (1)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global client_connections (3)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global file_connections (2)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global clients (0)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global connections (4)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global client_connections (4)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global file_connections (3)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global clients (0)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global connections (5)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global connections (6)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global connections (7)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global client_connections (5)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global file_connections (4)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global client_connections (6)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global file_connections (5)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global client_connections (7)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global file_connections (6)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global clients (0)
+[2016-05-01  00:00:53] INFO fserve/fserve_client_create checking for file /favicon.ico (/usr/share/icecast2/web/favicon.ico)
+[2016-05-01  00:00:53] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/favicon.ico" No such file or directory
+[2016-05-01  00:00:53] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:00:53] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:00:53] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global connections (8)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global client_connections (8)
+[2016-05-01  00:00:53] DBUG stats/modify_node_event update global clients (0)
+[2016-05-01  00:00:54] DBUG auth/add_authenticated_listener Stats request, sending XSL transformed stats
+[2016-05-01  00:00:54] DBUG xslt/xslt_get_stylesheet Using cached sheet 2
+[2016-05-01  00:00:54] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:00:54] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:00:54] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:00:54] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:00:54] DBUG stats/modify_node_event update global connections (9)
+[2016-05-01  00:00:54] DBUG stats/modify_node_event update global client_connections (9)
+[2016-05-01  00:00:54] DBUG stats/modify_node_event update global clients (0)
+[2016-05-01  00:00:55] INFO fserve/fserve_client_create checking for file /style.css (/usr/share/icecast2/web/style.css)
+[2016-05-01  00:00:55] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:00:55] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:00:55] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:00:55] INFO fserve/fserve_client_create checking for file /corner_topleft.jpg (/usr/share/icecast2/web/corner_topleft.jpg)
+[2016-05-01  00:00:55] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:00:55] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:00:55] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:00:55] INFO fserve/fserve_client_create checking for file /corner_bottomleft.jpg (/usr/share/icecast2/web/corner_bottomleft.jpg)
+[2016-05-01  00:00:55] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:00:55] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:00:55] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:00:55] INFO fserve/fserve_client_create checking for file /corner_bottomright.jpg (/usr/share/icecast2/web/corner_bottomright.jpg)
+[2016-05-01  00:00:55] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:00:55] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:00:55] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:00:55] INFO fserve/fserve_client_create checking for file /corner_topright.jpg (/usr/share/icecast2/web/corner_topright.jpg)
+[2016-05-01  00:00:55] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:00:55] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:00:55] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:00:55] INFO fserve/fserve_client_create checking for file /icecast.png (/usr/share/icecast2/web/icecast.png)
+[2016-05-01  00:00:55] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:00:55] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:00:55] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global connections (10)
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global connections (11)
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global client_connections (10)
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global file_connections (7)
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global client_connections (11)
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global file_connections (8)
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global clients (0)
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global connections (12)
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global client_connections (12)
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global file_connections (9)
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global clients (0)
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global connections (13)
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global connections (14)
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global client_connections (13)
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global file_connections (10)
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global connections (15)
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global client_connections (14)
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global file_connections (11)
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global client_connections (15)
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global file_connections (12)
+[2016-05-01  00:00:55] DBUG stats/modify_node_event update global clients (0)
+[2016-05-01  00:00:56] DBUG admin/admin_handle_request Admin request (/admin/)
+[2016-05-01  00:00:56] DBUG admin/admin_handle_request Got command ()
+[2016-05-01  00:00:56] INFO admin/admin_handle_request Bad or missing password on admin command request (command: )
+[2016-05-01  00:00:56] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:00:56] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:00:56] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:00:56] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:00:56] DBUG stats/modify_node_event update global connections (16)
+[2016-05-01  00:00:56] DBUG stats/modify_node_event update global client_connections (16)
+[2016-05-01  00:00:56] DBUG stats/modify_node_event update global clients (0)
+[2016-05-01  00:00:59] DBUG admin/admin_handle_request Admin request (/admin/)
+[2016-05-01  00:00:59] DBUG admin/admin_handle_request Got command ()
+[2016-05-01  00:00:59] DBUG admin/command_stats Stats request, sending xml stats
+[2016-05-01  00:00:59] DBUG admin/admin_send_response Sending XSLT (/usr/share/icecast2/admin/stats.xsl)
+[2016-05-01  00:00:59] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:00:59] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:00:59] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:01:00] INFO fserve/fserve_client_create checking for file /style.css (/usr/share/icecast2/web/style.css)
+[2016-05-01  00:01:00] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:01:00] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:01:00] INFO fserve/fserve_client_create checking for file /corner_topleft.jpg (/usr/share/icecast2/web/corner_topleft.jpg)
+[2016-05-01  00:01:00] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:01:00] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:01:00] INFO fserve/fserve_client_create checking for file /corner_bottomleft.jpg (/usr/share/icecast2/web/corner_bottomleft.jpg)
+[2016-05-01  00:01:00] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:01:00] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:01:00] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global connections (17)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global client_connections (17)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global clients (0)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global connections (18)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global connections (19)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global client_connections (18)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global file_connections (13)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global client_connections (19)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global file_connections (14)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global clients (0)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global connections (20)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global client_connections (20)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global file_connections (15)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global clients (0)
+[2016-05-01  00:01:00] INFO fserve/fserve_client_create checking for file /corner_bottomright.jpg (/usr/share/icecast2/web/corner_bottomright.jpg)
+[2016-05-01  00:01:00] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:01:00] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:01:00] INFO fserve/fserve_client_create checking for file /corner_topright.jpg (/usr/share/icecast2/web/corner_topright.jpg)
+[2016-05-01  00:01:00] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:01:00] INFO fserve/fserve_client_create checking for file /icecast.png (/usr/share/icecast2/web/icecast.png)
+[2016-05-01  00:01:00] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:01:00] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global connections (21)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global connections (22)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global connections (23)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global client_connections (21)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global file_connections (16)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global client_connections (22)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global file_connections (17)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global client_connections (23)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global file_connections (18)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:01:00] DBUG stats/modify_node_event update global clients (0)
+[2016-05-01  00:01:19] DBUG slave/_slave_thread checking master stream list
+[2016-05-01  00:01:40] INFO fserve/fserve_client_create checking for file /livestream (/usr/share/icecast2/web/livestream)
+[2016-05-01  00:01:40] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/livestream" No such file or directory
+[2016-05-01  00:01:40] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:01:40] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:01:40] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:01:40] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:01:40] DBUG stats/modify_node_event update global connections (24)
+[2016-05-01  00:01:40] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:01:40] DBUG stats/modify_node_event update global connections (25)
+[2016-05-01  00:01:40] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:01:40] DBUG stats/modify_node_event update global connections (26)
+[2016-05-01  00:01:40] DBUG stats/modify_node_event update global clients (4)
+[2016-05-01  00:01:40] DBUG stats/modify_node_event update global connections (27)
+[2016-05-01  00:01:40] DBUG stats/modify_node_event update global clients (5)
+[2016-05-01  00:01:40] DBUG stats/modify_node_event update global connections (28)
+[2016-05-01  00:01:40] DBUG stats/modify_node_event update global clients (6)
+[2016-05-01  00:01:40] DBUG stats/modify_node_event update global connections (29)
+[2016-05-01  00:01:40] DBUG stats/modify_node_event update global client_connections (24)
+[2016-05-01  00:01:40] DBUG stats/modify_node_event update global clients (5)
+[2016-05-01  00:01:43] DBUG connection/_handle_get_request alias has made / into /status.xsl
+[2016-05-01  00:01:43] DBUG auth/add_authenticated_listener Stats request, sending XSL transformed stats
+[2016-05-01  00:01:43] DBUG xslt/xslt_get_stylesheet Using cached sheet 2
+[2016-05-01  00:01:43] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:01:43] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:01:43] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:01:44] INFO fserve/fserve_client_create checking for file /style.css (/usr/share/icecast2/web/style.css)
+[2016-05-01  00:01:44] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:01:44] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:01:44] INFO fserve/fserve_client_create checking for file /corner_topleft.jpg (/usr/share/icecast2/web/corner_topleft.jpg)
+[2016-05-01  00:01:44] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:01:44] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:01:44] INFO fserve/fserve_client_create checking for file /corner_bottomleft.jpg (/usr/share/icecast2/web/corner_bottomleft.jpg)
+[2016-05-01  00:01:44] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:01:44] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:01:44] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:01:44] DBUG stats/modify_node_event update global clients (6)
+[2016-05-01  00:01:44] DBUG stats/modify_node_event update global connections (30)
+[2016-05-01  00:01:44] DBUG stats/modify_node_event update global client_connections (25)
+[2016-05-01  00:01:44] DBUG stats/modify_node_event update global clients (5)
+[2016-05-01  00:01:44] DBUG stats/modify_node_event update global client_connections (26)
+[2016-05-01  00:01:44] DBUG stats/modify_node_event update global file_connections (19)
+[2016-05-01  00:01:44] DBUG stats/modify_node_event update global client_connections (27)
+[2016-05-01  00:01:44] DBUG stats/modify_node_event update global file_connections (20)
+[2016-05-01  00:01:44] DBUG stats/modify_node_event update global clients (4)
+[2016-05-01  00:01:44] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:01:44] DBUG stats/modify_node_event update global client_connections (28)
+[2016-05-01  00:01:44] DBUG stats/modify_node_event update global file_connections (21)
+[2016-05-01  00:01:44] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:01:44] INFO fserve/fserve_client_create checking for file /corner_bottomright.jpg (/usr/share/icecast2/web/corner_bottomright.jpg)
+[2016-05-01  00:01:44] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:01:44] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:01:44] INFO fserve/fserve_client_create checking for file /corner_topright.jpg (/usr/share/icecast2/web/corner_topright.jpg)
+[2016-05-01  00:01:44] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:01:44] INFO fserve/fserve_client_create checking for file /icecast.png (/usr/share/icecast2/web/icecast.png)
+[2016-05-01  00:01:44] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:01:44] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:01:44] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:01:44] DBUG stats/modify_node_event update global connections (31)
+[2016-05-01  00:01:44] DBUG stats/modify_node_event update global client_connections (29)
+[2016-05-01  00:01:44] DBUG stats/modify_node_event update global file_connections (22)
+[2016-05-01  00:01:44] DBUG stats/modify_node_event update global client_connections (30)
+[2016-05-01  00:01:44] DBUG stats/modify_node_event update global file_connections (23)
+[2016-05-01  00:01:44] DBUG stats/modify_node_event update global client_connections (31)
+[2016-05-01  00:01:44] DBUG stats/modify_node_event update global file_connections (24)
+[2016-05-01  00:01:44] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:01:44] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:01:44] DBUG stats/modify_node_event update global clients (0)
+[2016-05-01  00:01:56] INFO sighandler/_sig_die Caught signal 2, shutting down...
+[2016-05-01  00:01:56] INFO main/main Shutting down
+[2016-05-01  00:01:56] INFO fserve/fserve_shutdown file serving stopped
+[2016-05-01  00:01:56] DBUG slave/slave_shutdown waiting for slave thread
+[2016-05-01  00:01:57] INFO slave/_slave_thread shutting down current relays
+[2016-05-01  00:01:57] INFO slave/_slave_thread Slave thread shutdown complete
+[2016-05-01  00:01:57] INFO auth/auth_shutdown Auth shutdown
+[2016-05-01  00:01:57] INFO yp/yp_shutdown YP thread down
+[2016-05-01  00:01:57] INFO stats/stats_shutdown stats thread finished
+[2016-05-01  00:02:02] INFO main/main Icecast 2.3.3 server started
+[2016-05-01  00:02:02] DBUG yp/yp_recheck_config Updating YP configuration
+[2016-05-01  00:02:02] INFO connection/get_ssl_certificate No SSL capability
+[2016-05-01  00:02:02] INFO yp/yp_update_thread YP update thread started
+[2016-05-01  00:02:03] DBUG slave/_slave_thread checking master stream list
+[2016-05-01  00:02:09] DBUG connection/_handle_get_request alias has made / into /status.xsl
+[2016-05-01  00:02:09] DBUG auth/add_authenticated_listener Stats request, sending XSL transformed stats
+[2016-05-01  00:02:09] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:02:09] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:02:09] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:02:09] INFO fserve/fserve_client_create checking for file /style.css (/usr/share/icecast2/web/style.css)
+[2016-05-01  00:02:09] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:02:09] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:02:09] INFO fserve/fserve_client_create checking for file /corner_topleft.jpg (/usr/share/icecast2/web/corner_topleft.jpg)
+[2016-05-01  00:02:09] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:02:09] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:02:09] INFO fserve/fserve_client_create checking for file /corner_bottomleft.jpg (/usr/share/icecast2/web/corner_bottomleft.jpg)
+[2016-05-01  00:02:09] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:02:09] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:02:09] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global connections (1)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global connections (2)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global connections (3)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global clients (4)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global connections (4)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global clients (5)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global connections (5)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global clients (6)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global connections (6)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global client_connections (1)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global clients (5)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global client_connections (2)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global file_connections (1)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global client_connections (3)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global file_connections (2)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global clients (4)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global client_connections (4)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global file_connections (3)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:02:09] INFO fserve/fserve_client_create checking for file /corner_bottomright.jpg (/usr/share/icecast2/web/corner_bottomright.jpg)
+[2016-05-01  00:02:09] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:02:09] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:02:09] INFO fserve/fserve_client_create checking for file /corner_topright.jpg (/usr/share/icecast2/web/corner_topright.jpg)
+[2016-05-01  00:02:09] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:02:09] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:02:09] INFO fserve/fserve_client_create checking for file /icecast.png (/usr/share/icecast2/web/icecast.png)
+[2016-05-01  00:02:09] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:02:09] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:02:09] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global connections (7)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global client_connections (5)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global file_connections (4)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global client_connections (6)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global file_connections (5)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global client_connections (7)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global file_connections (6)
+[2016-05-01  00:02:09] DBUG stats/modify_node_event update global clients (0)
+[2016-05-01  00:02:10] DBUG connection/_handle_get_request alias has made / into /status.xsl
+[2016-05-01  00:02:10] DBUG auth/add_authenticated_listener Stats request, sending XSL transformed stats
+[2016-05-01  00:02:10] DBUG xslt/xslt_get_stylesheet Using cached sheet 2
+[2016-05-01  00:02:10] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:02:10] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:02:10] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:02:11] INFO fserve/fserve_client_create checking for file /style.css (/usr/share/icecast2/web/style.css)
+[2016-05-01  00:02:11] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:02:11] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:02:11] INFO fserve/fserve_client_create checking for file /corner_topleft.jpg (/usr/share/icecast2/web/corner_topleft.jpg)
+[2016-05-01  00:02:11] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:02:11] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:02:11] INFO fserve/fserve_client_create checking for file /corner_bottomleft.jpg (/usr/share/icecast2/web/corner_bottomleft.jpg)
+[2016-05-01  00:02:11] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:02:11] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:02:11] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global connections (8)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global connections (9)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global connections (10)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global clients (4)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global connections (11)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global clients (5)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global connections (12)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global clients (6)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global connections (13)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global client_connections (8)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global clients (5)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global client_connections (9)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global file_connections (7)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global client_connections (10)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global file_connections (8)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global clients (4)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global client_connections (11)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global file_connections (9)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:02:11] INFO fserve/fserve_client_create checking for file /corner_bottomright.jpg (/usr/share/icecast2/web/corner_bottomright.jpg)
+[2016-05-01  00:02:11] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:02:11] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:02:11] INFO fserve/fserve_client_create checking for file /corner_topright.jpg (/usr/share/icecast2/web/corner_topright.jpg)
+[2016-05-01  00:02:11] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:02:11] INFO fserve/fserve_client_create checking for file /icecast.png (/usr/share/icecast2/web/icecast.png)
+[2016-05-01  00:02:11] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:02:11] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global connections (14)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global client_connections (12)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global file_connections (10)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global client_connections (13)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global file_connections (11)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global client_connections (14)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global file_connections (12)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:02:11] DBUG stats/modify_node_event update global clients (0)
+[2016-05-01  00:02:12] DBUG admin/admin_handle_request Admin request (/admin/)
+[2016-05-01  00:02:12] DBUG admin/admin_handle_request Got command ()
+[2016-05-01  00:02:12] DBUG admin/command_stats Stats request, sending xml stats
+[2016-05-01  00:02:12] DBUG admin/admin_send_response Sending XSLT (/usr/share/icecast2/admin/stats.xsl)
+[2016-05-01  00:02:12] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:02:12] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:02:12] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:02:12] INFO fserve/fserve_client_create checking for file /style.css (/usr/share/icecast2/web/style.css)
+[2016-05-01  00:02:12] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:02:12] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:02:12] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:02:12] INFO fserve/fserve_client_create checking for file /corner_topleft.jpg (/usr/share/icecast2/web/corner_topleft.jpg)
+[2016-05-01  00:02:12] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:02:12] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:02:12] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:02:12] INFO fserve/fserve_client_create checking for file /corner_bottomleft.jpg (/usr/share/icecast2/web/corner_bottomleft.jpg)
+[2016-05-01  00:02:12] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:02:12] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:02:12] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global connections (15)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global client_connections (15)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global clients (0)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global connections (16)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global connections (17)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global client_connections (16)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global file_connections (13)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global connections (18)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global client_connections (17)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global file_connections (14)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global client_connections (18)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global file_connections (15)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global clients (0)
+[2016-05-01  00:02:12] INFO fserve/fserve_client_create checking for file /corner_bottomright.jpg (/usr/share/icecast2/web/corner_bottomright.jpg)
+[2016-05-01  00:02:12] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:02:12] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:02:12] INFO fserve/fserve_client_create checking for file /corner_topright.jpg (/usr/share/icecast2/web/corner_topright.jpg)
+[2016-05-01  00:02:12] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:02:12] INFO fserve/fserve_client_create checking for file /icecast.png (/usr/share/icecast2/web/icecast.png)
+[2016-05-01  00:02:12] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:02:12] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global connections (19)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global connections (20)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global connections (21)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global client_connections (19)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global file_connections (16)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global client_connections (20)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global file_connections (17)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global client_connections (21)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global file_connections (18)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:02:12] DBUG stats/modify_node_event update global clients (0)
+[2016-05-01  00:02:20] INFO sighandler/_sig_die Caught signal 2, shutting down...
+[2016-05-01  00:02:20] INFO main/main Shutting down
+[2016-05-01  00:02:20] INFO fserve/fserve_shutdown file serving stopped
+[2016-05-01  00:02:20] DBUG slave/slave_shutdown waiting for slave thread
+[2016-05-01  00:02:21] INFO slave/_slave_thread shutting down current relays
+[2016-05-01  00:02:21] INFO slave/_slave_thread Slave thread shutdown complete
+[2016-05-01  00:02:21] INFO auth/auth_shutdown Auth shutdown
+[2016-05-01  00:02:21] INFO yp/yp_shutdown YP thread down
+[2016-05-01  00:02:22] INFO stats/stats_shutdown stats thread finished
+[2016-05-01  00:05:04] INFO main/main Icecast 2.3.3 server started
+[2016-05-01  00:05:04] DBUG yp/yp_recheck_config Updating YP configuration
+[2016-05-01  00:05:04] INFO connection/get_ssl_certificate No SSL capability
+[2016-05-01  00:05:04] INFO yp/yp_update_thread YP update thread started
+[2016-05-01  00:05:05] DBUG slave/_slave_thread checking master stream list
+[2016-05-01  00:07:04] DBUG admin/admin_handle_request Admin request (/admin/)
+[2016-05-01  00:07:04] DBUG admin/admin_handle_request Got command ()
+[2016-05-01  00:07:04] DBUG admin/command_stats Stats request, sending xml stats
+[2016-05-01  00:07:04] DBUG admin/admin_send_response Sending XSLT (/usr/share/icecast2/admin/stats.xsl)
+[2016-05-01  00:07:04] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:07:04] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:07:04] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:07:04] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:07:04] DBUG stats/modify_node_event update global connections (1)
+[2016-05-01  00:07:04] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:07:04] DBUG stats/modify_node_event update global connections (2)
+[2016-05-01  00:07:04] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:07:04] DBUG stats/modify_node_event update global connections (3)
+[2016-05-01  00:07:04] DBUG stats/modify_node_event update global clients (4)
+[2016-05-01  00:07:04] DBUG stats/modify_node_event update global connections (4)
+[2016-05-01  00:07:04] DBUG stats/modify_node_event update global clients (5)
+[2016-05-01  00:07:04] DBUG stats/modify_node_event update global connections (5)
+[2016-05-01  00:07:04] DBUG stats/modify_node_event update global clients (6)
+[2016-05-01  00:07:04] DBUG stats/modify_node_event update global connections (6)
+[2016-05-01  00:07:04] DBUG stats/modify_node_event update global client_connections (1)
+[2016-05-01  00:07:04] DBUG stats/modify_node_event update global clients (5)
+[2016-05-01  00:07:04] INFO fserve/fserve_client_create checking for file /style.css (/usr/share/icecast2/web/style.css)
+[2016-05-01  00:07:04] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:07:04] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:07:04] INFO fserve/fserve_client_create checking for file /corner_topleft.jpg (/usr/share/icecast2/web/corner_topleft.jpg)
+[2016-05-01  00:07:04] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:07:04] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:07:04] INFO fserve/fserve_client_create checking for file /corner_bottomleft.jpg (/usr/share/icecast2/web/corner_bottomleft.jpg)
+[2016-05-01  00:07:04] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:07:04] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:07:04] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:07:05] INFO fserve/fserve_client_create checking for file /corner_bottomright.jpg (/usr/share/icecast2/web/corner_bottomright.jpg)
+[2016-05-01  00:07:05] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:07:05] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:07:05] INFO fserve/fserve_client_create checking for file /corner_topright.jpg (/usr/share/icecast2/web/corner_topright.jpg)
+[2016-05-01  00:07:05] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:07:05] INFO fserve/fserve_client_create checking for file /icecast.png (/usr/share/icecast2/web/icecast.png)
+[2016-05-01  00:07:05] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:07:05] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:07:05] DBUG stats/modify_node_event update global client_connections (2)
+[2016-05-01  00:07:05] DBUG stats/modify_node_event update global file_connections (1)
+[2016-05-01  00:07:05] DBUG stats/modify_node_event update global client_connections (3)
+[2016-05-01  00:07:05] DBUG stats/modify_node_event update global file_connections (2)
+[2016-05-01  00:07:05] DBUG stats/modify_node_event update global clients (4)
+[2016-05-01  00:07:05] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:07:05] DBUG stats/modify_node_event update global client_connections (4)
+[2016-05-01  00:07:05] DBUG stats/modify_node_event update global file_connections (3)
+[2016-05-01  00:07:05] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:07:05] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:07:05] DBUG stats/modify_node_event update global connections (7)
+[2016-05-01  00:07:05] DBUG stats/modify_node_event update global client_connections (5)
+[2016-05-01  00:07:05] DBUG stats/modify_node_event update global file_connections (4)
+[2016-05-01  00:07:05] DBUG stats/modify_node_event update global client_connections (6)
+[2016-05-01  00:07:05] DBUG stats/modify_node_event update global file_connections (5)
+[2016-05-01  00:07:05] DBUG stats/modify_node_event update global client_connections (7)
+[2016-05-01  00:07:05] DBUG stats/modify_node_event update global file_connections (6)
+[2016-05-01  00:07:05] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:07:05] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:07:05] DBUG stats/modify_node_event update global clients (0)
+[2016-05-01  00:07:05] DBUG slave/_slave_thread checking master stream list
+[2016-05-01  00:07:08] INFO fserve/fserve_client_create checking for file /live (/usr/share/icecast2/web/live)
+[2016-05-01  00:07:08] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/live" No such file or directory
+[2016-05-01  00:07:08] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:07:08] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:07:08] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:07:08] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:07:08] DBUG stats/modify_node_event update global connections (8)
+[2016-05-01  00:07:08] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:07:08] DBUG stats/modify_node_event update global connections (9)
+[2016-05-01  00:07:08] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:07:08] DBUG stats/modify_node_event update global connections (10)
+[2016-05-01  00:07:08] DBUG stats/modify_node_event update global clients (4)
+[2016-05-01  00:07:08] DBUG stats/modify_node_event update global connections (11)
+[2016-05-01  00:07:08] DBUG stats/modify_node_event update global clients (5)
+[2016-05-01  00:07:08] DBUG stats/modify_node_event update global connections (12)
+[2016-05-01  00:07:08] DBUG stats/modify_node_event update global clients (6)
+[2016-05-01  00:07:08] DBUG stats/modify_node_event update global connections (13)
+[2016-05-01  00:07:08] DBUG stats/modify_node_event update global client_connections (8)
+[2016-05-01  00:07:08] DBUG stats/modify_node_event update global clients (5)
+[2016-05-01  00:07:11] INFO fserve/fserve_client_create checking for file /livestream (/usr/share/icecast2/web/livestream)
+[2016-05-01  00:07:11] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/livestream" No such file or directory
+[2016-05-01  00:07:11] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:07:11] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:07:11] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:07:11] DBUG stats/modify_node_event update global client_connections (9)
+[2016-05-01  00:07:11] DBUG stats/modify_node_event update global clients (4)
+[2016-05-01  00:07:23] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:07:23] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:07:23] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:07:23] DBUG stats/modify_node_event update global clients (0)
+[2016-05-01  00:09:05] DBUG slave/_slave_thread checking master stream list
+[2016-05-01  00:11:05] DBUG slave/_slave_thread checking master stream list
+[2016-05-01  00:13:05] DBUG slave/_slave_thread checking master stream list
+[2016-05-01  00:14:50] INFO sighandler/_sig_die Caught signal 15, shutting down...
+[2016-05-01  00:14:50] INFO main/main Shutting down
+[2016-05-01  00:14:50] INFO fserve/fserve_shutdown file serving stopped
+[2016-05-01  00:14:50] DBUG slave/slave_shutdown waiting for slave thread
+[2016-05-01  00:14:51] INFO slave/_slave_thread shutting down current relays
+[2016-05-01  00:14:51] INFO slave/_slave_thread Slave thread shutdown complete
+[2016-05-01  00:14:51] INFO auth/auth_shutdown Auth shutdown
+[2016-05-01  00:14:51] INFO yp/yp_shutdown YP thread down
+[2016-05-01  00:14:51] INFO stats/stats_shutdown stats thread finished
+[2016-05-01  00:18:04] INFO main/main Icecast 2.3.3 server started
+[2016-05-01  00:18:04] DBUG yp/yp_recheck_config Updating YP configuration
+[2016-05-01  00:18:04] INFO connection/get_ssl_certificate No SSL capability
+[2016-05-01  00:18:04] INFO yp/yp_update_thread YP update thread started
+[2016-05-01  00:18:05] DBUG slave/_slave_thread checking master stream list
+[2016-05-01  00:20:05] DBUG slave/_slave_thread checking master stream list
+[2016-05-01  00:20:25] INFO fserve/fserve_client_create checking for file /livestream (/usr/share/icecast2/web/livestream)
+[2016-05-01  00:20:25] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/livestream" No such file or directory
+[2016-05-01  00:20:25] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:20:25] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:20:25] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:20:26] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:20:26] DBUG stats/modify_node_event update global connections (1)
+[2016-05-01  00:20:26] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:20:26] DBUG stats/modify_node_event update global connections (2)
+[2016-05-01  00:20:26] DBUG stats/modify_node_event update global client_connections (1)
+[2016-05-01  00:20:26] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:20:40] DBUG stats/modify_node_event update global clients (0)
+[2016-05-01  00:21:02] DBUG connection/_handle_get_request alias has made / into /status.xsl
+[2016-05-01  00:21:02] DBUG auth/add_authenticated_listener Stats request, sending XSL transformed stats
+[2016-05-01  00:21:02] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:21:02] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:21:02] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global connections (3)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global client_connections (2)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global clients (0)
+[2016-05-01  00:21:02] INFO fserve/fserve_client_create checking for file /style.css (/usr/share/icecast2/web/style.css)
+[2016-05-01  00:21:02] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:21:02] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:21:02] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:21:02] INFO fserve/fserve_client_create checking for file /corner_topleft.jpg (/usr/share/icecast2/web/corner_topleft.jpg)
+[2016-05-01  00:21:02] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:21:02] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:21:02] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:21:02] INFO fserve/fserve_client_create checking for file /corner_bottomleft.jpg (/usr/share/icecast2/web/corner_bottomleft.jpg)
+[2016-05-01  00:21:02] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:21:02] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:21:02] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:21:02] INFO fserve/fserve_client_create checking for file /corner_bottomright.jpg (/usr/share/icecast2/web/corner_bottomright.jpg)
+[2016-05-01  00:21:02] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:21:02] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:21:02] INFO fserve/fserve_client_create checking for file /corner_topright.jpg (/usr/share/icecast2/web/corner_topright.jpg)
+[2016-05-01  00:21:02] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:21:02] INFO fserve/fserve_client_create checking for file /icecast.png (/usr/share/icecast2/web/icecast.png)
+[2016-05-01  00:21:02] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:21:02] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global connections (4)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global connections (5)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global client_connections (3)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global file_connections (1)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global connections (6)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global client_connections (4)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global file_connections (2)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global client_connections (5)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global file_connections (3)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global clients (0)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global connections (7)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global connections (8)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global connections (9)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global client_connections (6)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global file_connections (4)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global client_connections (7)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global file_connections (5)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global client_connections (8)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global file_connections (6)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:21:02] DBUG stats/modify_node_event update global clients (0)
+[2016-05-01  00:21:03] DBUG admin/admin_handle_request Admin request (/admin/)
+[2016-05-01  00:21:03] DBUG admin/admin_handle_request Got command ()
+[2016-05-01  00:21:03] DBUG admin/command_stats Stats request, sending xml stats
+[2016-05-01  00:21:03] DBUG admin/admin_send_response Sending XSLT (/usr/share/icecast2/admin/stats.xsl)
+[2016-05-01  00:21:03] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:21:03] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:21:03] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:21:03] INFO fserve/fserve_client_create checking for file /style.css (/usr/share/icecast2/web/style.css)
+[2016-05-01  00:21:03] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:21:03] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:21:03] INFO fserve/fserve_client_create checking for file /corner_topleft.jpg (/usr/share/icecast2/web/corner_topleft.jpg)
+[2016-05-01  00:21:03] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:21:03] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:21:03] INFO fserve/fserve_client_create checking for file /corner_bottomleft.jpg (/usr/share/icecast2/web/corner_bottomleft.jpg)
+[2016-05-01  00:21:03] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:21:03] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:21:03] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:21:03] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:21:03] DBUG stats/modify_node_event update global connections (10)
+[2016-05-01  00:21:03] DBUG stats/modify_node_event update global client_connections (9)
+[2016-05-01  00:21:03] DBUG stats/modify_node_event update global clients (0)
+[2016-05-01  00:21:03] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:21:03] DBUG stats/modify_node_event update global connections (11)
+[2016-05-01  00:21:03] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:21:03] DBUG stats/modify_node_event update global connections (12)
+[2016-05-01  00:21:03] DBUG stats/modify_node_event update global client_connections (10)
+[2016-05-01  00:21:03] DBUG stats/modify_node_event update global file_connections (7)
+[2016-05-01  00:21:03] DBUG stats/modify_node_event update global client_connections (11)
+[2016-05-01  00:21:03] DBUG stats/modify_node_event update global file_connections (8)
+[2016-05-01  00:21:03] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:21:03] DBUG stats/modify_node_event update global clients (0)
+[2016-05-01  00:21:03] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:21:03] DBUG stats/modify_node_event update global connections (13)
+[2016-05-01  00:21:03] DBUG stats/modify_node_event update global client_connections (12)
+[2016-05-01  00:21:03] DBUG stats/modify_node_event update global file_connections (9)
+[2016-05-01  00:21:03] DBUG stats/modify_node_event update global clients (0)
+[2016-05-01  00:21:03] INFO fserve/fserve_client_create checking for file /corner_bottomright.jpg (/usr/share/icecast2/web/corner_bottomright.jpg)
+[2016-05-01  00:21:03] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:21:03] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:21:03] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:21:03] INFO fserve/fserve_client_create checking for file /corner_topright.jpg (/usr/share/icecast2/web/corner_topright.jpg)
+[2016-05-01  00:21:03] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:21:03] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:21:03] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:21:03] INFO fserve/fserve_client_create checking for file /icecast.png (/usr/share/icecast2/web/icecast.png)
+[2016-05-01  00:21:03] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:21:03] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:21:03] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:21:04] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:21:04] DBUG stats/modify_node_event update global connections (14)
+[2016-05-01  00:21:04] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:21:04] DBUG stats/modify_node_event update global connections (15)
+[2016-05-01  00:21:04] DBUG stats/modify_node_event update global client_connections (13)
+[2016-05-01  00:21:04] DBUG stats/modify_node_event update global file_connections (10)
+[2016-05-01  00:21:04] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:21:04] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:21:04] DBUG stats/modify_node_event update global connections (16)
+[2016-05-01  00:21:04] DBUG stats/modify_node_event update global client_connections (14)
+[2016-05-01  00:21:04] DBUG stats/modify_node_event update global file_connections (11)
+[2016-05-01  00:21:04] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:21:04] DBUG stats/modify_node_event update global client_connections (15)
+[2016-05-01  00:21:04] DBUG stats/modify_node_event update global file_connections (12)
+[2016-05-01  00:21:04] DBUG stats/modify_node_event update global clients (0)
+[2016-05-01  00:22:03] DBUG admin/admin_handle_request Admin request (/admin/)
+[2016-05-01  00:22:03] DBUG admin/admin_handle_request Got command ()
+[2016-05-01  00:22:03] DBUG admin/command_stats Stats request, sending xml stats
+[2016-05-01  00:22:03] DBUG admin/admin_send_response Sending XSLT (/usr/share/icecast2/admin/stats.xsl)
+[2016-05-01  00:22:03] DBUG xslt/xslt_get_stylesheet Using cached sheet 1
+[2016-05-01  00:22:03] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:22:03] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:22:03] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:22:03] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:22:03] DBUG stats/modify_node_event update global connections (17)
+[2016-05-01  00:22:03] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:22:03] DBUG stats/modify_node_event update global connections (18)
+[2016-05-01  00:22:03] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:22:03] DBUG stats/modify_node_event update global connections (19)
+[2016-05-01  00:22:03] DBUG stats/modify_node_event update global clients (4)
+[2016-05-01  00:22:03] DBUG stats/modify_node_event update global connections (20)
+[2016-05-01  00:22:03] DBUG stats/modify_node_event update global clients (5)
+[2016-05-01  00:22:03] DBUG stats/modify_node_event update global connections (21)
+[2016-05-01  00:22:03] DBUG stats/modify_node_event update global clients (6)
+[2016-05-01  00:22:03] DBUG stats/modify_node_event update global connections (22)
+[2016-05-01  00:22:03] DBUG stats/modify_node_event update global client_connections (16)
+[2016-05-01  00:22:03] DBUG stats/modify_node_event update global clients (5)
+[2016-05-01  00:22:04] INFO fserve/fserve_client_create checking for file /style.css (/usr/share/icecast2/web/style.css)
+[2016-05-01  00:22:04] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:22:04] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:22:04] INFO fserve/fserve_client_create checking for file /corner_topleft.jpg (/usr/share/icecast2/web/corner_topleft.jpg)
+[2016-05-01  00:22:04] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:22:04] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:22:04] INFO fserve/fserve_client_create checking for file /corner_bottomleft.jpg (/usr/share/icecast2/web/corner_bottomleft.jpg)
+[2016-05-01  00:22:04] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:22:04] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:22:04] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:22:04] INFO connection/_handle_source_request Source logging in at mountpoint "/livestream"
+[2016-05-01  00:22:04] INFO connection/_handle_source_request Source (/livestream) attempted to login with invalid or missing password
+[2016-05-01  00:22:04] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:22:04] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:22:04] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:22:04] INFO connection/_handle_source_request Source logging in at mountpoint "/livestream"
+[2016-05-01  00:22:04] DBUG connection/connection_complete_source sources count is 0
+[2016-05-01  00:22:04] DBUG source/source_apply_mount Applying mount information for "/livestream"
+[2016-05-01  00:22:04] DBUG source/source_update_settings public set to 0
+[2016-05-01  00:22:04] DBUG source/source_update_settings max listeners to -1
+[2016-05-01  00:22:04] DBUG source/source_update_settings queue size to 524288
+[2016-05-01  00:22:04] DBUG source/source_update_settings burst size to 65535
+[2016-05-01  00:22:04] DBUG source/source_update_settings source timeout to 10
+[2016-05-01  00:22:04] DBUG source/source_update_settings fallback_when_full to 0
+[2016-05-01  00:22:04] DBUG connection/connection_complete_source source is ready to start
+[2016-05-01  00:22:04] DBUG fserve/fserve_add_client_callback Adding client to file serving engine
+[2016-05-01  00:22:04] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:22:04] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:22:04] DBUG source/source_init Source creation complete
+[2016-05-01  00:22:04] DBUG format-vorbis/initial_vorbis_page checking for vorbis codec
+[2016-05-01  00:22:04] INFO format-vorbis/initial_vorbis_page seen initial vorbis header
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update global client_connections (17)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update global file_connections (13)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update global client_connections (18)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update global file_connections (14)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update global clients (4)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update global client_connections (19)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update global file_connections (15)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update global connections (23)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update global connections (24)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update global sources (1)
+[2016-05-01  00:22:04] DBUG stats/process_source_event new source stat /livestream
+[2016-05-01  00:22:04] DBUG stats/process_source_event new node listenurl (http://localhost:8000/livestream)
+[2016-05-01  00:22:04] DBUG stats/process_source_event new node listener_peak (0)
+[2016-05-01  00:22:04] DBUG stats/process_source_event new node public (0)
+[2016-05-01  00:22:04] DBUG stats/process_source_event new node server_name (Awesome Stream)
+[2016-05-01  00:22:04] DBUG stats/process_source_event new node server_description (A really cool stream)
+[2016-05-01  00:22:04] DBUG stats/process_source_event new node genre (Custom)
+[2016-05-01  00:22:04] DBUG stats/process_source_event new node server_type (application/ogg)
+[2016-05-01  00:22:04] DBUG stats/process_source_event new node max_listeners (unlimited)
+[2016-05-01  00:22:04] DBUG stats/process_source_event new node source_ip (127.0.0.1)
+[2016-05-01  00:22:04] DBUG stats/process_source_event new node user_agent (IceS 2.0.1)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update global source_client_connections (1)
+[2016-05-01  00:22:04] DBUG stats/process_source_event new node listeners (0)
+[2016-05-01  00:22:04] DBUG stats/process_source_event new node samplerate (0)
+[2016-05-01  00:22:04] DBUG stats/process_source_event new node channels (0)
+[2016-05-01  00:22:04] DBUG stats/process_source_event new node quality (3.00)
+[2016-05-01  00:22:04] DBUG stats/process_source_event new node audio_info (samplerate=0;channels=0;quality=3%2e00)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update "/livestream" listenurl (http://localhost:8000/livestream)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update global source_total_connections (1)
+[2016-05-01  00:22:04] DBUG stats/process_source_event new node slow_listeners (0)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update "/livestream" listeners (0)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update "/livestream" listener_peak (0)
+[2016-05-01  00:22:04] DBUG stats/process_source_event new node stream_start (Sun, 01 May 2016 00:22:04 -0400)
+[2016-05-01  00:22:04] DBUG stats/process_source_event new node total_bytes_read (0)
+[2016-05-01  00:22:04] DBUG stats/process_source_event new node total_bytes_sent (0)
+[2016-05-01  00:22:04] DBUG format-vorbis/process_vorbis_page processing incoming header packet (1)
+[2016-05-01  00:22:04] DBUG format-vorbis/process_vorbis_page processing incoming header packet (2)
+[2016-05-01  00:22:04] DBUG format-vorbis/process_vorbis_page we have the header packets now
+[2016-05-01  00:22:04] DBUG format-vorbis/process_vorbis_headers Adding the 3 header packets
+[2016-05-01  00:22:04] DBUG format-ogg/format_ogg_attach_header attaching BOS page
+[2016-05-01  00:22:04] DBUG format-ogg/format_ogg_attach_header attaching header page
+[2016-05-01  00:22:04] INFO fserve/fserve_client_create checking for file /corner_bottomright.jpg (/usr/share/icecast2/web/corner_bottomright.jpg)
+[2016-05-01  00:22:04] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:22:04] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:22:04] INFO fserve/fserve_client_create checking for file /corner_topright.jpg (/usr/share/icecast2/web/corner_topright.jpg)
+[2016-05-01  00:22:04] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:22:04] INFO fserve/fserve_client_create checking for file /icecast.png (/usr/share/icecast2/web/icecast.png)
+[2016-05-01  00:22:04] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:22:04] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:22:04] INFO source/source_main listener count on /livestream now 0
+[2016-05-01  00:22:04] DBUG stats/process_source_event new node audio_samplerate (44100)
+[2016-05-01  00:22:04] DBUG stats/process_source_event new node audio_channels (2)
+[2016-05-01  00:22:04] DBUG stats/process_source_event new node audio_bitrate (192000)
+[2016-05-01  00:22:04] DBUG stats/process_source_event new node ice-bitrate (192)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update global clients (4)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update global connections (25)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update global client_connections (20)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update global file_connections (16)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update global client_connections (21)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update global file_connections (17)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update global client_connections (22)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update global file_connections (18)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:22:04] DBUG stats/process_source_event new node subtype (Vorbis)
+[2016-05-01  00:22:04] DBUG stats/modify_node_event update "/livestream" listeners (0)
+[2016-05-01  00:22:05] DBUG slave/_slave_thread checking master stream list
+[2016-05-01  00:22:05] DBUG admin/admin_handle_request Admin request (/admin/)
+[2016-05-01  00:22:05] DBUG admin/admin_handle_request Got command ()
+[2016-05-01  00:22:05] DBUG admin/command_stats Stats request, sending xml stats
+[2016-05-01  00:22:05] DBUG admin/admin_send_response Sending XSLT (/usr/share/icecast2/admin/stats.xsl)
+[2016-05-01  00:22:05] DBUG xslt/xslt_get_stylesheet Using cached sheet 1
+[2016-05-01  00:22:05] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:22:05] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:22:05] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global connections (26)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global connections (27)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global clients (4)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global connections (28)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global clients (5)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global connections (29)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global client_connections (23)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global clients (4)
+[2016-05-01  00:22:06] INFO fserve/fserve_client_create checking for file /style.css (/usr/share/icecast2/web/style.css)
+[2016-05-01  00:22:06] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:22:06] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:22:06] INFO fserve/fserve_client_create checking for file /corner_topleft.jpg (/usr/share/icecast2/web/corner_topleft.jpg)
+[2016-05-01  00:22:06] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:22:06] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:22:06] INFO fserve/fserve_client_create checking for file /corner_bottomleft.jpg (/usr/share/icecast2/web/corner_bottomleft.jpg)
+[2016-05-01  00:22:06] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:22:06] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:22:06] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:22:06] INFO fserve/fserve_client_create checking for file /tunein.png (/usr/share/icecast2/web/tunein.png)
+[2016-05-01  00:22:06] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:22:06] DBUG fserve/fserve_add_pending fserve handler waking up
+[2016-05-01  00:22:06] INFO fserve/fserve_client_create checking for file /corner_bottomright.jpg (/usr/share/icecast2/web/corner_bottomright.jpg)
+[2016-05-01  00:22:06] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:22:06] INFO fserve/fserve_client_create checking for file /corner_topright.jpg (/usr/share/icecast2/web/corner_topright.jpg)
+[2016-05-01  00:22:06] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:22:06] INFO fserve/fserve_client_create checking for file /icecast.png (/usr/share/icecast2/web/icecast.png)
+[2016-05-01  00:22:06] DBUG fserve/fserve_add_client Adding client to file serving engine
+[2016-05-01  00:22:06] DBUG fserve/fserv_thread_function fserve handler exit
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global client_connections (24)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global file_connections (19)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global client_connections (25)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global file_connections (20)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global client_connections (26)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global file_connections (21)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global connections (30)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global connections (31)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global clients (4)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global connections (32)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global clients (5)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global connections (33)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global client_connections (27)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global file_connections (22)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global client_connections (28)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global file_connections (23)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global client_connections (29)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global file_connections (24)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global client_connections (30)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global file_connections (25)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global clients (4)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:22:06] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:22:09] DBUG stats/modify_node_event update "/livestream" total_bytes_read (138394)
+[2016-05-01  00:22:09] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (0)
+[2016-05-01  00:22:13] DBUG auth/add_listener_to_source max on /livestream is -1 (cur 0)
+[2016-05-01  00:22:13] DBUG auth/add_listener_to_source Added client to /livestream
+[2016-05-01  00:22:13] DBUG auth/add_authenticated_listener client authenticated, passed to source
+[2016-05-01  00:22:13] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:22:13] DBUG stats/modify_node_event update global connections (34)
+[2016-05-01  00:22:13] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:22:13] DBUG stats/modify_node_event update global connections (35)
+[2016-05-01  00:22:13] DBUG stats/modify_node_event update global clients (4)
+[2016-05-01  00:22:13] DBUG stats/modify_node_event update global connections (36)
+[2016-05-01  00:22:13] DBUG stats/modify_node_event update global client_connections (31)
+[2016-05-01  00:22:13] DBUG source/source_main Client added
+[2016-05-01  00:22:13] INFO source/source_main listener count on /livestream now 1
+[2016-05-01  00:22:14] DBUG auth/add_listener_to_source max on /livestream is -1 (cur 1)
+[2016-05-01  00:22:14] DBUG auth/add_listener_to_source Added client to /livestream
+[2016-05-01  00:22:14] DBUG auth/add_authenticated_listener client authenticated, passed to source
+[2016-05-01  00:22:14] DBUG format/format_check_http_buffer processing pending client headers
+[2016-05-01  00:22:14] DBUG source/source_main Client added
+[2016-05-01  00:22:14] INFO source/source_main listener count on /livestream now 2
+[2016-05-01  00:22:14] DBUG stats/modify_node_event update "/livestream" listener_peak (1)
+[2016-05-01  00:22:14] DBUG stats/modify_node_event update "/livestream" listeners (1)
+[2016-05-01  00:22:14] DBUG stats/modify_node_event update global client_connections (32)
+[2016-05-01  00:22:14] DBUG stats/modify_node_event update global listeners (1)
+[2016-05-01  00:22:14] DBUG stats/modify_node_event update global listener_connections (1)
+[2016-05-01  00:22:14] DBUG stats/modify_node_event update "/livestream" listener_peak (2)
+[2016-05-01  00:22:14] DBUG stats/modify_node_event update "/livestream" listeners (2)
+[2016-05-01  00:22:14] DBUG format/format_check_http_buffer processing pending client headers
+[2016-05-01  00:22:14] DBUG client/client_send_bytes Client connection died
+[2016-05-01  00:22:14] DBUG source/source_main Client removed
+[2016-05-01  00:22:14] INFO source/source_main listener count on /livestream now 1
+[2016-05-01  00:22:14] DBUG stats/modify_node_event update "/livestream" total_bytes_read (264155)
+[2016-05-01  00:22:14] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (246)
+[2016-05-01  00:22:14] DBUG stats/modify_node_event update global listeners (2)
+[2016-05-01  00:22:14] DBUG stats/modify_node_event update global listener_connections (2)
+[2016-05-01  00:22:14] DBUG stats/modify_node_event update global listeners (1)
+[2016-05-01  00:22:14] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:22:14] DBUG stats/modify_node_event update "/livestream" listeners (1)
+[2016-05-01  00:22:14] DBUG auth/add_listener_to_source max on /livestream is -1 (cur 1)
+[2016-05-01  00:22:14] DBUG auth/add_listener_to_source Added client to /livestream
+[2016-05-01  00:22:14] DBUG auth/add_authenticated_listener client authenticated, passed to source
+[2016-05-01  00:22:14] DBUG client/client_send_bytes Client connection died
+[2016-05-01  00:22:14] DBUG source/source_main Client removed
+[2016-05-01  00:22:14] DBUG source/source_main Client added
+[2016-05-01  00:22:15] DBUG stats/modify_node_event update global client_connections (33)
+[2016-05-01  00:22:15] DBUG stats/modify_node_event update global listeners (0)
+[2016-05-01  00:22:15] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:22:15] DBUG format/format_check_http_buffer processing pending client headers
+[2016-05-01  00:22:15] DBUG stats/modify_node_event update global listeners (1)
+[2016-05-01  00:22:15] DBUG stats/modify_node_event update global listener_connections (3)
+[2016-05-01  00:22:19] DBUG stats/modify_node_event update "/livestream" total_bytes_read (388690)
+[2016-05-01  00:22:19] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (241464)
+[2016-05-01  00:22:24] DBUG stats/modify_node_event update "/livestream" total_bytes_read (513002)
+[2016-05-01  00:22:24] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (365696)
+[2016-05-01  00:22:29] DBUG stats/modify_node_event update "/livestream" total_bytes_read (646693)
+[2016-05-01  00:22:29] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (498978)
+[2016-05-01  00:22:34] DBUG stats/modify_node_event update "/livestream" total_bytes_read (779383)
+[2016-05-01  00:22:34] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (631721)
+[2016-05-01  00:22:39] DBUG stats/modify_node_event update "/livestream" total_bytes_read (908830)
+[2016-05-01  00:22:39] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (761004)
+[2016-05-01  00:22:44] DBUG stats/modify_node_event update "/livestream" total_bytes_read (1039180)
+[2016-05-01  00:22:44] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (891213)
+[2016-05-01  00:22:49] DBUG stats/modify_node_event update "/livestream" total_bytes_read (1168319)
+[2016-05-01  00:22:49] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (1020738)
+[2016-05-01  00:22:54] DBUG stats/modify_node_event update "/livestream" total_bytes_read (1305494)
+[2016-05-01  00:22:54] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (1158131)
+[2016-05-01  00:22:59] DBUG stats/modify_node_event update "/livestream" total_bytes_read (1441947)
+[2016-05-01  00:22:59] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (1294271)
+[2016-05-01  00:23:04] DBUG stats/modify_node_event update "/livestream" total_bytes_read (1576142)
+[2016-05-01  00:23:04] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (1428834)
+[2016-05-01  00:23:09] DBUG stats/modify_node_event update "/livestream" total_bytes_read (1715123)
+[2016-05-01  00:23:09] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (1567507)
+[2016-05-01  00:23:14] DBUG stats/modify_node_event update "/livestream" total_bytes_read (1849466)
+[2016-05-01  00:23:14] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (1702040)
+[2016-05-01  00:23:19] DBUG stats/modify_node_event update "/livestream" total_bytes_read (1982986)
+[2016-05-01  00:23:19] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (1835413)
+[2016-05-01  00:23:24] DBUG stats/modify_node_event update "/livestream" total_bytes_read (2101191)
+[2016-05-01  00:23:24] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (1953387)
+[2016-05-01  00:23:29] DBUG stats/modify_node_event update "/livestream" total_bytes_read (2230875)
+[2016-05-01  00:23:29] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (2083097)
+[2016-05-01  00:23:34] DBUG stats/modify_node_event update "/livestream" total_bytes_read (2360727)
+[2016-05-01  00:23:34] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (2213249)
+[2016-05-01  00:23:39] DBUG stats/modify_node_event update "/livestream" total_bytes_read (2485622)
+[2016-05-01  00:23:39] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (2337772)
+[2016-05-01  00:23:44] DBUG stats/modify_node_event update "/livestream" total_bytes_read (2615829)
+[2016-05-01  00:23:44] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (2468235)
+[2016-05-01  00:23:49] DBUG stats/modify_node_event update "/livestream" total_bytes_read (2750281)
+[2016-05-01  00:23:49] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (2602872)
+[2016-05-01  00:23:54] DBUG stats/modify_node_event update "/livestream" total_bytes_read (2887299)
+[2016-05-01  00:23:54] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (2739551)
+[2016-05-01  00:23:59] DBUG stats/modify_node_event update "/livestream" total_bytes_read (3020122)
+[2016-05-01  00:23:59] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (2872330)
+[2016-05-01  00:24:04] DBUG stats/modify_node_event update "/livestream" total_bytes_read (3158869)
+[2016-05-01  00:24:04] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (3011277)
+[2016-05-01  00:24:05] DBUG slave/_slave_thread checking master stream list
+[2016-05-01  00:24:09] DBUG stats/modify_node_event update "/livestream" total_bytes_read (3283560)
+[2016-05-01  00:24:09] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (3136085)
+[2016-05-01  00:24:14] DBUG stats/modify_node_event update "/livestream" total_bytes_read (3412565)
+[2016-05-01  00:24:14] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (3264749)
+[2016-05-01  00:24:19] DBUG stats/modify_node_event update "/livestream" total_bytes_read (3542029)
+[2016-05-01  00:24:19] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (3394256)
+[2016-05-01  00:24:24] DBUG stats/modify_node_event update "/livestream" total_bytes_read (3671575)
+[2016-05-01  00:24:24] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (3524312)
+[2016-05-01  00:24:29] DBUG stats/modify_node_event update "/livestream" total_bytes_read (3793207)
+[2016-05-01  00:24:29] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (3645775)
+[2016-05-01  00:24:34] DBUG stats/modify_node_event update "/livestream" total_bytes_read (3919297)
+[2016-05-01  00:24:34] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (3771994)
+[2016-05-01  00:24:39] DBUG stats/modify_node_event update "/livestream" total_bytes_read (4057118)
+[2016-05-01  00:24:39] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (3909342)
+[2016-05-01  00:24:44] DBUG stats/modify_node_event update "/livestream" total_bytes_read (4190988)
+[2016-05-01  00:24:44] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (4043388)
+[2016-05-01  00:24:49] DBUG stats/modify_node_event update "/livestream" total_bytes_read (4328543)
+[2016-05-01  00:24:49] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (4181011)
+[2016-05-01  00:24:54] DBUG stats/modify_node_event update "/livestream" total_bytes_read (4461702)
+[2016-05-01  00:24:54] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (4314152)
+[2016-05-01  00:24:59] DBUG stats/modify_node_event update "/livestream" total_bytes_read (4595913)
+[2016-05-01  00:24:59] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (4448411)
+[2016-05-01  00:25:04] DBUG stats/modify_node_event update "/livestream" total_bytes_read (4728882)
+[2016-05-01  00:25:04] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (4581252)
+[2016-05-01  00:25:09] DBUG stats/modify_node_event update "/livestream" total_bytes_read (4861689)
+[2016-05-01  00:25:09] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (4714384)
+[2016-05-01  00:25:14] DBUG stats/modify_node_event update "/livestream" total_bytes_read (4996514)
+[2016-05-01  00:25:14] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (4848820)
+[2016-05-01  00:25:19] DBUG stats/modify_node_event update "/livestream" total_bytes_read (5124828)
+[2016-05-01  00:25:19] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (4977522)
+[2016-05-01  00:25:24] DBUG stats/modify_node_event update "/livestream" total_bytes_read (5259696)
+[2016-05-01  00:25:24] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (5111957)
+[2016-05-01  00:25:29] DBUG stats/modify_node_event update "/livestream" total_bytes_read (5385925)
+[2016-05-01  00:25:29] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (5238283)
+[2016-05-01  00:25:31] DBUG format-vorbis/initiate_flush adding EOS packet
+[2016-05-01  00:25:31] DBUG format-vorbis/get_buffer_finished flushing page
+[2016-05-01  00:25:31] DBUG format-vorbis/get_buffer_finished flushing page
+[2016-05-01  00:25:31] DBUG format-ogg/format_ogg_free_headers releasing header pages
+[2016-05-01  00:25:31] DBUG format-ogg/format_ogg_free_headers releasing header pages
+[2016-05-01  00:25:31] DBUG format-ogg/free_ogg_codecs freeing codecs
+[2016-05-01  00:25:31] DBUG format-vorbis/vorbis_codec_free freeing vorbis codec
+[2016-05-01  00:25:31] DBUG format-vorbis/initial_vorbis_page checking for vorbis codec
+[2016-05-01  00:25:31] INFO format-vorbis/initial_vorbis_page seen initial vorbis header
+[2016-05-01  00:25:31] DBUG format-vorbis/process_vorbis_page processing incoming header packet (1)
+[2016-05-01  00:25:31] DBUG format-vorbis/process_vorbis_page processing incoming header packet (2)
+[2016-05-01  00:25:31] DBUG format-vorbis/process_vorbis_page we have the header packets now
+[2016-05-01  00:25:31] DBUG format-vorbis/process_vorbis_headers Adding the 3 header packets
+[2016-05-01  00:25:31] DBUG format-ogg/format_ogg_attach_header attaching BOS page
+[2016-05-01  00:25:31] DBUG format-ogg/format_ogg_attach_header attaching header page
+[2016-05-01  00:25:31] DBUG stats/process_source_event delete node audio_bitrate
+[2016-05-01  00:25:31] DBUG stats/process_source_event delete node audio_channels
+[2016-05-01  00:25:31] DBUG stats/process_source_event delete node audio_samplerate
+[2016-05-01  00:25:31] DBUG stats/process_source_event new node audio_samplerate (44100)
+[2016-05-01  00:25:31] DBUG stats/process_source_event new node audio_channels (2)
+[2016-05-01  00:25:31] DBUG stats/process_source_event new node audio_bitrate (192000)
+[2016-05-01  00:25:31] DBUG stats/modify_node_event update "/livestream" ice-bitrate (192)
+[2016-05-01  00:25:31] DBUG stats/modify_node_event update "/livestream" subtype (Vorbis)
+[2016-05-01  00:25:34] DBUG stats/modify_node_event update "/livestream" total_bytes_read (5474807)
+[2016-05-01  00:25:34] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (5327192)
+[2016-05-01  00:25:39] DBUG stats/modify_node_event update "/livestream" total_bytes_read (5561077)
+[2016-05-01  00:25:39] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (5413827)
+[2016-05-01  00:25:44] DBUG stats/modify_node_event update "/livestream" total_bytes_read (5647123)
+[2016-05-01  00:25:44] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (5503732)
+[2016-05-01  00:25:49] DBUG stats/modify_node_event update "/livestream" total_bytes_read (5729334)
+[2016-05-01  00:25:49] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (5581762)
+[2016-05-01  00:25:54] DBUG stats/modify_node_event update "/livestream" total_bytes_read (5810642)
+[2016-05-01  00:25:54] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (5667594)
+[2016-05-01  00:25:55] DBUG format-vorbis/initiate_flush adding EOS packet
+[2016-05-01  00:25:55] DBUG format-vorbis/get_buffer_finished flushing page
+[2016-05-01  00:25:55] DBUG format-ogg/format_ogg_free_headers releasing header pages
+[2016-05-01  00:25:55] DBUG format-ogg/format_ogg_free_headers releasing header pages
+[2016-05-01  00:25:55] DBUG format-ogg/free_ogg_codecs freeing codecs
+[2016-05-01  00:25:55] DBUG format-vorbis/vorbis_codec_free freeing vorbis codec
+[2016-05-01  00:25:55] DBUG format-vorbis/initial_vorbis_page checking for vorbis codec
+[2016-05-01  00:25:55] INFO format-vorbis/initial_vorbis_page seen initial vorbis header
+[2016-05-01  00:25:55] DBUG format-vorbis/process_vorbis_page processing incoming header packet (1)
+[2016-05-01  00:25:55] DBUG format-vorbis/process_vorbis_page processing incoming header packet (2)
+[2016-05-01  00:25:55] DBUG format-vorbis/process_vorbis_page we have the header packets now
+[2016-05-01  00:25:55] DBUG format-vorbis/process_vorbis_headers Adding the 3 header packets
+[2016-05-01  00:25:55] DBUG format-ogg/format_ogg_attach_header attaching BOS page
+[2016-05-01  00:25:55] DBUG format-ogg/format_ogg_attach_header attaching header page
+[2016-05-01  00:25:55] DBUG stats/process_source_event delete node audio_bitrate
+[2016-05-01  00:25:55] DBUG stats/process_source_event delete node audio_channels
+[2016-05-01  00:25:55] DBUG stats/process_source_event delete node audio_samplerate
+[2016-05-01  00:25:55] DBUG stats/process_source_event new node audio_samplerate (44100)
+[2016-05-01  00:25:55] DBUG stats/process_source_event new node audio_channels (2)
+[2016-05-01  00:25:55] DBUG stats/process_source_event new node audio_bitrate (192000)
+[2016-05-01  00:25:55] DBUG stats/modify_node_event update "/livestream" ice-bitrate (192)
+[2016-05-01  00:25:55] DBUG stats/modify_node_event update "/livestream" subtype (Vorbis)
+[2016-05-01  00:25:59] DBUG stats/modify_node_event update "/livestream" total_bytes_read (5939036)
+[2016-05-01  00:25:59] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (5791789)
+[2016-05-01  00:26:04] DBUG stats/modify_node_event update "/livestream" total_bytes_read (6069834)
+[2016-05-01  00:26:04] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (5922021)
+[2016-05-01  00:26:05] DBUG slave/_slave_thread checking master stream list
+[2016-05-01  00:26:09] DBUG stats/modify_node_event update "/livestream" total_bytes_read (6194551)
+[2016-05-01  00:26:09] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (6047261)
+[2016-05-01  00:26:14] DBUG stats/modify_node_event update "/livestream" total_bytes_read (6318650)
+[2016-05-01  00:26:14] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (6171349)
+[2016-05-01  00:26:19] DBUG stats/modify_node_event update "/livestream" total_bytes_read (6447686)
+[2016-05-01  00:26:19] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (6300258)
+[2016-05-01  00:26:24] DBUG stats/modify_node_event update "/livestream" total_bytes_read (6581007)
+[2016-05-01  00:26:24] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (6433376)
+[2016-05-01  00:26:29] DBUG stats/modify_node_event update "/livestream" total_bytes_read (6714205)
+[2016-05-01  00:26:29] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (6566715)
+[2016-05-01  00:26:34] DBUG stats/modify_node_event update "/livestream" total_bytes_read (6844202)
+[2016-05-01  00:26:34] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (6696541)
+[2016-05-01  00:26:39] DBUG stats/modify_node_event update "/livestream" total_bytes_read (6973935)
+[2016-05-01  00:26:39] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (6826652)
+[2016-05-01  00:26:44] DBUG stats/modify_node_event update "/livestream" total_bytes_read (7106816)
+[2016-05-01  00:26:44] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (6959152)
+[2016-05-01  00:26:49] DBUG stats/modify_node_event update "/livestream" total_bytes_read (7243293)
+[2016-05-01  00:26:49] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (7095540)
+[2016-05-01  00:26:54] DBUG stats/modify_node_event update "/livestream" total_bytes_read (7377689)
+[2016-05-01  00:26:54] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (7229872)
+[2016-05-01  00:26:59] DBUG stats/modify_node_event update "/livestream" total_bytes_read (7519889)
+[2016-05-01  00:26:59] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (7372587)
+[2016-05-01  00:27:04] DBUG stats/modify_node_event update "/livestream" total_bytes_read (7654888)
+[2016-05-01  00:27:04] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (7507067)
+[2016-05-01  00:27:09] DBUG stats/modify_node_event update "/livestream" total_bytes_read (7788260)
+[2016-05-01  00:27:09] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (7640834)
+[2016-05-01  00:27:14] DBUG stats/modify_node_event update "/livestream" total_bytes_read (7906491)
+[2016-05-01  00:27:14] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (7758773)
+[2016-05-01  00:27:19] DBUG stats/modify_node_event update "/livestream" total_bytes_read (8032377)
+[2016-05-01  00:27:19] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (7884485)
+[2016-05-01  00:27:24] DBUG stats/modify_node_event update "/livestream" total_bytes_read (8161675)
+[2016-05-01  00:27:24] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (8014153)
+[2016-05-01  00:27:29] DBUG stats/modify_node_event update "/livestream" total_bytes_read (8291113)
+[2016-05-01  00:27:29] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (8143784)
+[2016-05-01  00:27:34] DBUG stats/modify_node_event update "/livestream" total_bytes_read (8420857)
+[2016-05-01  00:27:34] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (8273189)
+[2016-05-01  00:27:39] DBUG stats/modify_node_event update "/livestream" total_bytes_read (8551428)
+[2016-05-01  00:27:39] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (8403458)
+[2016-05-01  00:27:44] DBUG stats/modify_node_event update "/livestream" total_bytes_read (8692827)
+[2016-05-01  00:27:44] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (8545477)
+[2016-05-01  00:27:49] DBUG stats/modify_node_event update "/livestream" total_bytes_read (8821119)
+[2016-05-01  00:27:49] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (8673854)
+[2016-05-01  00:27:53] DBUG auth/add_listener_to_source max on /livestream is -1 (cur 1)
+[2016-05-01  00:27:53] DBUG auth/add_listener_to_source Added client to /livestream
+[2016-05-01  00:27:53] DBUG auth/add_authenticated_listener client authenticated, passed to source
+[2016-05-01  00:27:53] DBUG source/source_main Client added
+[2016-05-01  00:27:53] INFO source/source_main listener count on /livestream now 2
+[2016-05-01  00:27:53] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:27:53] DBUG stats/modify_node_event update global connections (37)
+[2016-05-01  00:27:53] DBUG stats/modify_node_event update global clients (4)
+[2016-05-01  00:27:53] DBUG stats/modify_node_event update global connections (38)
+[2016-05-01  00:27:53] DBUG stats/modify_node_event update global client_connections (34)
+[2016-05-01  00:27:53] DBUG stats/modify_node_event update "/livestream" listeners (2)
+[2016-05-01  00:27:53] DBUG format/format_check_http_buffer processing pending client headers
+[2016-05-01  00:27:54] DBUG stats/modify_node_event update global listeners (2)
+[2016-05-01  00:27:54] DBUG stats/modify_node_event update global listener_connections (4)
+[2016-05-01  00:27:54] DBUG client/client_send_bytes Client connection died
+[2016-05-01  00:27:54] DBUG source/source_main Client removed
+[2016-05-01  00:27:54] INFO source/source_main listener count on /livestream now 1
+[2016-05-01  00:27:54] DBUG stats/modify_node_event update "/livestream" total_bytes_read (8960308)
+[2016-05-01  00:27:54] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (8812825)
+[2016-05-01  00:27:54] DBUG stats/modify_node_event update global listeners (1)
+[2016-05-01  00:27:54] DBUG stats/modify_node_event update global clients (3)
+[2016-05-01  00:27:54] DBUG stats/modify_node_event update "/livestream" listeners (1)
+[2016-05-01  00:27:54] DBUG auth/add_listener_to_source max on /livestream is -1 (cur 1)
+[2016-05-01  00:27:54] DBUG auth/add_listener_to_source Added client to /livestream
+[2016-05-01  00:27:54] DBUG auth/add_authenticated_listener client authenticated, passed to source
+[2016-05-01  00:27:54] DBUG client/client_send_bytes Client connection died
+[2016-05-01  00:27:54] DBUG source/source_main Client removed
+[2016-05-01  00:27:54] DBUG source/source_main Client added
+[2016-05-01  00:27:54] DBUG stats/modify_node_event update global client_connections (35)
+[2016-05-01  00:27:54] DBUG stats/modify_node_event update global listeners (0)
+[2016-05-01  00:27:54] DBUG stats/modify_node_event update global clients (2)
+[2016-05-01  00:27:54] DBUG format/format_check_http_buffer processing pending client headers
+[2016-05-01  00:27:55] DBUG stats/modify_node_event update global listeners (1)
+[2016-05-01  00:27:55] DBUG stats/modify_node_event update global listener_connections (5)
+[2016-05-01  00:27:59] DBUG stats/modify_node_event update "/livestream" total_bytes_read (9089000)
+[2016-05-01  00:27:59] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (9070831)
+[2016-05-01  00:28:04] DBUG stats/modify_node_event update "/livestream" total_bytes_read (9217664)
+[2016-05-01  00:28:04] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (9199447)
+[2016-05-01  00:28:05] DBUG slave/_slave_thread checking master stream list
+[2016-05-01  00:28:09] DBUG stats/modify_node_event update "/livestream" total_bytes_read (9347592)
+[2016-05-01  00:28:09] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (9329444)
+[2016-05-01  00:28:10] DBUG client/client_send_bytes Client connection died
+[2016-05-01  00:28:10] DBUG source/source_main Client removed
+[2016-05-01  00:28:10] INFO source/source_main listener count on /livestream now 0
+[2016-05-01  00:28:10] DBUG stats/modify_node_event update global listeners (0)
+[2016-05-01  00:28:10] DBUG stats/modify_node_event update global clients (1)
+[2016-05-01  00:28:10] DBUG stats/modify_node_event update "/livestream" listeners (0)
+[2016-05-01  00:28:14] DBUG stats/modify_node_event update "/livestream" total_bytes_read (9477005)
+[2016-05-01  00:28:14] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (9371997)
+[2016-05-01  00:28:19] DBUG stats/modify_node_event update "/livestream" total_bytes_read (9598483)
+[2016-05-01  00:28:19] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (9371997)
+[2016-05-01  00:28:24] DBUG stats/modify_node_event update "/livestream" total_bytes_read (9720832)
+[2016-05-01  00:28:24] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (9371997)
+[2016-05-01  00:28:29] DBUG stats/modify_node_event update "/livestream" total_bytes_read (9858348)
+[2016-05-01  00:28:29] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (9371997)
+[2016-05-01  00:28:34] DBUG stats/modify_node_event update "/livestream" total_bytes_read (9992070)
+[2016-05-01  00:28:34] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (9371997)
+[2016-05-01  00:28:39] DBUG stats/modify_node_event update "/livestream" total_bytes_read (10129611)
+[2016-05-01  00:28:39] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (9371997)
+[2016-05-01  00:28:44] DBUG stats/modify_node_event update "/livestream" total_bytes_read (10262730)
+[2016-05-01  00:28:44] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (9371997)
+[2016-05-01  00:28:49] DBUG stats/modify_node_event update "/livestream" total_bytes_read (10401502)
+[2016-05-01  00:28:49] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (9371997)
+[2016-05-01  00:28:54] DBUG stats/modify_node_event update "/livestream" total_bytes_read (10529776)
+[2016-05-01  00:28:54] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (9371997)
+[2016-05-01  00:28:59] DBUG stats/modify_node_event update "/livestream" total_bytes_read (10663592)
+[2016-05-01  00:28:59] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (9371997)
+[2016-05-01  00:29:04] DBUG stats/modify_node_event update "/livestream" total_bytes_read (10796897)
+[2016-05-01  00:29:04] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (9371997)
+[2016-05-01  00:29:09] DBUG stats/modify_node_event update "/livestream" total_bytes_read (10930540)
+[2016-05-01  00:29:09] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (9371997)
+[2016-05-01  00:29:14] DBUG stats/modify_node_event update "/livestream" total_bytes_read (11064613)
+[2016-05-01  00:29:14] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (9371997)
+[2016-05-01  00:29:19] DBUG stats/modify_node_event update "/livestream" total_bytes_read (11191341)
+[2016-05-01  00:29:19] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (9371997)
+[2016-05-01  00:29:22] DBUG format-vorbis/initiate_flush adding EOS packet
+[2016-05-01  00:29:22] DBUG format-vorbis/get_buffer_finished flushing page
+[2016-05-01  00:29:22] DBUG format-vorbis/get_buffer_finished flushing page
+[2016-05-01  00:29:22] DBUG format-ogg/format_ogg_free_headers releasing header pages
+[2016-05-01  00:29:22] DBUG format-ogg/format_ogg_free_headers releasing header pages
+[2016-05-01  00:29:22] DBUG format-ogg/free_ogg_codecs freeing codecs
+[2016-05-01  00:29:22] DBUG format-vorbis/vorbis_codec_free freeing vorbis codec
+[2016-05-01  00:29:22] DBUG format-vorbis/initial_vorbis_page checking for vorbis codec
+[2016-05-01  00:29:22] INFO format-vorbis/initial_vorbis_page seen initial vorbis header
+[2016-05-01  00:29:22] DBUG format-vorbis/process_vorbis_page processing incoming header packet (1)
+[2016-05-01  00:29:22] DBUG format-vorbis/process_vorbis_page processing incoming header packet (2)
+[2016-05-01  00:29:22] DBUG format-vorbis/process_vorbis_page we have the header packets now
+[2016-05-01  00:29:22] DBUG format-vorbis/process_vorbis_headers Adding the 3 header packets
+[2016-05-01  00:29:22] DBUG format-ogg/format_ogg_attach_header attaching BOS page
+[2016-05-01  00:29:22] DBUG format-ogg/format_ogg_attach_header attaching header page
+[2016-05-01  00:29:22] DBUG stats/process_source_event delete node audio_bitrate
+[2016-05-01  00:29:22] DBUG stats/process_source_event delete node audio_channels
+[2016-05-01  00:29:22] DBUG stats/process_source_event delete node audio_samplerate
+[2016-05-01  00:29:22] DBUG stats/process_source_event new node audio_samplerate (44100)
+[2016-05-01  00:29:22] DBUG stats/process_source_event new node audio_channels (2)
+[2016-05-01  00:29:22] DBUG stats/process_source_event new node audio_bitrate (192000)
+[2016-05-01  00:29:22] DBUG stats/modify_node_event update "/livestream" ice-bitrate (192)
+[2016-05-01  00:29:22] DBUG stats/modify_node_event update "/livestream" subtype (Vorbis)
+[2016-05-01  00:29:24] DBUG stats/modify_node_event update "/livestream" total_bytes_read (11284624)
+[2016-05-01  00:29:24] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (9371997)
+[2016-05-01  00:29:29] DBUG stats/modify_node_event update "/livestream" total_bytes_read (11371003)
+[2016-05-01  00:29:29] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (9371997)
+[2016-05-01  00:29:34] DBUG stats/modify_node_event update "/livestream" total_bytes_read (11465323)
+[2016-05-01  00:29:34] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (9371997)
+[2016-05-01  00:29:39] DBUG stats/modify_node_event update "/livestream" total_bytes_read (11543413)
+[2016-05-01  00:29:39] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (9371997)
+[2016-05-01  00:29:44] DBUG stats/modify_node_event update "/livestream" total_bytes_read (11629211)
+[2016-05-01  00:29:44] DBUG stats/modify_node_event update "/livestream" total_bytes_sent (9371997)
+[2016-05-01  00:29:46] DBUG format-vorbis/initiate_flush adding EOS packet
+[2016-05-01  00:29:46] DBUG format-vorbis/get_buffer_finished flushing page
+[2016-05-01  00:29:46] DBUG format-ogg/format_ogg_free_headers releasing header pages
+[2016-05-01  00:29:46] DBUG format-ogg/format_ogg_free_headers releasing header pages
+[2016-05-01  00:29:46] DBUG format-ogg/free_ogg_codecs freeing codecs
+[2016-05-01  00:29:46] DBUG format-vorbis/vorbis_codec_free freeing vorbis codec
+[2016-05-01  00:29:46] DBUG format-vorbis/initial_vorbis_page checking for vorbis codec
+[2016-05-01  00:29:46] INFO format-vorbis/initial_vorbis_page seen initial vorbis header
+[2016-05-01  00:29:46] DBUG format-vorbis/process_vorbis_page processing incoming header packet (1)
+[2016-05-01  00:29:46] DBUG format-vorbis/process_vorbis_page processing incoming header packet (2)
+[2016-05-01  00:29:46] DBUG format-vorbis/process_vorbis_page we have the header packets now
+[2016-05-01  00:29:46] DBUG format-vorbis/process_vorbis_headers Adding the 3 header packets
+[2016-05-01  00:29:46] DBUG format-ogg/format_ogg_attach_header attaching BOS page
+[2016-05-01  00:29:46] DBUG format-ogg/format_ogg_attach_header attaching header page
+[2016-05-01  00:29:46] DBUG stats/process_source_event delete node audio_bitrate
+[2016-05-01  00:29:46] DBUG stats/process_source_event delete node audio_channels
+[2016-05-01  00:29:46] DBUG stats/process_source_event delete node audio_samplerate
+[2016-05-01  00:29:46] DBUG stats/process_source_event new node audio_samplerate (44100)
+[2016-05-01  00:29:46] DBUG stats/process_source_event new node audio_channels (2)
+[2016-05-01  00:29:46] DBUG stats/process_source_event new node audio_bitrate (192000)
+[2016-05-01  00:29:46] DBUG stats/modify_node_event update "/livestream" ice-bitrate (192)
+[2016-05-01  00:29:46] DBUG stats/modify_node_event update "/livestream" subtype (Vorbis)

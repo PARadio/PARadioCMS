@@ -1,0 +1,23 @@
+[2016-04-30  23:48:33] INFO ices-core/main IceS 2.0.1 started...
+[2016-04-30  23:48:33] INFO signals/signal_usr1_handler Metadata update requested
+[2016-04-30  23:48:33] INFO playlist-basic/playlist_basic_get_next_filename Loading playlist from file "/var/www/html/PARadioCMS/lib/ices/playlist.txt"
+[2016-05-01  00:05:04] INFO ices-core/main IceS 2.0.1 started...
+[2016-05-01  00:05:04] INFO signals/signal_usr1_handler Metadata update requested
+[2016-05-01  00:05:04] INFO playlist-basic/playlist_basic_get_next_filename Loading playlist from file "/var/www/html/PARadioCMS/lib/ices/playlist.txt"
+[2016-05-01  00:06:04] INFO ices-core/main IceS 2.0.1 started...
+[2016-05-01  00:06:04] INFO signals/signal_usr1_handler Metadata update requested
+[2016-05-01  00:06:04] INFO playlist-basic/playlist_basic_get_next_filename Loading playlist from file "/var/www/html/PARadioCMS/lib/ices/playlist.txt"
+[2016-05-01  00:18:04] INFO ices-core/main IceS 2.0.1 started...
+[2016-05-01  00:18:04] INFO signals/signal_usr1_handler Metadata update requested
+[2016-05-01  00:18:04] INFO playlist-basic/playlist_basic_get_next_filename Loading playlist from file "/var/www/html/PARadioCMS/lib/ices/playlist.txt"
+[2016-05-01  00:22:04] INFO ices-core/main IceS 2.0.1 started...
+[2016-05-01  00:22:04] INFO signals/signal_usr1_handler Metadata update requested
+[2016-05-01  00:22:04] INFO playlist-basic/playlist_basic_get_next_filename Loading playlist from file "/var/www/html/PARadioCMS/lib/ices/playlist.txt"
+[2016-05-01  00:22:04] INFO playlist-builtin/playlist_read Currently playing "/var/www/html/PARadioCMS/public/uploads/mediafiles/DestinysChild-Bootylicious.ogg"
+[2016-05-01  00:22:04] INFO stream/ices_instance_stream Connected to server: localhost:8000/livestream
+[2016-05-01  00:25:31] INFO playlist-basic/playlist_basic_get_next_filename Reloading playlist after file "/var/www/html/PARadioCMS/lib/ices/playlist.txt" changed
+[2016-05-01  00:25:31] INFO playlist-builtin/playlist_read Currently playing "/var/www/html/PARadioCMS/public/uploads/mediafiles/dumbintro.ogg"
+[2016-05-01  00:25:55] INFO playlist-builtin/playlist_read Currently playing "/var/www/html/PARadioCMS/public/uploads/mediafiles/DestinysChild-Bootylicious.ogg"
+[2016-05-01  00:29:22] EROR playlist-builtin/playlist_read Cannot play same file twice in a row, skipping
+[2016-05-01  00:29:22] INFO playlist-builtin/playlist_read Currently playing "/var/www/html/PARadioCMS/public/uploads/mediafiles/dumbintro.ogg"
+[2016-05-01  00:29:46] INFO playlist-builtin/playlist_read Currently playing "/var/www/html/PARadioCMS/public/uploads/mediafiles/DestinysChild-Bootylicious.ogg"
