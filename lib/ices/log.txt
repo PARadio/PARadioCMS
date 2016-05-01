@@ -21,3 +21,19 @@
 [2016-05-01  00:29:22] EROR playlist-builtin/playlist_read Cannot play same file twice in a row, skipping
 [2016-05-01  00:29:22] INFO playlist-builtin/playlist_read Currently playing "/var/www/html/PARadioCMS/public/uploads/mediafiles/dumbintro.ogg"
 [2016-05-01  00:29:46] INFO playlist-builtin/playlist_read Currently playing "/var/www/html/PARadioCMS/public/uploads/mediafiles/DestinysChild-Bootylicious.ogg"
+[2016-05-01  16:47:01] INFO ices-core/main IceS 2.0.1 started...
+[2016-05-01  16:47:01] INFO signals/signal_usr1_handler Metadata update requested
+[2016-05-01  16:47:01] INFO playlist-basic/playlist_basic_get_next_filename Loading playlist from file "/var/www/html/PARadioCMS/lib/ices/playlist.txt"
+[2016-05-01  16:47:01] WARN playlist-builtin/playlist_read Error opening file "/var/www/html/PARadioCMS/public/uploads/mediafiles/DestinysChild-Bootylicious.ogg": No such file or directory
+[2016-05-01  16:47:01] WARN playlist-builtin/playlist_read Error opening file "/var/www/html/PARadioCMS/public/uploads/mediafiles/dumbintro.ogg": No such file or directory
+[2016-05-01  16:47:01] WARN playlist-builtin/playlist_read Error opening file "/var/www/html/PARadioCMS/public/uploads/mediafiles/DestinysChild-Bootylicious.ogg": No such file or directory
+[2016-05-01  16:47:01] EROR playlist-builtin/playlist_read Cannot play same file twice in a row, skipping
+[2016-05-01  16:47:01] WARN playlist-builtin/playlist_read Error opening file "/var/www/html/PARadioCMS/public/uploads/mediafiles/dumbintro.ogg": No such file or directory
+[2016-05-01  16:47:01] WARN playlist-builtin/playlist_read Error opening file "/var/www/html/PARadioCMS/public/uploads/mediafiles/DestinysChild-Bootylicious.ogg": No such file or directory
+[2016-05-01  16:47:01] WARN playlist-builtin/playlist_read Too many consecutive errors - exiting
+[2016-05-01  16:47:01] INFO stream/ices_instance_stream Connected to server: localhost:8000/livestream
+[2016-05-01  16:47:01] DBUG stream-shared/stream_wait_for_data Shutdown signalled: thread shutting down
+[2016-05-01  16:47:01] DBUG input/input_loop An instance died, removing it
+[2016-05-01  16:47:01] DBUG input/input_flush_queue Input queue flush requested
+[2016-05-01  16:47:01] INFO input/input_loop All instances removed, shutting down...
+[2016-05-01  16:47:02] INFO ices-core/main Shutdown complete
