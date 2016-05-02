@@ -1,10 +1,9 @@
 # Change these
-server '54.191.141.112', port: 22, roles: [:web, :app, :db], primary: true
-server 'localhost', port: 22, roles: [:web, :app, :db]
+server '54.191.141.112', port: 22, roles: [:web, :app, :db], user: 'ubuntu', primary: true
+server 'localhost', roles: [:web, :app, :db]
 
 set :repo_url,        'git@github.com:PARadio/PARadioCMS.git'
 set :application,     'PARadioCMS'
-set :user,            'ubuntu'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
