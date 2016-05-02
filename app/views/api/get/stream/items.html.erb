@@ -1,0 +1,17 @@
+[
+  <% @streamitems.each_with_index do |streamitem, index| %>
+    {
+      "id": "<%= streamitem.id %>",
+      "position": "<%= streamitem.position %>",
+      "start_time": "<%= streamitem.start_time.strftime("%I:%M:%S %p") %>",
+      "name": "<%= streamitem.episode.name %>",
+      "description": "<%= streamitem.episode.description %>",
+      "created": "<%= streamitem.episode.created_at %>",
+      "updated": "<%= streamitem.episode.updated_at %>"
+    <% if @streamitems[index+1].nil? %>
+      }
+    <% else %>
+      },
+    <% end %>
+  <% end %>
+]

@@ -2,94 +2,8 @@
 <div class="livestream index">
   <div class="container">
     <%= link_to(echoGlyphicon("menu-left") + " Return to Admin Panel", admin_index_path, class: "btn btn-primary")%>
-    <h2 id="livestreamHeader" >Livestream<% if defined? @selected_date %><%= ": " + @selected_date.strftime('%d %B, %Y') %><% end %></h2>
+    <h2 id="livestreamHeader" >Livestream</h2>
     <div id="dateChooser" class="row">
-      <script>
-        function daysInMonth(month, year) {
-            return new Date(year, month, 0).getDate();
-        }
-        function updateDaySelect(){
-          var days = daysInMonth($("#month").val(), $("#year").val());
-          var str = "";
-          for(var i = 1; i <= days; i++){
-            str += "<option value='" + i + "'>" + i + "</option>";
-          }
-          $("#day").html(str);
-        }
-        function updateSelects(){
-          var urlArray = window.location.href.split("/");
-          if(!(typeof urlArray[7] === 'undefined')) {
-            $("#year option[value='"+ urlArray[5] +"']").prop('selected', true);
-            $("#month option[value='"+ urlArray[6] +"']").prop('selected', true);
-            updateDaySelect();
-            $("#day option[value='"+ urlArray[7] +"']").prop('selected', true);
-          }
-        }
-        $(document).ready(function (){
-          updateSelects();
-          $("#month").change(function() {
-            if($("#day").val() != -1){
-              window.location.replace("/admin/streamitems/" + $("#year").val() + "/" + $("#month").val() + "/" + $("#day").val());
-            }
-            updateDaySelect();
-          });
-          $("#year").change(function() {
-            if($("#day").val() != -1){
-              window.location.replace("/admin/streamitems/" + $("#year").val() + "/" + $("#month").val() + "/" + $("#day").val());
-            }
-            //updateDaySelect();
-          });
-          $("#day").change(function() {
-            window.location.replace("/admin/streamitems/" + $("#year").val() + "/" + $("#month").val() + "/" + $("#day").val());
-          });
-          $( "#streamitems" ).sortable({
-            /*drop: function(event, ui) {
-              console.log(event.target);
-            },
-            receive: function(event, ui) {
-              console.log($(this).data().uiSortable.currentItem.prev());
-              console.log(event.target);
-            },*/
-            update: function(event, ui){
-              var oldPosition = $(ui.item[0]).attr('position');
-              var newPosition;
-              if($(ui.item[0]).prev()[0] === undefined){
-                newPosition = 1;
-              } else if(oldPosition > $(ui.item[0]).prev().attr('position')) {
-                newPosition = $(ui.item[0]).next().attr('position');
-              } else if(oldPosition < $(ui.item[0]).prev().attr('position')) {
-                newPosition = $(ui.item[0]).prev().attr('position');
-              }
-              console.log(oldPosition + " -> " + newPosition);
-
-
-              var streamItemsReorg = $("#streamitems").children();
-              var newPositionsArray = [];
-              for(var i = 0; i < streamItemsReorg.length; i++){
-                newPositionsArray.push($(streamItemsReorg[i]).attr('position'));
-              }
-              console.log(newPositionsArray);
-
-              var parameters = {
-                "old_positions[]": newPositionsArray
-              };
-
-              $.post(
-                "/admin/streamitems/" + $("#year").val() + "/" + $("#month").val() + "/" + $("#day").val() + "/move",
-                parameters
-              ).done(function(data, statusText) {
-                location.reload();
-              });
-
-              // reorganize
-              /*for (i = 0; i < streamItemsReorg.length; i++) {
-                $(streamItemsReorg[i]).attr('position', i+1);
-              }*/
-            }
-          });
-          $( "#streamitems" ).disableSelection();
-        });
-      </script>
       <div class="<%= setCols(4) %>">
         <select id="year" class="form-control">
           <option value='2016'>2016</option>
@@ -119,18 +33,18 @@
         </select>
       </div>
     </div>
-    <% if defined? @streamitems %>
+    <div id="stream-form" style="display: none;">
       <div class="row">
         <div class="<%= setCols(2) %>">
-          <%= link_to(echoGlyphicon("plus") + " Queue An Episode", streamitems_new_path, class: "btn btn-success") %>
+          <button type="button" class="btn btn-success" onclick="addEpisode()"><%= echoGlyphicon("plus") + " Queue An Episode" %></button>
         </div>
         <div class="<%= setCols(2) %>">
-          <div class="progressText"><%= @time_available_str %> left</div>
+          <div id="timeAvailable" class="progress-text"></div>
         </div>
         <div class="<%= setCols(8) %>">
           <div class="progress">
-            <div class="progress-bar progress-bar-<%= @progress_class %>" role="progressbar" aria-valuenow="<%= @percent_left %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= @percent_left %>%">
-              <div class="progressText"><%= @percent_left %>% Full.</div>
+            <div id="timeTakenBar" class="progress-bar" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+              <div id="progressLabel" class="progress-text"></div>
             </div>
           </div>
         </div>
@@ -146,16 +60,9 @@
          </thead>
 
          <tbody id="streamitems">
-            <% @streamitems.each do |streamitem| %>
-               <tr position="<%= streamitem.position %>">
-                  <td class="col-md-2"><%= streamitem.start_time.strftime("%I:%M:%S %p") %></td>
-                  <td class="col-md-2"><%= streamitem.episode.name %></td>
-                  <td class="col-md-6"><%= streamitem.episode.description %></td>
-                  <td class="col-md-2"><%= link_to "Remove", admin_streamitem_path(streamitem), method: :delete %></td>
-               </tr>
-            <% end %>
+
          </tbody>
       </table>
-    <% end %>
+    </div>
   </div>
 </div>
