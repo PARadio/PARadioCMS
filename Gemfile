@@ -68,3 +68,5 @@ gem 'time_difference'
 gem 'whenever', require: false
 
 gem 'autoprefixer-rails', '~> 6.3', '>= 6.3.6'
+
+gem 'rspec', '~> 3.4'
