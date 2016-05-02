@@ -52,4 +52,4 @@ production:
   database: PARadioCMS_production
   host: localhost
   username: PARadioCMS
-  password: FourTwentyBl4ze1t
+  password: <%= ENV["DB_PASS"] %>
