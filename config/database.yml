@@ -50,6 +50,6 @@ test:
 production:
   <<: *default
   database: PARadioCMS_production
-  host: 54.191.141.112
+  host: localhost
   username: PARadioCMS
   password: FourTwentyBl4ze1t
