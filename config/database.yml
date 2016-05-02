@@ -51,4 +51,4 @@ production:
   <<: *default
   database: PARadioCMS_production
   username: PARadioCMS
-  password: <%= ENV['PARADIOCMS_DATABASE_PASSWORD'] %>
+  password: FourTwentyBl4ze1t
