@@ -1,5 +1,6 @@
 # Change these
 server '54.191.141.112', port: 22, roles: [:web, :app, :db], primary: true
+server 'localhost', port: 22, roles: [:web, :app, :db]
 
 set :repo_url,        'git@github.com:PARadio/PARadioCMS.git'
 set :application,     'PARadioCMS'
@@ -79,10 +80,17 @@ namespace :deploy do
     end
   end
 
+  task :update_whenever do
+    on "ubuntu@localhost" do
+      execute "whenever -i"
+    end
+  end
+
   before :starting,     :check_revision
   after  :finishing,    :compile_assets
   after  :finishing,    :cleanup
   after  :finishing,    :restart
+  after  :finishing,    :update_whenever
 end
 
 # ps aux | grep puma    # Get puma pid
