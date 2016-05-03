@@ -87,7 +87,7 @@ function addEpisode(){
   window.location.replace("/admin/streamitems/" + $("#year").val() + "/" + $("#month").val() + "/" + $("#day").val() + "/new");
 }
 
-$(document).ready(function (){
+var ready = function() {
   updateSelects();
   $("#month").change(function() {
     if($("#day").val() != -1){
@@ -139,4 +139,7 @@ $(document).ready(function (){
     }
   });
   $( "#streamitems" ).disableSelection();
-});
+};
+
+$(document).ready(ready);
+$(document).on('page:load', ready);

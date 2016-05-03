@@ -22,7 +22,7 @@
 set :output, "/home/ubuntu/apps/PARadioCMS/current/lib/ices/cron_log.log"
 set :environment, 'production'
 
-every 1.day, :at => '5:00 am' do
+every 1.day, :at => '2:00 pm' do
   runner "Admin::Streamitem.updatePlaylistFile"
   command "/usr/bin/icecast2 -c /home/ubuntu/apps/PARadioCMS/current/lib/ices/icecast.xml"
   command "/usr/bin/ices2 /home/ubuntu/apps/PARadioCMS/current/lib/ices/ices.xml"
