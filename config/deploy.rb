@@ -81,8 +81,8 @@ namespace :deploy do
   end
 
   task :update_whenever do
-    on "ubuntu@localhost" do
-      execute "whenever -i"
+    on "ubuntu@54.191.141.112" do
+      execute "cd '#{release_path}'; whenever -i"
     end
   end
 
