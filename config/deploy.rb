@@ -1,6 +1,6 @@
 # Change these
 server '54.191.141.112', port: 22, roles: [:web, :app, :db], user: 'ubuntu', primary: true
-server 'localhost', roles: [:web, :app, :db]
+server 'localhost', roles: [:web, :app, :db], user: 'ubuntu'
 
 set :repo_url,        'git@github.com:PARadio/PARadioCMS.git'
 set :application,     'PARadioCMS'
@@ -24,7 +24,7 @@ set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
 set :rbenv_type, :system
 set :rbenv_ruby, '2.3.1'
-set :rbenv_custom_path, "/home/ubuntu/.rbenv"
+set :rbenv_custom_path, "/home/#{fetch(:user)}/.rbenv"
 set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_custom_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_custom_path)}/bin/rbenv exec"
 set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 set :rbenv_roles, :all # default value
