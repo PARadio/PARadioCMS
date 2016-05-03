@@ -25,6 +25,7 @@ module PARadioCMS
     config.autoload_paths += %W["#{config.root}/app/validators/"]
 
     config.assets.compile = true
+    config.assets.precompile =  ['*.js', '^[^_]*.css', '*.css.erb']
 
   end
 end
