@@ -82,7 +82,7 @@ namespace :deploy do
 
   task :update_whenever do
     on "ubuntu@54.191.141.112" do
-      execute "cd '#{release_path}'; #{rbenv_custom_path}/versions/#{rbenv_ruby}/bin/bundle exec whenever -i"
+      execute "cd '#{release_path}'; #{fetch(:rbenv_custom_path)}/versions/#{fetch(:rbenv_ruby)}/bin/bundle exec whenever -i"
     end
   end
 
