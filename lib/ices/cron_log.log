@@ -11,3 +11,4 @@ Ignoring binding_of_caller-0.7.2 because its extensions are not built.  Try: gem
 Ignoring bcrypt-3.1.11 because its extensions are not built.  Try: gem pristine bcrypt --version 3.1.11
 Ignoring binding_of_caller-0.7.2 because its extensions are not built.  Try: gem pristine binding_of_caller --version 0.7.2
 Running via Spring preloader in process 7125
+ices2: no process found

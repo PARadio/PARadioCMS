@@ -82,7 +82,7 @@ namespace :deploy do
 
   task :update_whenever do
     on "ubuntu@54.191.141.112" do
-      execute "cd '#{release_path}'; source ~/.bashrc; bundle exec whenever -i"
+      execute "cd '#{release_path}'; /home/ubuntu/.rbenv/versions/2.3.1/bin/bundle exec whenever -i"
     end
   end
 
