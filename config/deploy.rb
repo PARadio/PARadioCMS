@@ -1,6 +1,6 @@
 # Change these
 server '54.191.141.112', port: 22, roles: [:web, :app, :db], user: 'ubuntu', primary: true
-server 'localhost', roles: [:web, :app, :db]
+#server 'localhost', roles: [:web, :app, :db]
 
 set :repo_url,        'git@github.com:PARadio/PARadioCMS.git'
 set :user,            'ubuntu'
