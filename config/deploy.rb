@@ -1,9 +1,10 @@
 # Change these
-server '54.191.141.112', port: 22, roles: [:web, :app, :db], primary: true
+server '54.191.141.112', port: 22, roles: [:web, :app, :db], user: 'ubuntu', primary: true
+#server 'localhost', roles: [:web, :app, :db]
 
 set :repo_url,        'git@github.com:PARadio/PARadioCMS.git'
-set :application,     'PARadioCMS'
 set :user,            'ubuntu'
+set :application,     'PARadioCMS'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
@@ -24,14 +25,14 @@ set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
 set :rbenv_type, :system
 set :rbenv_ruby, '2.3.1'
-set :rbenv_custom_path, "$HOME/.rbenv"
+set :rbenv_custom_path, "/home/#{fetch(:user)}/.rbenv"
 set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_custom_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_custom_path)}/bin/rbenv exec"
 set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 set :rbenv_roles, :all # default value
 
 ## Defaults:
 # set :scm,           :git
-set :branch,        :deploy
+set :branch,        :master
 # set :format,        :pretty
 # set :log_level,     :debug
 # set :keep_releases, 5
@@ -79,10 +80,17 @@ namespace :deploy do
     end
   end
 
+  task :update_whenever do
+    on "ubuntu@54.191.141.112" do
+      execute "cd '#{release_path}'; #{fetch(:rbenv_custom_path)}/versions/#{fetch(:rbenv_ruby)}/bin/bundle exec whenever -i"
+    end
+  end
+
   before :starting,     :check_revision
   after  :finishing,    :compile_assets
   after  :finishing,    :cleanup
   after  :finishing,    :restart
+  after  :finishing,    :update_whenever
 end
 
 # ps aux | grep puma    # Get puma pid

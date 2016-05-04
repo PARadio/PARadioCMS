@@ -1,8 +1,8 @@
 class Admin::Streamitem < ActiveRecord::Base
   belongs_to :episode #holds episode_id
 
-  @@stream_start = Time.parse("05:00 AM")
-  @@stream_end = Time.parse("11:00 PM")
+  @@stream_start = Time.parse("02:00 PM")
+  @@stream_end = Time.parse("04:00 PM")
   cattr_reader :stream_start
   cattr_reader :stream_end
 
@@ -76,7 +76,7 @@ class Admin::Streamitem < ActiveRecord::Base
     streamitems = Admin::Streamitem.where(date: Date.today.strftime('%Y-%m-%d')).sorted
     File.open(Rails.root.join('lib', 'ices', 'playlist.txt'), 'w') do |f|
       streamitems.each do |streamitem|
-       f.puts "/var/www/html/PARadioCMS/public" + streamitem.episode.mediafile.attachment_url
+       f.puts "/home/ubuntu/apps/PARadioCMS/current/public" + streamitem.episode.mediafile.attachment_url
       end
     end
   end
