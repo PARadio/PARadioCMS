@@ -2,22 +2,22 @@ class Admin::EpisodesController < ApplicationController
   before_action :require_login
   layout 'main'
   def index
-    @episodes = Admin::Episode.all
+    @episodes = Episode.all
   end
 
   def show
-    @episode = Admin::Episode.find(params[:id])
+    @episode = Episode.find(params[:id])
   end
 
   def new
-    @episode = Admin::Episode.new
-    @mediafile = Admin::Mediafile.new
+    @episode = Episode.new
+    @mediafile = Mediafile.new
   end
 
   def create
-    @episode = Admin::Episode.new(episode_params)
+    @episode = Episode.new(episode_params)
     @mediafile = @episode.build_mediafile(mediafiles_params)
-    Admin::Episode.transaction do
+    Episode.transaction do
       begin
         @episode.mediafile.title=@episode.name.sub(" ", "_").downcase
         @episode.user_id= session[:user_id]
@@ -40,14 +40,14 @@ class Admin::EpisodesController < ApplicationController
   end
 
   def edit
-    @episode = Admin::Episode.find(params[:id])
+    @episode = Episode.find(params[:id])
     @mediafile = @episode.mediafile
   end
 
   def update
-    @episode = Admin::Episode.find(params[:id])
-    @mediafile = Admin::Mediafile.find(@episode.media_id)
-    Admin::Episode.transaction do
+    @episode = Episode.find(params[:id])
+    @mediafile = Mediafile.find(@episode.media_id)
+    Episode.transaction do
       begin
         @episode.update_attributes(episode_params)
         @mediafile.title=@episode.name.sub(" ", "_").downcase
@@ -61,12 +61,12 @@ class Admin::EpisodesController < ApplicationController
   end
 
   def delete
-    @episode= Admin::Episode.find(params[:id])
+    @episode= Episode.find(params[:id])
     @mediafile= @episode.mediafile
   end
 
   def destroy
-    @episode= Admin::Episode.find(params[:id]).destroy
+    @episode= Episode.find(params[:id]).destroy
     flash[:notice]= "Episode deleted successfully"
     redirect_to({:action=>'index'})
   end

@@ -1,3 +1,3 @@
-class Admin::Image < ActiveRecord::Base
+class Image < ActiveRecord::Base
 
 end

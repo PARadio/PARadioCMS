@@ -1,6 +1,6 @@
 class ListenController < ApplicationController
   layout 'main'
   def index
-    @currentItem = Admin::Streamitem.getCurrent
+    @currentItem = Streamitem.getCurrent
   end
 end

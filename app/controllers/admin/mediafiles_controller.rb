@@ -2,15 +2,15 @@ class Admin::MediafilesController < ApplicationController
   before_action :require_login
   layout 'main'
   def index
-      @mediafiles = Admin::Mediafile.all
+      @mediafiles = Mediafile.all
    end
 
    def new
-      @mediafile = Admin::Mediafile.new
+      @mediafile = Mediafile.new
    end
 
    def create
-      @mediafile = Admin::Mediafile.new(mediafiles_params)
+      @mediafile = Mediafile.new(mediafiles_params)
 
       if @mediafile.save
         redirect_to admin_mediafiles_path, notice: "The media file #{@mediafile.title} has been uploaded."
@@ -20,7 +20,7 @@ class Admin::MediafilesController < ApplicationController
    end
 
    def destroy
-      @mediafile = Admin::Mediafile.find(params[:id])
+      @mediafile = Mediafile.find(params[:id])
       @mediafile.destroy
 
       redirect_to admin_mediafiles_path, notice:  "The media file #{@mediafile.title} has been deleted."

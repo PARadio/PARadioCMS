@@ -1,4 +1,4 @@
-class Admin::Streamitem < ActiveRecord::Base
+class Streamitem < ActiveRecord::Base
   belongs_to :episode #holds episode_id
 
   @@stream_start = Time.parse("02:00 PM")
@@ -11,11 +11,11 @@ class Admin::Streamitem < ActiveRecord::Base
   def start_time
     position = read_attribute(:position)
     if position == 1
-      return Admin::Streamitem.stream_start
+      return Streamitem.stream_start
     else
       date = read_attribute(:date)
-      itemsBefore = Admin::Streamitem.where(date: date).where("position < :currentPosition", {currentPosition: position}).sorted
-      time_counter = Admin::Streamitem.stream_start
+      itemsBefore = Streamitem.where(date: date).where("position < :currentPosition", {currentPosition: position}).sorted
+      time_counter = Streamitem.stream_start
       itemsBefore.each do |item|
         time_counter = time_counter + item.episode.duration.seconds;
       end
@@ -25,7 +25,7 @@ class Admin::Streamitem < ActiveRecord::Base
 
   def self.getCurrent
     # get all of todays queued episodes
-    streamitems = Admin::Streamitem.where(date: Date.today.strftime('%Y-%m-%d')).sorted
+    streamitems = Streamitem.where(date: Date.today.strftime('%Y-%m-%d')).sorted
 
     # if no streams, then nothing playing
     if streamitems.empty? || streamitems.nil?
@@ -38,9 +38,9 @@ class Admin::Streamitem < ActiveRecord::Base
     end
 
     # if the current time is in between streams, return nil
-    if Time.now < Admin::Streamitem.stream_start
+    if Time.now < Streamitem.stream_start
       return nil
-    elsif Time.now > Admin::Streamitem.stream_end
+    elsif Time.now > Streamitem.stream_end
       return nil
     end
 
@@ -51,7 +51,7 @@ class Admin::Streamitem < ActiveRecord::Base
     streamitems.each do |item|
       loop_time+=item.episode.duration
     end
-    num_loops = (TimeDifference.between(Admin::Streamitem.stream_start, Time.now).in_seconds)/loop_time
+    num_loops = (TimeDifference.between(Streamitem.stream_start, Time.now).in_seconds)/loop_time
     loop_frac = ('0.'+num_loops.to_s.split('.').last).to_f
     current_time_in_loop = loop_time*loop_frac
     puts current_time_in_loop
@@ -73,7 +73,7 @@ class Admin::Streamitem < ActiveRecord::Base
   end
 
   def self.updatePlaylistFile
-    streamitems = Admin::Streamitem.where(date: Date.today.strftime('%Y-%m-%d')).sorted
+    streamitems = Streamitem.where(date: Date.today.strftime('%Y-%m-%d')).sorted
     File.open(Rails.root.join('lib', 'ices', 'playlist.txt'), 'w') do |f|
       streamitems.each do |streamitem|
        f.puts "/home/ubuntu/apps/PARadioCMS/current/public" + streamitem.episode.mediafile.attachment_url

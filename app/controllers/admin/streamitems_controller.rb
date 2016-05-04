@@ -8,19 +8,19 @@ class Admin::StreamitemsController < ApplicationController
   def new
     datestr = params[:year].to_s + "-" + params[:month].to_s + "-" + params[:day].to_s
     @selected_date = Date.strptime(datestr, '%Y-%m-%d')
-    @streamitem = Admin::Streamitem.new
+    @streamitem = Streamitem.new
   end
 
   def create
     # create a new stream item and pass it an episode to add.
     # dynamically assign position variable
     # save streamitem
-    @newStreamitem = Admin::Streamitem.new(streamitems_params)
+    @newStreamitem = Streamitem.new(streamitems_params)
     @newStreamitem.date = Date.strptime(params[:admin_streamitem][:date], '%Y-%m-%d')
     @newStreamitem.position = get_next_position(@newStreamitem.date)
 
-    if @newStreamitem.start_time + @newStreamitem.episode.duration.seconds > Admin::Streamitem.stream_end
-      time_available_hrs = TimeDifference.between(@streamitems.last.start_time + @streamitems.last.episode.duration.seconds, Admin::Streamitem.stream_end).in_hours
+    if @newStreamitem.start_time + @newStreamitem.episode.duration.seconds > Streamitem.stream_end
+      time_available_hrs = TimeDifference.between(@streamitems.last.start_time + @streamitems.last.episode.duration.seconds, Streamitem.stream_end).in_hours
       time_available_min = ("0." + time_available_hrs.to_s.split('.').last).to_f * 60
       time_available_sec = ("0." + time_available_min.to_s.split('.').last).to_f * 60
       time_available_str = time_available_hrs.to_i.to_s + "h " + time_available_min.to_i.to_s + "m " + time_available_sec.to_i.to_s + "s"
@@ -42,7 +42,7 @@ class Admin::StreamitemsController < ApplicationController
     i = 1
     itemsArray = [];
     params[:old_positions].each do |old_position|
-      itemToShift = Admin::Streamitem.where(date: datestr).where(position: old_position).first
+      itemToShift = Streamitem.where(date: datestr).where(position: old_position).first
       itemToShift.position = i
       itemsArray.push(itemToShift)
       i = i + 1
@@ -53,8 +53,8 @@ class Admin::StreamitemsController < ApplicationController
   end
 
   def destroy
-    @streamitem = Admin::Streamitem.find(params[:id]).destroy
-    itemsToShift = Admin::Streamitem.where(date: @streamitem.date.strftime('%Y-%m-%d')).where("position > :positionToDelete", {positionToDelete: @streamitem.position}).sorted
+    @streamitem = Streamitem.find(params[:id]).destroy
+    itemsToShift = Streamitem.where(date: @streamitem.date.strftime('%Y-%m-%d')).where("position > :positionToDelete", {positionToDelete: @streamitem.position}).sorted
 
     # rewrite order
     itemsToShift.each do |item|
@@ -63,7 +63,7 @@ class Admin::StreamitemsController < ApplicationController
     end
 
     # rewrite playlist
-    #@streamitemsUpdated = Admin::Streamitem.sorted
+    #@streamitemsUpdated = Streamitem.sorted
     #File.open(Rails.root.join('lib', 'ices', 'playlist.txt'), 'w') do |f|
     #  @streamitemsUpdated.each do |streamitemUpdated|
     #    f.puts Rails.root.join('public', @streamitemsUpdated.episode.mediafile.attachment_url)
@@ -80,7 +80,7 @@ class Admin::StreamitemsController < ApplicationController
 
     def get_next_position(selected_date)
       #returns next start time for stream item.
-      streamitems = Admin::Streamitem.where(date: selected_date.strftime('%Y-%m-%d')).sorted
+      streamitems = Streamitem.where(date: selected_date.strftime('%Y-%m-%d')).sorted
       if streamitems.empty?
         newPosition = 1
       else
