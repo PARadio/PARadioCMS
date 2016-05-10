@@ -1,8 +1,8 @@
 class Streamitem < ActiveRecord::Base
   belongs_to :episode #holds episode_id
 
-  @@stream_start = Time.parse("02:00 PM")
-  @@stream_end = Time.parse("04:00 PM")
+  @@stream_start = Time.parse("02:15 PM")
+  @@stream_end = Time.parse("11:00 PM")
   cattr_reader :stream_start
   cattr_reader :stream_end
 
