@@ -19,12 +19,12 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: {format: 'json'} do
     namespace :v1 do
-      resources :episodes, :streamitems
+      resources :episodes, :streamitems, :shows
     end
   end
 
   namespace :admin do
-    resources :episodes, :mediafiles, :streamitems, :access
+    resources :episodes, :mediafiles, :streamitems, :access, :shows
   end
 
   get '/home', to: 'home#index', as: 'home'

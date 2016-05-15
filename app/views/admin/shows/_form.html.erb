@@ -5,10 +5,6 @@
     <td><%= f.text_field(:name) %></td>
   </tr>
   <tr>
-    <th><%= f.label(:number, "Episode Number")%></th>
-    <td><%= f.text_field(:number) %></td>
-  </tr>
-  <tr>
     <th><%= f.label(:stage, "Stage")%></th>
     <td><%= f.select(:stage, {"Authored"=>1, "Edited"=>2, "Published"=>3}) %></td>
   </tr>
@@ -16,14 +12,4 @@
     <th><%= f.label(:description, "Description")%></th>
     <td><%= f.text_area(:description, :size=> '40x10') %></td>
   </tr>
-  <tr>
-    <th><%= f.label(:transcript, "Transcript")%></th>
-    <td><%= f.text_area(:transcript, :size=> '40x10') %></td>
-  </tr>
-  <%= fields_for(@mediafile) do |m| %>
-    <tr>
-      <th><%= m.label(:attachment, "Media File")%></th>
-      <td><%= m.file_field :attachment %></td>
-    </tr>
-  <% end %>
 </table>

@@ -1,0 +1,29 @@
+<% @page_title="Shows" %>
+<%= link_to("<< Back to List", {:action => 'index'}, :class=>"back-link") %>
+
+<div class= "shows show">
+  <h2>Show Show</h2>
+
+  <table summary="Show detail view">
+    <tr>
+      <th>Name</th>
+      <td><%= @show.name %></td>
+    </tr>
+    <tr>
+      <th>Description</th>
+      <td><%= @show.description%></td>
+    </tr>
+    <tr>
+      <th>Author</th>
+      <td><%= @show.description%></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @show.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @show.updated_at %></td>
+    </tr>
+  </table>
+</div>

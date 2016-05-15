@@ -1,13 +1,13 @@
-<% @page_title="Update Episode" %>
+<% @page_title="Update Show" %>
 <%= link_to("<< Back to List", {:action => 'index'}, :class=>"back-link") %>
 
-<div class="episodes update">
-  <h2>Update Episode</h2>
+<div class="shows update">
+  <h2>Update Show</h2>
 
-  <%= form_for([:admin, @episode]) do |f| %>
+  <%= form_for([:admin, @show]) do |f| %>
     <%= render(:partial => "form", :locals=>{:f=>f})%>
     <div class="form-buttons">
-      <%= submit_tag("Update Episode")%>
+      <%= submit_tag("Update Show")%>
     </div>
   <% end %>
 </div>

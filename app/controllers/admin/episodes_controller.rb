@@ -73,10 +73,10 @@ class Admin::EpisodesController < ApplicationController
 
   private
     def episode_params
-      params.require(:admin_episode).permit([:name, :description, :transcript, :stage,
+      params.require(:episode).permit([:name, :description, :transcript, :stage,
         :number])
     end
     def mediafiles_params
-      params.require(:admin_mediafile).permit(:attachment)
+      params.require(:mediafile).permit(:attachment)
     end
 end
