@@ -17,8 +17,14 @@ Rails.application.routes.draw do
   get '/api/get/stream/:year/:month/:day/items', to: 'api#getStreamItems', as: 'api_stream_items'
   get '/api/get/stream/current', to: 'api#getCurrentItem', as: 'api_stream_current'
 
+  namespace :api, defaults: {format: 'json'} do
+    namespace :v1 do
+      resources :episodes, :streamitems
+    end
+  end
+
   namespace :admin do
-      resources :episodes, :mediafiles, :streamitems, :access
+    resources :episodes, :mediafiles, :streamitems, :access
   end
 
   get '/home', to: 'home#index', as: 'home'

@@ -1,4 +1,4 @@
-class ApiController < ApplicationController
+class Api::ApiController < ApplicationController
   def getStreamMetadata
     datestr = params[:year].to_s + "-" + params[:month].to_s + "-" + params[:day].to_s
     @selected_date = Date.strptime(datestr, '%Y-%m-%d')
