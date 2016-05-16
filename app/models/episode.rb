@@ -4,8 +4,8 @@ class Episode < ActiveRecord::Base
   #has one means Episode is linked to from :streamitem. Episode doesn't even
   #know it has one based off of db stuff.
   has_one :mediafile, dependent: :destroy, autosave: true
-  belongs_to :show
-  
+  belongs_to :show, inverse_of: :episodes
+
 
   validates :name, :presence => true , :length =>{:maximum => 150}
   validates_presence_of :description

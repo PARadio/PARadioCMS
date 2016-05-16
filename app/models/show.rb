@@ -1,6 +1,6 @@
 class Show < ActiveRecord::Base
-  has_many :episodes
-  belongs_to :user, :class_name=>"User", :foreign_key=>"user_id"
+  has_many :episodes, inverse_of: :show 
+  belongs_to :user
 
   validates :name, :presence => true , :length =>{:maximum => 150}
   validates_presence_of :description

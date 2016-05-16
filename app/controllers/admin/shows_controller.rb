@@ -21,8 +21,10 @@ class Admin::ShowsController < ApplicationController
     #actually creates the show
     @show = Show.new(show_params)
 
+    @show.user=User.find(session[:user_id])
+
     if @show.save
-      redirect_to admin_show_path, notice: "The show #{@show.name} has been uploaded."
+      redirect_to admin_show_path(@show), notice: "The show #{@show.name} has been uploaded."
     else
        render "new"
     end
@@ -60,5 +62,5 @@ end
 
 private
   def show_params
-    params.require(:show).permit([:name, :description, :stage])
+    params.require(:show).permit([:name, :description, :stage, :user_id])
   end
