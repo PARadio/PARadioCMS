@@ -1,49 +1,24 @@
-<% @page_title="Shows" %>
-<%= link_to("<< Back to List", {:action => 'index'}, :class=>"back-link") %>
-
-<div class= "shows show">
-  <h2>Show Show</h2>
-
-  <table summary="Show detail view">
-    <tr>
-      <th>Name</th>
-      <td><%= @show.name %></td>
-    </tr>
-    <tr>
-      <th>Description</th>
-      <td><%= @show.description%></td>
-    </tr>
-    <tr>
-      <th>Author</th>
-      <td><%= @show.description%></td>
-    </tr>
-    <tr>
-      <th>Created</th>
-      <td><%= @show.created_at %></td>
-    </tr>
-    <tr>
-      <th>Updated</th>
-      <td><%= @show.updated_at %></td>
-    </tr>
-  </table>
-  <%=link_to("Add New Episode", new_admin_episode_path())%><!--Button here instead-->
-  <div><%= pluralize(@show.episodes.size,'episode')%> found</div>
+<% @page_title="Episodes" %>
+<div class="episodes index container">
+  <%= link_to("<- Back to Admin Panel", admin_index_path)%>
+  <h2>Episodes</h2>
+  <div><%= pluralize(@episodes.size,'episode')%> found</div>
   <table class="listing table table-bordered table-striped" summary="Episode List">
     <thead>
       <tr class="header">
         <th>Episode Number</th>
         <th>Episode Name</th>
-        <th>Stage</th>
+        <th>Show</th>
         <th>Last Updated</th>
         <th>Actions</th>
       </tr>
     </thead>
     <tbody>
-      <% @show.episodes.each do |episode| %>
+      <% @episodes.each do |episode| %>
       <tr>
         <td><%= episode.number %></td>
         <td><%= episode.name %></td>
-        <td><%= episode.stage %></td><!--not necessary-->
+        <td><%= episode.show %></td><!--not necessary-->
         <td><%= episode.updated_at.strftime("%a  %B %d, %Y at %I:%M %p")%></td>
         <td class="actions">
           <%= link_to("Show",{:action => 'show', :id => episode.id}, :class => 'action show') %> <!-- onclick this happens -->

@@ -2,7 +2,7 @@
 <div class="users index container">
   <%= link_to("<- Back to Admin Panel", admin_index_path)%>
   <h2>Users</h2>
-  <%=link_to("Add New User", new_user_path())%><!--Button here instead-->
+  <%=link_to("Add New User", new_admin_user_path())%><!--Button here instead-->
   <div><%= pluralize(@users.size,'user')%> found</div>
   <table class="listing table table-bordered table-striped" summary="User List">
     <thead>
@@ -28,7 +28,7 @@
           <!-- invisible until edit button toggled -->
           <%= link_to("Edit",{:action => 'edit', :id => user.id}, :class => 'action edit') %>
           <!-- invisible until edit button toggled -->
-          <%= link_to("Delete", user_path(user), method: :delete) %>
+          <%= link_to("Delete", admin_user_path(user), method: :delete) %>
         </td>
       </tr>
       <% end %>

@@ -51,7 +51,7 @@ class Admin::ShowsController < ApplicationController
     #shows delete confirmation?
   end
 
-  def destroys
+  def destroy
     #deletes show
     @show = Show.find(params[:id])
     @show.destroy

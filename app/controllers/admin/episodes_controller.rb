@@ -4,7 +4,9 @@ class Admin::EpisodesController < ApplicationController
   def index
     @episodes = Episode.all
   end
-
+  def all
+    @episodes = Episode.all
+  end
   def show
     @episode = Episode.find(params[:id])
   end
@@ -20,7 +22,7 @@ class Admin::EpisodesController < ApplicationController
     Episode.transaction do
       begin
         @episode.mediafile.title=@episode.name.sub(" ", "_").downcase
-          
+
         if @episode.save
           # set duration attribute
           fullpath = Rails.root.join('public', @episode.mediafile.attachment_url.to_s[1..-1])

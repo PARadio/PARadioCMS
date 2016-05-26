@@ -1,0 +1,35 @@
+<% @page_title="Shows" %>
+<div class="shows index container">
+  <%= link_to("<- Back to Admin Panel", admin_index_path)%>
+  <h2>Shows</h2>
+  <%=link_to("Add New Show", new_admin_show_path())%><!--Button here instead-->
+  <div><%= pluralize(@shows.size,'show')%> found</div>
+  <table class="listing table table-bordered table-striped" summary="Show List">
+    <thead>
+      <tr class="header">
+        <th>Show Name</th>
+        <th>Stage</th>
+        <th>Main Author</th>
+        <th>Last Updated</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @shows.each do |show| %>
+      <tr>
+        <td><%= show.name %></td>
+        <td><%= show.stage %></td><!--not necessary-->
+        <td><%= "#{show.user.first_name} #{show.user.last_name}"%></td><!--not necessary-->
+        <td><%= show.updated_at.strftime("%a  %B %d, %Y at %I:%M %p")%></td>
+        <td class="actions">
+          <%= link_to("Show",{:action => 'show', :id => show.id}, :class => 'action show') %> <!-- onclick this happens -->
+          <!-- invisible until edit button toggled -->
+          <%= link_to("Edit",{:action => 'edit', :id => show.id}, :class => 'action edit') %>
+          <!-- invisible until edit button toggled -->
+          <%= link_to("Delete", admin_show_path(show), method: :delete) %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

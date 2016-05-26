@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class Admin::UsersController < ApplicationController
   before_action :require_login
   layout 'main'
   def new
@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     @user=User.new(user_params)
     if @user.save()
       flash[:notice]="User created successfully"
-      redirect_to(user_path(@user))
+      redirect_to(admin_user_path(@user))
     else
       render('new')
     end
@@ -31,7 +31,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
       flash[:notice]="User updated successfully"
-      redirect_to(user_path(@user))
+      redirect_to(admin_user_path(@user))
     else
       render('edit')
     end

@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   # auto encrypts that password
   has_secure_password
   has_many :shows, dependent: :destroy
+  has_many :episodes, through: :shows
   validates :email, uniqueness: true, email: true
 
 end

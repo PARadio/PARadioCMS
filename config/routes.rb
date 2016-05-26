@@ -7,8 +7,6 @@ Rails.application.routes.draw do
   get 'admin/access/logout', as: :logout
   post 'admin/access/attempt_login', as: :attempt_login
 
-  resources :users
-
   get '/admin/streamitems/:year/:month/:day', to: 'admin/streamitems#index', as: 'streamitems_show'
   get '/admin/streamitems/:year/:month/:day/new', to: 'admin/streamitems#new', as: 'streamitems_new'
   post '/admin/streamitems/:year/:month/:day/move', to: 'admin/streamitems#move', as: 'streamitems_move'
@@ -19,13 +17,24 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: {format: 'json'} do
     namespace :v1 do
-      resources :episodes, :streamitems, :shows
+      resources :streamitems
+      resources :shows do
+        resources :episodes, shallow: true
+      end
     end
   end
 
   namespace :admin do
-    resources :episodes, :mediafiles, :streamitems, :access, :shows
+    get '/episodes/all', to: 'episodes#all', as: 'episodes'
+    get '/shows/all', to: 'shows#all', as: 'shows'
+    resources :mediafiles, :streamitems, :access
+    resources :users, shallow: true do
+      resources :shows, shallow: true do
+        resources :episodes
+      end
+    end
   end
+
 
   get '/home', to: 'home#index', as: 'home'
 
