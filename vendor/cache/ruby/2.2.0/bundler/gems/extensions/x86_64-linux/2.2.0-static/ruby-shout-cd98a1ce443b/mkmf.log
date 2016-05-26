@@ -1,0 +1,287 @@
+have_func: checking for rb_thread_blocking_region()... -------------------- no
+
+"gcc -o conftest -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0/x86_64-linux -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0/ruby/backward -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0 -I. -I/home/sean/.rbenv/versions/2.2.3/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat -DRUBY_1_9_x conftest.c  -L. -L/home/sean/.rbenv/versions/2.2.3/lib -Wl,-R/home/sean/.rbenv/versions/2.2.3/lib -L. -L/home/sean/.rbenv/versions/2.2.3/lib  -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-R/home/sean/.rbenv/versions/2.2.3/lib -L/home/sean/.rbenv/versions/2.2.3/lib -lruby-static  -lpthread -ldl -lcrypt -lm   -lc"
+/home/sean/.rbenv/versions/2.2.3/lib/ruby/2.2.0/mkmf.rb:395: warning: Insecure world writable dir /media/sean/programs/android-sdk-linux/tools in PATH, mode 040777
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"gcc -o conftest -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0/x86_64-linux -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0/ruby/backward -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0 -I. -I/home/sean/.rbenv/versions/2.2.3/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat -DRUBY_1_9_x conftest.c  -L. -L/home/sean/.rbenv/versions/2.2.3/lib -Wl,-R/home/sean/.rbenv/versions/2.2.3/lib -L. -L/home/sean/.rbenv/versions/2.2.3/lib  -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-R/home/sean/.rbenv/versions/2.2.3/lib -L/home/sean/.rbenv/versions/2.2.3/lib -lruby-static  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:57: error: ‘rb_thread_blocking_region’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_blocking_region; return 0; }
+                                                         ^
+conftest.c:13:57: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_blocking_region; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_blocking_region; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0/x86_64-linux -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0/ruby/backward -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0 -I. -I/home/sean/.rbenv/versions/2.2.3/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat -DRUBY_1_9_x conftest.c  -L. -L/home/sean/.rbenv/versions/2.2.3/lib -Wl,-R/home/sean/.rbenv/versions/2.2.3/lib -L. -L/home/sean/.rbenv/versions/2.2.3/lib  -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-R/home/sean/.rbenv/versions/2.2.3/lib -L/home/sean/.rbenv/versions/2.2.3/lib -lruby-static  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:1: warning: implicit declaration of function ‘rb_thread_blocking_region’ [-Wimplicit-function-declaration]
+ int t(void) { rb_thread_blocking_region(); return 0; }
+ ^
+/tmp/cc5cbIsb.o: In function `t':
+/var/www/html/PARadioCMS/vendor/cache/ruby/2.2.0/bundler/gems/ruby-shout-cd98a1ce443b/ext/conftest.c:13: undefined reference to `rb_thread_blocking_region'
+collect2: error: ld returned 1 exit status
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { rb_thread_blocking_region(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for oggpack_writeinit() in -logg... -------------------- yes
+
+"gcc -o conftest -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0/x86_64-linux -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0/ruby/backward -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0 -I. -I/home/sean/.rbenv/versions/2.2.3/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat -DRUBY_1_9_x conftest.c  -L. -L/home/sean/.rbenv/versions/2.2.3/lib -Wl,-R/home/sean/.rbenv/versions/2.2.3/lib -L. -L/home/sean/.rbenv/versions/2.2.3/lib  -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-R/home/sean/.rbenv/versions/2.2.3/lib -L/home/sean/.rbenv/versions/2.2.3/lib -lruby-static -logg  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:57: error: ‘oggpack_writeinit’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))oggpack_writeinit; return 0; }
+                                                         ^
+conftest.c:13:57: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))oggpack_writeinit; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))oggpack_writeinit; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0/x86_64-linux -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0/ruby/backward -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0 -I. -I/home/sean/.rbenv/versions/2.2.3/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat -DRUBY_1_9_x conftest.c  -L. -L/home/sean/.rbenv/versions/2.2.3/lib -Wl,-R/home/sean/.rbenv/versions/2.2.3/lib -L. -L/home/sean/.rbenv/versions/2.2.3/lib  -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-R/home/sean/.rbenv/versions/2.2.3/lib -L/home/sean/.rbenv/versions/2.2.3/lib -lruby-static -logg  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:1: warning: implicit declaration of function ‘oggpack_writeinit’ [-Wimplicit-function-declaration]
+ int t(void) { oggpack_writeinit(); return 0; }
+ ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { oggpack_writeinit(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for vorbis_dsp_clear() in -lvorbis... -------------------- yes
+
+"gcc -o conftest -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0/x86_64-linux -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0/ruby/backward -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0 -I. -I/home/sean/.rbenv/versions/2.2.3/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat -DRUBY_1_9_x conftest.c  -L. -L/home/sean/.rbenv/versions/2.2.3/lib -Wl,-R/home/sean/.rbenv/versions/2.2.3/lib -L. -L/home/sean/.rbenv/versions/2.2.3/lib  -fstack-protector -rdynamic -Wl,-export-dynamic    -logg  -Wl,-R/home/sean/.rbenv/versions/2.2.3/lib -L/home/sean/.rbenv/versions/2.2.3/lib -lruby-static -lvorbis -logg  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:57: error: ‘vorbis_dsp_clear’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))vorbis_dsp_clear; return 0; }
+                                                         ^
+conftest.c:13:57: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))vorbis_dsp_clear; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))vorbis_dsp_clear; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0/x86_64-linux -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0/ruby/backward -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0 -I. -I/home/sean/.rbenv/versions/2.2.3/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat -DRUBY_1_9_x conftest.c  -L. -L/home/sean/.rbenv/versions/2.2.3/lib -Wl,-R/home/sean/.rbenv/versions/2.2.3/lib -L. -L/home/sean/.rbenv/versions/2.2.3/lib  -fstack-protector -rdynamic -Wl,-export-dynamic    -logg  -Wl,-R/home/sean/.rbenv/versions/2.2.3/lib -L/home/sean/.rbenv/versions/2.2.3/lib -lruby-static -lvorbis -logg  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:1: warning: implicit declaration of function ‘vorbis_dsp_clear’ [-Wimplicit-function-declaration]
+ int t(void) { vorbis_dsp_clear(); return 0; }
+ ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { vorbis_dsp_clear(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for pthread_create() in -lpthread... -------------------- yes
+
+"gcc -o conftest -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0/x86_64-linux -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0/ruby/backward -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0 -I. -I/home/sean/.rbenv/versions/2.2.3/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat -DRUBY_1_9_x conftest.c  -L. -L/home/sean/.rbenv/versions/2.2.3/lib -Wl,-R/home/sean/.rbenv/versions/2.2.3/lib -L. -L/home/sean/.rbenv/versions/2.2.3/lib  -fstack-protector -rdynamic -Wl,-export-dynamic    -lvorbis -logg  -Wl,-R/home/sean/.rbenv/versions/2.2.3/lib -L/home/sean/.rbenv/versions/2.2.3/lib -lruby-static -lpthread -lvorbis -logg  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:57: error: ‘pthread_create’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))pthread_create; return 0; }
+                                                         ^
+conftest.c:13:57: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))pthread_create; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))pthread_create; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0/x86_64-linux -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0/ruby/backward -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0 -I. -I/home/sean/.rbenv/versions/2.2.3/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat -DRUBY_1_9_x conftest.c  -L. -L/home/sean/.rbenv/versions/2.2.3/lib -Wl,-R/home/sean/.rbenv/versions/2.2.3/lib -L. -L/home/sean/.rbenv/versions/2.2.3/lib  -fstack-protector -rdynamic -Wl,-export-dynamic    -lvorbis -logg  -Wl,-R/home/sean/.rbenv/versions/2.2.3/lib -L/home/sean/.rbenv/versions/2.2.3/lib -lruby-static -lpthread -lvorbis -logg  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:1: warning: implicit declaration of function ‘pthread_create’ [-Wimplicit-function-declaration]
+ int t(void) { pthread_create(); return 0; }
+ ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { pthread_create(); return 0; }
+/* end */
+
+--------------------
+
+find_library: checking for shout_init() in -lshout... -------------------- yes
+
+"gcc -o conftest -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0/x86_64-linux -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0/ruby/backward -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0 -I. -I/home/sean/.rbenv/versions/2.2.3/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat -DRUBY_1_9_x conftest.c  -L. -L/home/sean/.rbenv/versions/2.2.3/lib -Wl,-R/home/sean/.rbenv/versions/2.2.3/lib -L. -L/home/sean/.rbenv/versions/2.2.3/lib  -fstack-protector -rdynamic -Wl,-export-dynamic    -lpthread -lvorbis -logg  -Wl,-R/home/sean/.rbenv/versions/2.2.3/lib -L/home/sean/.rbenv/versions/2.2.3/lib -lruby-static -lshout -lpthread -lvorbis -logg  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:57: error: ‘shout_init’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))shout_init; return 0; }
+                                                         ^
+conftest.c:13:57: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))shout_init; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))shout_init; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0/x86_64-linux -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0/ruby/backward -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0 -I. -I/home/sean/.rbenv/versions/2.2.3/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat -DRUBY_1_9_x conftest.c  -L. -L/home/sean/.rbenv/versions/2.2.3/lib -Wl,-R/home/sean/.rbenv/versions/2.2.3/lib -L. -L/home/sean/.rbenv/versions/2.2.3/lib  -fstack-protector -rdynamic -Wl,-export-dynamic    -lpthread -lvorbis -logg  -Wl,-R/home/sean/.rbenv/versions/2.2.3/lib -L/home/sean/.rbenv/versions/2.2.3/lib -lruby-static -lshout -lpthread -lvorbis -logg  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:1: warning: implicit declaration of function ‘shout_init’ [-Wimplicit-function-declaration]
+ int t(void) { shout_init(); return 0; }
+ ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { shout_init(); return 0; }
+/* end */
+
+--------------------
+
+have_header: checking for shout/shout.h... -------------------- yes
+
+"gcc -E -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0/x86_64-linux -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0/ruby/backward -I/home/sean/.rbenv/versions/2.2.3/include/ruby-2.2.0 -I. -I/home/sean/.rbenv/versions/2.2.3/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat -DRUBY_1_9_x  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <shout/shout.h>
+/* end */
+
+--------------------
+

@@ -13,3 +13,17 @@ Ignoring binding_of_caller-0.7.2 because its extensions are not built.  Try: gem
 Running via Spring preloader in process 7125
 ices2: no process found
 ices2: no process found
+unable to open log /home/ubuntu/apps/PARadioCMS/current/lib/ices/log.txt
+Ignoring bcrypt-3.1.11 because its extensions are not built.  Try: gem pristine bcrypt --version 3.1.11
+Ignoring binding_of_caller-0.7.2 because its extensions are not built.  Try: gem pristine binding_of_caller --version 0.7.2
+Ignoring bcrypt-3.1.11 because its extensions are not built.  Try: gem pristine bcrypt --version 3.1.11
+Ignoring binding_of_caller-0.7.2 because its extensions are not built.  Try: gem pristine binding_of_caller --version 0.7.2
+Running via Spring preloader in process 20662
+ices2: no process found
+unable to open log /home/ubuntu/apps/PARadioCMS/current/lib/ices/log.txt
+Ignoring bcrypt-3.1.11 because its extensions are not built.  Try: gem pristine bcrypt --version 3.1.11
+Ignoring binding_of_caller-0.7.2 because its extensions are not built.  Try: gem pristine binding_of_caller --version 0.7.2
+Ignoring bcrypt-3.1.11 because its extensions are not built.  Try: gem pristine bcrypt --version 3.1.11
+Ignoring binding_of_caller-0.7.2 because its extensions are not built.  Try: gem pristine binding_of_caller --version 0.7.2
+Running via Spring preloader in process 5073
+ices2: no process found

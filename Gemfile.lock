@@ -1,4 +1,11 @@
 GIT
+  remote: https://github.com/niko/ruby-shout.git
+  revision: cd98a1ce443b51b6ac1422522e37fb8fa1e7d3d8
+  branch: master
+  specs:
+    ruby-shout (2.2.2)
+
+GIT
   remote: https://github.com/twbs/bootstrap-sass.git
   revision: 3845d130f235ddb3d9bed1d996e6a8a6c6bcd7f2
   branch: next
@@ -228,6 +235,7 @@ DEPENDENCIES
   puma
   rails (= 4.2.4)
   rspec (~> 3.4)
+  ruby-shout!
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
