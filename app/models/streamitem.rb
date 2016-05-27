@@ -23,9 +23,13 @@ class Streamitem < ActiveRecord::Base
     end
   end
 
+  def self.getToday
+    return Streamitem.where(date: Date.today.strftime('%Y-%m-%d')).sorted
+  end
+
   def self.getCurrent
     # get all of todays queued episodes
-    streamitems = Streamitem.where(date: Date.today.strftime('%Y-%m-%d')).sorted
+    streamitems = Streamitem.getToday
 
     # if no streams, then nothing playing
     if streamitems.empty? || streamitems.nil?

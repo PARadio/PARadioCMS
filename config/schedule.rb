@@ -19,16 +19,11 @@
 
 # Learn more: http://github.com/javan/whenever
 
-set :output, "/home/ubuntu/apps/PARadioCMS/current/lib/ices/cron_log.log"
+set :output, "/home/ubuntu/apps/PARadioCMS/current/log/whenever.log"
 set :environment, 'production'
 
-every 1.day, :at => '2:15 pm' do
-  runner "Admin::Streamitem.updatePlaylistFile"
-  command "/usr/bin/icecast2 -c /home/ubuntu/apps/PARadioCMS/current/lib/ices/icecast.xml"
-  command "/usr/bin/ices2 /home/ubuntu/apps/PARadioCMS/current/lib/ices/ices.xml"
-end
-
-every 1.day, :at => '11:00 pm' do
-  command "killall ices2"
+every 1.day, :at => '00:00 AM' do
+  runner "Livestream.delay(run_at: Livestream.start_time).runStream"
   command "killall icecast2"
+  command "/usr/bin/icecast2 -c /home/ubuntu/apps/PARadioCMS/current/lib/ices/icecast.xml"
 end

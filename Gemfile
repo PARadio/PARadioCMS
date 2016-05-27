@@ -73,3 +73,7 @@ gem 'autoprefixer-rails', '~> 6.3', '>= 6.3.6'
 gem 'rspec', '~> 3.4'
 
 gem 'ruby-shout', :git => 'https://github.com/niko/ruby-shout.git', :branch => 'master'
+
+gem 'delayed_job_active_record'
+
+gem 'nokogiri'

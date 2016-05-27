@@ -1,4 +1,4 @@
-/home/sean/.rbenv/versions/2.2.3/bin/ruby -r ./siteconf20160525-30635-19nrha2.rb extconf.rb
+/home/sean/.rbenv/versions/2.2.3/bin/ruby -r ./siteconf20160527-7658-1qvn1pd.rb extconf.rb
 checking for rb_thread_blocking_region()... no
 checking for oggpack_writeinit() in -logg... yes
 checking for vorbis_dsp_clear() in -lvorbis... yes
@@ -26,4 +26,4 @@ shout_ext.c:668:9: warning: ISO C90 forbids mixed declarations and code [-Wdecla
 linking shared-object shout_ext.so
 
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 shout_ext.so ./.gem.20160525-30635-10se4qr
+/usr/bin/install -c -m 0755 shout_ext.so ./.gem.20160527-7658-11z3pz4
