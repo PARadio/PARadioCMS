@@ -34,10 +34,10 @@ ActiveRecord::Schema.define(version: 20160527161210) do
     t.string   "name",        limit: 255
     t.text     "description", limit: 65535
     t.text     "transcript",  limit: 65535
-    t.integer  "stage",       limit: 4,     default: 1
+    t.integer  "stage",       limit: 4
     t.integer  "number",      limit: 4
-    t.datetime "created_at",                            null: false
-    t.datetime "updated_at",                            null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.integer  "duration",    limit: 4
   end
 
@@ -72,10 +72,10 @@ ActiveRecord::Schema.define(version: 20160527161210) do
   create_table "mp3files", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.string   "attachment", limit: 255
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
-    t.integer  "user_id",    limit: 4,   default: 0
-    t.integer  "duration",   limit: 4,   default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "user_id",    limit: 4
+    t.integer  "duration",   limit: 4
   end
 
   create_table "pages", force: :cascade do |t|

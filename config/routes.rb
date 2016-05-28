@@ -11,9 +11,9 @@ Rails.application.routes.draw do
   get '/admin/streamitems/:year/:month/:day/new', to: 'admin/streamitems#new', as: 'streamitems_new'
   post '/admin/streamitems/:year/:month/:day/move', to: 'admin/streamitems#move', as: 'streamitems_move'
 
-  get '/api/get/stream/:year/:month/:day/metadata', to: 'api#getStreamMetadata', as: 'api_stream_metadata'
-  get '/api/get/stream/:year/:month/:day/items', to: 'api#getStreamItems', as: 'api_stream_items'
-  get '/api/get/stream/current', to: 'api#getCurrentItem', as: 'api_stream_current'
+  get '/api/get/stream/:year/:month/:day/metadata', to: 'api/api#getStreamMetadata', as: 'api_stream_metadata'
+  get '/api/get/stream/:year/:month/:day/items', to: 'api/api#getStreamItems', as: 'api_stream_items'
+  get '/api/get/stream/current', to: 'api/api#getCurrentItem', as: 'api_stream_current'
 
   namespace :api, defaults: {format: 'json'} do
     namespace :v1 do

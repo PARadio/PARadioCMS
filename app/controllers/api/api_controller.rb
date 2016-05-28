@@ -21,6 +21,9 @@ class Api::ApiController < ApplicationController
     @time_available_sec = ("0." + @time_available_min.to_s.split('.').last).to_f * 60
     @time_available_str = @time_available_hrs.to_i.to_s + "h " + @time_available_min.to_i.to_s + "m " + @time_available_sec.to_i.to_s + "s"
 
+    @stream_start = Streamitem.stream_start.strftime("%I:%M%p")
+    @stream_end   = Streamitem.stream_end.strftime("%I:%M%p")
+
     render "api/get/stream/metadata", layout: false
   end
 
