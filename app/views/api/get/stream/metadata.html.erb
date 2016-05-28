@@ -8,8 +8,8 @@
   "total_time": "<%= @total_time %>",
   "percent_taken": "<%= @percent_taken %>",
   "time_available": {
-    "hours": "<%= @time_available_hrs.to_i.to_s %>",
-    "minutes": "<%= @time_available_min.to_i.to_s %>",
-    "seconds": "<%= @time_available_sec.to_i.to_s %>"
+    "hours": "<%= @time_available_obj['hrs'].to_s %>",
+    "minutes": "<%= @time_available_obj['min'].to_s %>",
+    "seconds": "<%= @time_available_obj['sec'].to_s %>"
   }
 }

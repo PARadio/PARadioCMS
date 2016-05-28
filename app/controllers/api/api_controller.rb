@@ -2,27 +2,15 @@ class Api::ApiController < ApplicationController
   def getStreamMetadata
     datestr = params[:year].to_s + "-" + params[:month].to_s + "-" + params[:day].to_s
     @selected_date = Date.strptime(datestr, '%Y-%m-%d')
-    @streamitems = Streamitem.where(date: @selected_date.strftime('%Y-%m-%d')).sorted
 
-    if @streamitems.empty?
-      @time_taken = 0
-    else
-      @time_taken = TimeDifference.between(Livestream::Config.start_time, @streamitems.last.start_time + @streamitems.last.episode.duration.seconds).in_seconds
-    end
-    @total_time = TimeDifference.between(Livestream::Config.start_time, Livestream::Config.end_time).in_seconds
-    @percent_taken = ((@time_taken / @total_time) * 100).round(2)
+    @time_taken = Livestream::Stats.time_taken_sec(@selected_date)
+    @total_time = Livestream::Stats.total_time_sec(@selected_date)
+    @percent_taken = Livestream::Stats.percent_taken(@selected_date)
 
-    if @streamitems.empty?
-      @time_available_hrs = TimeDifference.between(Livestream::Config.start_time, Livestream::Config.end_time).in_hours
-    else
-      @time_available_hrs = TimeDifference.between(@streamitems.last.start_time + @streamitems.last.episode.duration.seconds, Livestream::Config.end_time).in_hours
-    end
-    @time_available_min = ("0." + @time_available_hrs.to_s.split('.').last).to_f * 60
-    @time_available_sec = ("0." + @time_available_min.to_s.split('.').last).to_f * 60
-    @time_available_str = @time_available_hrs.to_i.to_s + "h " + @time_available_min.to_i.to_s + "m " + @time_available_sec.to_i.to_s + "s"
+    @time_available_obj = Livestream::Stats.time_available_obj(@selected_date)
 
-    @stream_start = Livestream::Config.start_time.strftime("%I:%M%p")
-    @stream_end   = Livestream::Config.end_time.strftime("%I:%M%p")
+    @stream_start = Livestream::Config.start_time(@selected_date).strftime("%I:%M%p")
+    @stream_end   = Livestream::Config.end_time(@selected_date).strftime("%I:%M%p")
 
     render "api/get/stream/metadata", layout: false
   end

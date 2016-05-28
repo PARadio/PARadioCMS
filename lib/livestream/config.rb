@@ -21,7 +21,7 @@ class Livestream::Config
     'logging loglevel'               => 4
   }
 
-  def self.start_time
+  def self.start_time (date = Time.now)
     t = Time.now
     if t.saturday? || t.sunday?
       return Time.parse("09:00 AM")
@@ -30,7 +30,7 @@ class Livestream::Config
     end
   end
 
-  def self.end_time
+  def self.end_time (date = Time.now)
     t = Time.now
     if t.saturday? || t.sunday?
       return Time.parse("11:00 PM")
