@@ -16,11 +16,11 @@ class Admin::StreamitemsController < ApplicationController
     # dynamically assign position variable
     # save streamitem
     @newStreamitem = Streamitem.new(streamitems_params)
-    @newStreamitem.date = Date.strptime(params[:admin_streamitem][:date], '%Y-%m-%d')
+    @newStreamitem.date = Date.strptime(params[:streamitem][:date], '%Y-%m-%d')
     @newStreamitem.position = get_next_position(@newStreamitem.date)
 
-    if @newStreamitem.start_time + @newStreamitem.episode.duration.seconds > Livestream::Engine.end_time
-      time_available_hrs = TimeDifference.between(@streamitems.last.start_time + @streamitems.last.episode.duration.seconds, Livestream::Engine.end_time).in_hours
+    if @newStreamitem.start_time + @newStreamitem.episode.duration.seconds > Livestream::Config.end_time
+      time_available_hrs = TimeDifference.between(@streamitems.last.start_time + @streamitems.last.episode.duration.seconds, Livestream::Config.end_time).in_hours
       time_available_min = ("0." + time_available_hrs.to_s.split('.').last).to_f * 60
       time_available_sec = ("0." + time_available_min.to_s.split('.').last).to_f * 60
       time_available_str = time_available_hrs.to_i.to_s + "h " + time_available_min.to_i.to_s + "m " + time_available_sec.to_i.to_s + "s"
@@ -75,7 +75,7 @@ class Admin::StreamitemsController < ApplicationController
 
   private
     def streamitems_params
-      params.require(:admin_streamitem).permit(:episode_id)
+      params.require(:streamitem).permit(:episode_id)
     end
 
     def get_next_position(selected_date)

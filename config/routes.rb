@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'admin/access/logout', as: :logout
   post 'admin/access/attempt_login', as: :attempt_login
 
+  
   get '/admin/streamitems/:year/:month/:day', to: 'admin/streamitems#index', as: 'streamitems_show'
   get '/admin/streamitems/:year/:month/:day/new', to: 'admin/streamitems#new', as: 'streamitems_new'
   post '/admin/streamitems/:year/:month/:day/move', to: 'admin/streamitems#move', as: 'streamitems_move'

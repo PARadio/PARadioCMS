@@ -9,7 +9,7 @@
 <% end %>
 
 <div class="container">
-   <%= form_for @streamitem do |f| %>
+   <%= form_for @streamitem, url: {action: "create"} do |f| %>
     <div style="display: none;"><%= f.date_field :date, value: @selected_date.strftime('%Y-%m-%d') %></div>
     <%= f.collection_select(:episode_id, Admin::Episode.all, :id, :name, {}, {:class=>'form-control'}) %>
     <%= f.submit "Add", class: "btn btn-primary" %>

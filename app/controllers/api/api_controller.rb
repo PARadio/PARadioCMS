@@ -7,22 +7,22 @@ class Api::ApiController < ApplicationController
     if @streamitems.empty?
       @time_taken = 0
     else
-      @time_taken = TimeDifference.between(Livestream::Engine.start_time, @streamitems.last.start_time + @streamitems.last.episode.duration.seconds).in_seconds
+      @time_taken = TimeDifference.between(Livestream::Config.start_time, @streamitems.last.start_time + @streamitems.last.episode.duration.seconds).in_seconds
     end
-    @total_time = TimeDifference.between(Livestream::Engine.start_time, Livestream::Engine.end_time).in_seconds
+    @total_time = TimeDifference.between(Livestream::Config.start_time, Livestream::Config.end_time).in_seconds
     @percent_taken = ((@time_taken / @total_time) * 100).round(2)
 
     if @streamitems.empty?
-      @time_available_hrs = TimeDifference.between(Livestream::Engine.start_time, Livestream::Engine.end_time).in_hours
+      @time_available_hrs = TimeDifference.between(Livestream::Config.start_time, Livestream::Config.end_time).in_hours
     else
-      @time_available_hrs = TimeDifference.between(@streamitems.last.start_time + @streamitems.last.episode.duration.seconds, Livestream::Engine.end_time).in_hours
+      @time_available_hrs = TimeDifference.between(@streamitems.last.start_time + @streamitems.last.episode.duration.seconds, Livestream::Config.end_time).in_hours
     end
     @time_available_min = ("0." + @time_available_hrs.to_s.split('.').last).to_f * 60
     @time_available_sec = ("0." + @time_available_min.to_s.split('.').last).to_f * 60
     @time_available_str = @time_available_hrs.to_i.to_s + "h " + @time_available_min.to_i.to_s + "m " + @time_available_sec.to_i.to_s + "s"
 
-    @stream_start = Livestream::Engine.start_time.strftime("%I:%M%p")
-    @stream_end   = Livestream::Engine.end_time.strftime("%I:%M%p")
+    @stream_start = Livestream::Config.start_time.strftime("%I:%M%p")
+    @stream_end   = Livestream::Config.end_time.strftime("%I:%M%p")
 
     render "api/get/stream/metadata", layout: false
   end

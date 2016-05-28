@@ -1,23 +1,5 @@
 class Livestream::Engine
 
-  def self.start_time
-    t = Time.now
-    if t.saturday? || t.sunday?
-      return Time.parse("09:00 AM")
-    else
-      return Time.parse("05:00 PM")
-    end
-  end
-
-  def self.end_time
-    t = Time.now
-    if t.saturday? || t.sunday?
-      return Time.parse("11:00 PM")
-    else
-      return Time.parse("11:00 PM")
-    end
-  end
-
   def self.runStream
     require File.join(Rails.root, "vendor/cache/ruby/2.2.0/gems/ruby-shout-2.2.1/lib/shout")
 
@@ -27,10 +9,10 @@ class Livestream::Engine
     s.mount = "/livestream"
     # s.charset = "UTF-8"
     # s.mount = "/utf8"
-    s.host = @@icecast_config['hostname']
-    s.port = @@icecast_config['port']
+    s.host = Livestream::Config.icecast_config['hostname']
+    s.port = Livestream::Config.icecast_config['port']
     s.user = "source"
-    s.pass = @@icecast_config['authentication source-password']
+    s.pass = Livestream::Config.icecast_config['authentication source-password']
     s.format = Shout::MP3
     s.description ='Pinkerton Radio Livestream'
 
@@ -38,7 +20,7 @@ class Livestream::Engine
 
     streamitems = Livestream::Engine.getToday
 
-    while Time.now < Livestream::Engine.end_time do
+    while Time.now < Livestream::Config.end_time do
       streamitems.each do |streamitem|
         filename = Rails.root.join('public', streamitem.episode.mediafile.attachment_url)
         Icecast.streamFile(s, filename)
@@ -67,9 +49,9 @@ class Livestream::Engine
     end
 
     # if the current time is in between streams, return nil
-    if Time.now < Livestream::Engine.start_time
+    if Time.now < Livestream::Config.start_time
       return nil
-    elsif Time.now > Livestream::Engine.end_time
+    elsif Time.now > Livestream::Config.end_time
       return nil
     end
 
@@ -80,7 +62,7 @@ class Livestream::Engine
     streamitems.each do |item|
       loop_time+=item.episode.duration
     end
-    num_loops = (TimeDifference.between(Livestream::Engine.start_time, Time.now).in_seconds)/loop_time
+    num_loops = (TimeDifference.between(Livestream::Config.start_time, Time.now).in_seconds)/loop_time
     loop_frac = ('0.'+num_loops.to_s.split('.').last).to_f
     current_time_in_loop = loop_time*loop_frac
     puts current_time_in_loop

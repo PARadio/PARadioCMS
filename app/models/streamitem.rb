@@ -6,11 +6,11 @@ class Streamitem < ActiveRecord::Base
   def start_time
     position = read_attribute(:position)
     if position == 1
-      return Livestream::Engine.start_time
+      return Livestream::Config.start_time
     else
       date = read_attribute(:date)
       itemsBefore = Streamitem.where(date: date).where("position < :currentPosition", {currentPosition: position}).sorted
-      time_counter = Livestream::Engine.start_time
+      time_counter = Livestream::Config.start_time
       itemsBefore.each do |item|
         time_counter = time_counter + item.episode.duration.seconds;
       end
