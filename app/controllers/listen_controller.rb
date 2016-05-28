@@ -1,6 +1,6 @@
 class ListenController < ApplicationController
   layout 'main'
   def index
-    @currentItem = Streamitem.getCurrent
+    @currentItem = Livestream::Engine.getCurrent
   end
 end

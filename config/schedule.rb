@@ -19,11 +19,11 @@
 
 # Learn more: http://github.com/javan/whenever
 
-set :output, "/home/ubuntu/apps/PARadioCMS/current/log/whenever.log"
+set :output, File.join(Whenever.path, "log", "whenever.log") # "/home/ubuntu/apps/PARadioCMS/current/log/whenever.log"
 set :environment, 'production'
 
 every 1.day, :at => '00:00 AM' do
-  runner "Livestream.delay(run_at: Livestream.start_time).runStream"
-  command "killall icecast2"
-  command "/usr/bin/icecast2 -c /home/ubuntu/apps/PARadioCMS/current/lib/ices/icecast.xml"
+  runner "Livestream.delay(run_at: Livestream::Engine.start_time).runStream"
+  #command "killall icecast2"
+  #command "/usr/bin/icecast2 -c /home/ubuntu/apps/PARadioCMS/current/lib/ices/icecast.xml"
 end
