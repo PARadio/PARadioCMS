@@ -32,8 +32,6 @@ class Livestream::Stats
   end
 
   def self.time_taken_str (date = Time.now)
-    streamitems = Streamitem.where(date: date.strftime('%Y-%m-%d')).sorted
-
     time_obj = Livestream::Stats.time_taken_obj(date)
 
     return time_obj['hrs'].to_s + "h " + time_obj['min'].to_s + "m " + time_obj['sec'].to_s + "s"
@@ -71,8 +69,6 @@ class Livestream::Stats
   end
 
   def self.time_available_str (date = Time.now)
-    streamitems = Streamitem.where(date: date.strftime('%Y-%m-%d')).sorted
-
     time_obj = Livestream::Stats.time_available_obj(date)
 
     return time_obj['hrs'].to_s + "h " + time_obj['min'].to_s + "m " + time_obj['sec'].to_s + "s"

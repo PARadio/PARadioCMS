@@ -9,32 +9,36 @@ class Admin::StreamitemsController < ApplicationController
     datestr = params[:year].to_s + "-" + params[:month].to_s + "-" + params[:day].to_s
     @selected_date = Date.strptime(datestr, '%Y-%m-%d')
     @streamitem = Streamitem.new
+    @episodes = Episode.all
   end
 
   def create
     # create a new stream item and pass it an episode to add.
     # dynamically assign position variable
-    # save streamitem
-    @newStreamitem = Streamitem.new(streamitems_params)
-    @newStreamitem.date = Date.strptime(params[:streamitem][:date], '%Y-%m-%d')
-    @newStreamitem.position = get_next_position(@newStreamitem.date)
 
-    if @newStreamitem.start_time + @newStreamitem.episode.duration.seconds > Livestream::Config.end_time
-      time_available_hrs = TimeDifference.between(@streamitems.last.start_time + @streamitems.last.episode.duration.seconds, Livestream::Config.end_time).in_hours
-      time_available_min = ("0." + time_available_hrs.to_s.split('.').last).to_f * 60
-      time_available_sec = ("0." + time_available_min.to_s.split('.').last).to_f * 60
-      time_available_str = time_available_hrs.to_i.to_s + "h " + time_available_min.to_i.to_s + "m " + time_available_sec.to_i.to_s + "s"
-      redirect_to(streamitems_show_path(:year => @newStreamitem.date.strftime('%Y'), :month => @newStreamitem.date.strftime('%m'), :day => @newStreamitem.date.strftime('%d')), notice: "Not enough room in schedule for episode. Time Available: " + time_available_str)
-    elsif @newStreamitem.save
-      # update playlist
-      #File.open(Rails.root.join('lib', 'ices', 'playlist.txt'), 'a+') do |f|
-      #  f.puts Rails.root.join('public', @newStreamitem.episode.mediafile.attachment_url)
-      #end
+    # loop through episode ids to add
+    # key refers to the name of the parameter.
+    # since the episode_id is echoed in the name field,
+    # key refers to the episode_id
+    params.each do |key, value|
+      if !(key == "date" || key == "utf8" || key == "authenticity_token" || key == "commit" || key == "controller" || key == "action")
+        @newStreamitem = Streamitem.new
+        @episode = Episode.find(key)
+        @newStreamitem.episode_id = key
+        @newStreamitem.date = Date.strptime(params[:date][:string], '%Y-%m-%d')
+        @newStreamitem.position = get_next_position(@newStreamitem.date)
 
-      redirect_to(streamitems_show_path(:year => @newStreamitem.date.strftime('%Y'), :month => @newStreamitem.date.strftime('%m'), :day => @newStreamitem.date.strftime('%d')), notice: "The stream item has been added.")
-    else
-       render "new"
+        if @newStreamitem.start_time + @episode.duration.seconds > Livestream::Config.end_time
+          redirect_to(streamitems_show_path(:year => @newStreamitem.date.strftime('%Y'), :month => @newStreamitem.date.strftime('%m'), :day => @newStreamitem.date.strftime('%d')), notice: "Not enough room in schedule for episode. Time Available: " + Livestream::Stats.time_available_str(@newStreamitem.date))
+        elsif @newStreamitem.save
+          # woo it saved
+        else
+          render "new"
+        end
+      end
     end
+
+    redirect_to(streamitems_show_path(:year => @newStreamitem.date.strftime('%Y'), :month => @newStreamitem.date.strftime('%m'), :day => @newStreamitem.date.strftime('%d')), notice: "The stream items have been added.")
   end
 
   def move
@@ -61,14 +65,6 @@ class Admin::StreamitemsController < ApplicationController
       item.position = item.position - 1
       item.save
     end
-
-    # rewrite playlist
-    #@streamitemsUpdated = Streamitem.sorted
-    #File.open(Rails.root.join('lib', 'ices', 'playlist.txt'), 'w') do |f|
-    #  @streamitemsUpdated.each do |streamitemUpdated|
-    #    f.puts Rails.root.join('public', @streamitemsUpdated.episode.mediafile.attachment_url)
-    #  end
-    #end
 
     redirect_to(streamitems_show_path(:year => @streamitem.date.strftime('%Y'), :month => @streamitem.date.strftime('%m'), :day => @streamitem.date.strftime('%d')), notice:  "The episode has been removed.")
   end

@@ -141,5 +141,23 @@ var ready = function() {
   $( "#streamitems" ).disableSelection();
 };
 
-$(document).ready(ready);
-$(document).on('page:load', ready);
+$(document).ready(function() {
+  // get the url information
+  var urlArray = window.location.href.split("/");
+
+  // if the info exists
+  if((typeof urlArray[8] === 'undefined')) {
+    console.log(urlArray);
+    ready();
+  }
+});
+$(document).on('page:load', function() {
+  // get the url information
+  var urlArray = window.location.href.split("/");
+
+  // if the info exists
+  if((typeof urlArray[8] === 'undefined')) {
+    console.log(urlArray);
+    ready();
+  }
+});

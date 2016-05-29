@@ -1,2 +1,2 @@
-module EpisodesHelper
+module Admin::EpisodesHelper
 end

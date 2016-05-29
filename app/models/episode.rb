@@ -12,4 +12,14 @@ class Episode < ActiveRecord::Base
   validates_length_of :description, :maximum => 500
   validates_presence_of :transcript
   validates_length_of :transcript, :maximum => 1000
+
+  def duration_str
+    duration_sec = duration
+    duration_min = (duration_sec/60).floor
+    duration_sec = duration_sec - (duration_min*60)
+
+    duration_hrs = (duration_sec/60).floor
+
+    "#{duration_min}:#{duration_sec}"
+  end
 end

@@ -1,3 +1,4 @@
+<% @page_title="Add Episode to Stream" %>
 <% if !@streamitem.errors.empty? %>
    <div class = "alert alert-error">
       <ul>
@@ -9,9 +10,35 @@
 <% end %>
 
 <div class="container">
-   <%= form_for @streamitem, url: {action: "create"} do |f| %>
-    <div style="display: none;"><%= f.date_field :date, value: @selected_date.strftime('%Y-%m-%d') %></div>
-    <%= f.collection_select(:episode_id, Episode.all, :id, :name, {}, {:class=>'form-control'}) %>
-    <%= f.submit "Add", class: "btn btn-primary" %>
-   <% end %>
+  <h2>Add Episodes to <%= @selected_date.strftime('%B %d, %Y') %></h2>
+  <%= form_tag({controller: "admin/streamitems", action: "create"}, method: "post") do %>
+    <div style="display: none;"><%= date_field :date, :string, :value => @selected_date.strftime('%Y-%m-%d') %></div>
+    <table class="table table-bordered table-striped row">
+       <thead>
+          <tr>
+            <th class="col-md-1" style="text-align: center;"><%= echoGlyphicon("ok") %></th>
+            <th class="col-md-2">Name</th>
+            <th class="col-md-6">Description</th>
+            <th class="col-md-2">Duration</th>
+          </tr>
+       </thead>
+
+       <tbody id="streamitems">
+         <% @episodes.each do |episode| %>
+           <tr>
+            <td class="col-md-1">
+              <div class="checkbox checkbox-primary">
+                <%= check_box_tag("#{episode.id}") %>
+                <%= label_tag("#{episode.id}", "") %>
+              </div>
+            </td>
+            <td class="col-md-2"><%= episode.name %></td>
+            <td class="col-md-6"><%= episode.description %></td>
+            <td class="col-md-2"><%= episode.duration_str %></td>
+           </tr>
+         <% end %>
+       </tbody>
+    </table>
+    <%= submit_tag("Add Episodes", class: "btn btn-primary") %>
+  <% end %>
 </div>
